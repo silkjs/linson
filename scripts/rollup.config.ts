@@ -1,8 +1,12 @@
+import path from "path";
 import { defineConfig } from "rollup";
 import { babel } from "@rollup/plugin-babel";
+import resolve from "@rollup/plugin-node-resolve";
+import json from "@rollup/plugin-json";
+import postcss from "rollup-plugin-postcss";
 
 export default defineConfig({
-  input: "../package/desktop.tsx",
+  input: path.resolve(__dirname, "../package/desktop.ts"),
   output: [
     // {
     //   file: "dist/bundle.iife.js",
@@ -20,10 +24,17 @@ export default defineConfig({
     },
   ],
   plugins: [
-    babel({
-      babelHelpers: "bundled",
+    resolve({
       extensions: [".ts", ".tsx"],
     }),
+    babel({
+      extensions: [".ts", ".tsx"],
+    }),
+    postcss({
+      extensions: [".css", ".scss"],
+      extract: "index.css",
+    }),
+    json(),
   ],
   external: ["vue"],
 });
