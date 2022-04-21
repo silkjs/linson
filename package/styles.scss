@@ -1,0 +1,20 @@
+@use "sass:list";
+@import "./theme.scss";
+
+:root {
+  @each $name, $value in $colors {
+    --linson-light-#{$name}: #{list.nth($value, 1)};
+    --linson-dark-#{$name}: #{list.nth($value, 2)};
+    --linson-color-#{$name}: var(--linson-light-#{$name});
+  }
+}
+
+html {
+  // color-scheme: light;
+  &[data-theme="dark"] {
+    // color-scheme: dark;
+    @each $name, $_ in $colors {
+      --linson-color-#{$name}: var(--linson-dark-#{$name});
+    }
+  }
+}

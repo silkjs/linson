@@ -1,0 +1,6 @@
+.vscode
+app
+case
+docs
+node_modules
+yarn.lock

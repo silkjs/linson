@@ -2,7 +2,9 @@ import { defineComponent, PropType } from "vue";
 import { ButtonProps, ButtonEmits } from "./button-type";
 
 const emits: ButtonEmits = {
-  click: (e: MouseEvent) => {},
+  click: (e: MouseEvent) => {
+    return e instanceof MouseEvent;
+  },
 };
 
 export const Button = defineComponent({
@@ -11,6 +13,9 @@ export const Button = defineComponent({
     block: {
       type: Boolean as PropType<ButtonProps["block"]>,
       default: (): ButtonProps["block"] => false,
+    },
+    content: {
+      type: [String, Function] as PropType<ButtonProps["content"]>,
     },
     disabled: {
       type: Boolean as PropType<ButtonProps["disabled"]>,
@@ -36,35 +41,36 @@ export const Button = defineComponent({
       type: String as PropType<ButtonProps["type"]>,
       default: (): ButtonProps["type"] => "button",
     },
+    variant: {
+      type: String as PropType<ButtonProps["variant"]>,
+      default: (): ButtonProps["variant"] => "base",
+    },
   },
-  emits: {
-    ...emits,
-  },
+  emits: { ...emits },
   setup(props, { emit, slots }) {
+    const content =
+      typeof props.content === "undefined"
+        ? slots?.default?.()
+        : typeof props.content === "string"
+        ? props.content
+        : props.content();
     return () => (
       <button
-        class={{}}
+        class={[
+          "l-button",
+          `l-button--theme-${props.theme}`,
+          `l-button--variant-${props.variant}`,
+          {
+            "l-size-full-width": props.block,
+          },
+        ]}
         type={props.type}
         onClick={(e) => {
           emit("click", e);
         }}
       >
-        {slots?.default?.()}
+        {content}
       </button>
     );
   },
 });
-
-function Example() {
-  return (
-    <>
-      <Button
-        size="small"
-        theme="primary"
-        onClick={(e) => {
-          e.preventDefault();
-        }}
-      />
-    </>
-  );
-}

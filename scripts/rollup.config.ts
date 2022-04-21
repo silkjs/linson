@@ -2,7 +2,7 @@ import { defineConfig } from "rollup";
 import { babel } from "@rollup/plugin-babel";
 
 export default defineConfig({
-  input: "./src/desktop.tsx",
+  input: "../package/desktop.tsx",
   output: [
     // {
     //   file: "dist/bundle.iife.js",
