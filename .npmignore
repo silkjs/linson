@@ -1,6 +1,12 @@
 .vscode
 app
-case
 docs
 node_modules
+scripts
+
+.babelrc
+.editorconfig
+.prettierignore
+.prettierrc
+tsconfig.json
 yarn.lock

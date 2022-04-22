@@ -1,0 +1,21 @@
+@use "sass:math";
+@import "../../common/styles/theme.scss";
+
+.l-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+.l-col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  @for $i from 1 through 24 {
+    &.l-col-#{$i} {
+      width: math.div(100%, 24) * $i;
+    }
+  }
+}

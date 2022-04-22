@@ -2,13 +2,11 @@
   "name": "@silkjs/linson",
   "version": "0.0.2",
   "description": "A Vue 3 Component Library.",
-  "main": "./dist/bundle.esm.js",
-  "typings": "./dist/bundle.d.ts",
-  "exports": {
-    "import": "./dist/bundle.esm.js",
-    "require": "./dist/bundle.cjs.js",
-    "default": "./dist/bundle.esm.js"
-  },
+  "main": "dist/bundle.esm.js",
+  "typings": "dist/bundle.d.ts",
+  "files": [
+    "dist"
+  ],
   "directories": {
     "doc": "docs"
   },
@@ -43,7 +41,7 @@
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
-    "@rollup/plugin-typescript": "^8.3.1",
+    "@rollup/plugin-typescript": "^8.3.2",
     "@vue/babel-plugin-jsx": "^1.1.1",
     "rollup": "^2.70.2",
     "rollup-plugin-postcss": "^4.0.2",

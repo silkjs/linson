@@ -6,6 +6,6 @@
     "target": "esnext",
     "module": "esnext"
   },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["dist"]
+  "include": ["../package/**/*.ts", "../package/**/*.tsx"],
+  "exclude": ["../dist"]
 }
