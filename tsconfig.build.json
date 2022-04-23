@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "baseUrl": ".",
+    "rootDir": "package",
+    "outDir": "./dist/esm"
+  },
+  "include": ["./package/**/*.ts", "./package/**/*.tsx"]
+}

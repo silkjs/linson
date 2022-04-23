@@ -1,9 +1,9 @@
 {
   "name": "@silkjs/linson",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Vue 3 Component Library.",
   "main": "dist/bundle.esm.js",
-  "typings": "dist/bundle.d.ts",
+  "typings": "dist/esm/desktop.d.ts",
   "files": [
     "dist"
   ],
@@ -11,7 +11,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "rollup --config ./scripts/rollup.config.ts"
+    "build": "rollup --config ./scripts/rollup.config.ts && npm run typescript",
+    "typescript": "tsc -b tsconfig.build.json"
   },
   "repository": {
     "type": "git",
