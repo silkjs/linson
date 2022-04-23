@@ -11,7 +11,7 @@ export default defineConfig([
     input: path.resolve(__dirname, "../package/linson.ts"),
     output: [
       {
-        file: "dist/lonson.iife.js",
+        file: "dist/linson.iife.js",
         format: "iife",
         name: "linson",
         globals: {
@@ -20,11 +20,11 @@ export default defineConfig([
         extend: true,
       },
       {
-        file: "dist/lonson.cjs.js",
+        file: "dist/linson.cjs.js",
         format: "cjs",
       },
       {
-        file: "dist/lonson.esm.js",
+        file: "dist/linson.esm.js",
         format: "esm",
       },
     ],
