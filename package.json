@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "rollup --config ./scripts/rollup.config.ts && npm run typescript",
-    "typescript": "tsc -b tsconfig.build.json"
+    "typescript": "tsc -b tsconfig.build.json",
+    "app": "cd app && npm run dev"
   },
   "repository": {
     "type": "git",

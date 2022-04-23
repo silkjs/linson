@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@silkjs/linson": "../",
     "sass": "^1.50.1",
     "vue": "^3.2.25"
   },

@@ -48,29 +48,31 @@ export const Button = defineComponent({
   },
   emits: { ...emits },
   setup(props, { emit, slots }) {
-    const content =
-      typeof props.content === "undefined"
-        ? slots?.default?.()
-        : typeof props.content === "string"
-        ? props.content
-        : props.content();
-    return () => (
-      <button
-        class={[
-          "l-button",
-          `l-button--theme-${props.theme}`,
-          `l-button--variant-${props.variant}`,
-          {
-            "l-size-full-width": props.block,
-          },
-        ]}
-        type={props.type}
-        onClick={(e) => {
-          emit("click", e);
-        }}
-      >
-        {content}
-      </button>
-    );
+    return () => {
+      const content =
+        typeof props.content === "undefined"
+          ? slots.default?.()
+          : typeof props.content === "string"
+          ? props.content
+          : props.content();
+      return (
+        <button
+          class={[
+            "l-button",
+            `l-button--theme-${props.theme}`,
+            `l-button--variant-${props.variant}`,
+            {
+              "l-size-full-width": props.block,
+            },
+          ]}
+          type={props.type}
+          onClick={(e) => {
+            emit("click", e);
+          }}
+        >
+          {content}
+        </button>
+      );
+    };
   },
 });

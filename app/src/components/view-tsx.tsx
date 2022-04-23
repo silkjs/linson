@@ -1,6 +1,5 @@
 import { defineComponent } from "vue";
-import { Button } from "../../../package/widgets/button";
-import { Col, Row } from "../../../package/widgets/grid";
+import { Button, Row, Col } from "@silkjs/linson";
 
 export const ViewTSX = defineComponent({
   setup() {
@@ -12,11 +11,12 @@ export const ViewTSX = defineComponent({
             <Button
               theme="default"
               variant="base"
-              content="Action"
               onClick={() => {
                 console.log("Hello");
               }}
-            />
+            >
+              Action
+            </Button>
           </Col>
           <Col span={6}>
             <Button

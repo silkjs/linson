@@ -11,24 +11,25 @@ export const Col = defineComponent({
     },
   },
   setup(props, { slots }) {
-    const gutter = (getCurrentInstance()?.parent?.props as RowProps).gutter ?? 0;
-    const gap = { h: 0, v: 0 };
-    if (typeof gutter === "number") {
-      gap.v = Math.floor(gutter / 2);
-    } else {
-      gap.v = Math.floor(gutter[0] / 2);
-      gap.h = Math.floor(gutter[1] / 2);
-    }
-
-    return () => (
-      <div
-        class={["l-col", `l-col-${props.span}`]}
-        style={{
-          padding: `${gap.h}px ${gap.v}px`,
-        }}
-      >
-        {slots.default?.()}
-      </div>
-    );
+    return () => {
+      const gutter = (getCurrentInstance()?.parent?.props as RowProps)?.gutter ?? 0;
+      const gap = { h: 0, v: 0 };
+      if (typeof gutter === "number") {
+        gap.v = Math.floor(gutter / 2);
+      } else {
+        gap.v = Math.floor(gutter[0] / 2);
+        gap.h = Math.floor(gutter[1] / 2);
+      }
+      return (
+        <div
+          class={["l-col", `l-col-${props.span}`]}
+          style={{
+            padding: `${gap.h}px ${gap.v}px`,
+          }}
+        >
+          {slots.default?.()}
+        </div>
+      );
+    };
   },
 });
