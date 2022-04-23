@@ -1,9 +1,9 @@
 {
   "name": "@silkjs/linson",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Vue 3 Component Library.",
-  "main": "dist/bundle.esm.js",
-  "typings": "dist/esm/desktop.d.ts",
+  "main": "dist/linson.esm.js",
+  "typings": "dist/esm/linson.d.ts",
   "files": [
     "dist"
   ],

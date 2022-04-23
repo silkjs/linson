@@ -8,10 +8,10 @@ import postcss from "rollup-plugin-postcss";
 
 export default defineConfig([
   {
-    input: path.resolve(__dirname, "../package/desktop.ts"),
+    input: path.resolve(__dirname, "../package/linson.ts"),
     output: [
       {
-        file: "dist/bundle.iife.js",
+        file: "dist/lonson.iife.js",
         format: "iife",
         name: "linson",
         globals: {
@@ -20,11 +20,11 @@ export default defineConfig([
         extend: true,
       },
       {
-        file: "dist/bundle.cjs.js",
+        file: "dist/lonson.cjs.js",
         format: "cjs",
       },
       {
-        file: "dist/bundle.esm.js",
+        file: "dist/lonson.esm.js",
         format: "esm",
       },
     ],
@@ -38,7 +38,7 @@ export default defineConfig([
       }),
       postcss({
         extensions: [".css", ".scss"],
-        extract: "index.css",
+        extract: "linson.css",
       }),
       json(),
     ],
