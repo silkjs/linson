@@ -1,6 +1,6 @@
-import { defineComponent, type PropType } from "vue";
+import { defineComponent, provide, type PropType } from "vue";
 import { withInstall } from "../../utils/common";
-import { RowProps } from "./row-type";
+import { RowProps, RowProviderType } from "./row-type";
 
 export const Row = withInstall(
   defineComponent({
@@ -12,6 +12,9 @@ export const Row = withInstall(
       },
     },
     setup(props, { slots }) {
+      provide<RowProviderType>("RowContext", {
+        gutter: props.gutter,
+      });
       return () => <div class={["l-row", {}]}>{slots.default?.()}</div>;
     },
   })

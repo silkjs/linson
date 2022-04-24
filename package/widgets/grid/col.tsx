@@ -1,7 +1,7 @@
-import { defineComponent, getCurrentInstance, type PropType } from "vue";
+import { defineComponent, inject, type PropType } from "vue";
 import { withInstall } from "../../utils/common";
 import { ColProps } from "./col-type";
-import { RowProps } from "./row-type";
+import { RowProviderType } from "./row-type";
 
 export const Col = withInstall(
   defineComponent({
@@ -13,15 +13,17 @@ export const Col = withInstall(
       },
     },
     setup(props, { slots }) {
+      const context = inject<RowProviderType>("RowContext", {});
+      const gutter = context.gutter ?? 0;
+      const gap = { h: 0, v: 0 };
+      if (typeof gutter === "number") {
+        gap.v = Math.floor(gutter / 2);
+      } else {
+        gap.v = Math.floor(gutter[0] / 2);
+        gap.h = Math.floor(gutter[1] / 2);
+      }
+
       return () => {
-        const gutter = (getCurrentInstance()?.parent?.props as RowProps)?.gutter ?? 0;
-        const gap = { h: 0, v: 0 };
-        if (typeof gutter === "number") {
-          gap.v = Math.floor(gutter / 2);
-        } else {
-          gap.v = Math.floor(gutter[0] / 2);
-          gap.h = Math.floor(gutter[1] / 2);
-        }
         return (
           <div
             class={["l-col", `l-col-${props.span}`]}

@@ -5,3 +5,5 @@ export interface RowProps {
    */
   gutter?: number | [number, number];
 }
+
+export type RowProviderType = Pick<RowProps, "gutter">;
