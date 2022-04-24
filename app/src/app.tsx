@@ -1,7 +1,7 @@
 import { defineComponent } from "vue";
 import { ViewTSX } from "./components/view-tsx";
-import { Button } from "@silkjs/linson";
-// import "@silkjs/linson/dist/linson.css";
+import { Button, Space } from "@silkjs/linson";
+import ViewTEM from "./components/view-template.vue";
 
 export const App = defineComponent({
   setup() {
@@ -12,15 +12,32 @@ export const App = defineComponent({
         }}
       >
         <h3>Usage</h3>
-        {/* <ViewTSX />
-        <Button
-          block
-          theme="primary"
-          content="Action"
-          onClick={() => {
-            console.log("Hello");
-          }}
-        /> */}
+        <ViewTEM />
+        <ViewTSX />
+        <Space size="small">
+          <Button
+            theme="primary"
+            onClick={() => {
+              console.log("Hello");
+            }}
+          >
+            Action
+          </Button>
+          <Button
+            theme="primary"
+            content="Action"
+            onClick={() => {
+              console.log("Hello");
+            }}
+          />
+          <Button
+            theme="primary"
+            content="Action"
+            onClick={() => {
+              console.log("Hello");
+            }}
+          />
+        </Space>
       </div>
     );
   },

@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@silkjs/linson": "../",
+    "@silkjs/linson": "^0.1.3",
     "sass": "^1.50.1",
     "vue": "^3.2.25"
   },
@@ -16,7 +16,6 @@
     "@vitejs/plugin-vue": "^2.3.1",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "typescript": "^4.5.4",
-    "vite": "^2.9.5",
-    "vue-tsc": "^0.34.7"
+    "vite": "^2.9.5"
   }
 }

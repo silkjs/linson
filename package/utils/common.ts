@@ -23,3 +23,7 @@ export function withInstall<T extends { name: string }>(widget: T) {
   };
   return component;
 }
+
+export function PascalToCamel(name: string) {
+  return name.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+}
