@@ -1,7 +1,7 @@
 import { defineComponent } from "vue";
 import { ViewTSX } from "./components/view-tsx";
 import { Button } from "@silkjs/linson";
-import "@silkjs/linson/dist/index.css";
+// import "@silkjs/linson/dist/linson.css";
 
 export const App = defineComponent({
   setup() {
@@ -12,7 +12,7 @@ export const App = defineComponent({
         }}
       >
         <h3>Usage</h3>
-        <ViewTSX />
+        {/* <ViewTSX />
         <Button
           block
           theme="primary"
@@ -20,7 +20,7 @@ export const App = defineComponent({
           onClick={() => {
             console.log("Hello");
           }}
-        />
+        /> */}
       </div>
     );
   },
