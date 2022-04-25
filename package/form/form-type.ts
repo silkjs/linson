@@ -1,0 +1,1 @@
+type ValidatorsFn = () => [boolean, string];
