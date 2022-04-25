@@ -5,7 +5,7 @@
     "emitDeclarationOnly": true,
     "baseUrl": ".",
     "rootDir": "package",
-    "outDir": "./dist/esm"
+    "outDir": "./types"
   },
   "include": ["./package/**/*.ts", "./package/**/*.tsx"]
 }

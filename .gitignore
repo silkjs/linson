@@ -1,6 +1,9 @@
-node_modules
-.DS_Store
+.coverage
 dist
-dist-ssr
+node_modules
+types
+
+.DS_Store
 *.local
 yarn.lock
+packagee-lock.json

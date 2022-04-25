@@ -4,5 +4,4 @@ app/
 dist/
 node_modules/
 types/
-LICENSE
-yarn.lock
+*.d.ts

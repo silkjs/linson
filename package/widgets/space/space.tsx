@@ -1,6 +1,6 @@
-import { defineComponent, type PropType, computed } from "vue";
+import { type PropType, computed, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { SpaceProps, SpaceEmits } from "./space-type";
+import { SpaceEmits, SpaceProps } from "./space-type";
 
 const emits: SpaceEmits = {};
 

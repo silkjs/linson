@@ -1,6 +1,6 @@
-import { defineComponent, type PropType } from "vue";
+import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { FormItemProps, FormItemEmits } from "./form-item-type";
+import { FormItemEmits, FormItemProps } from "./form-item-type";
 
 const emits: FormItemEmits = {};
 

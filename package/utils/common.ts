@@ -1,13 +1,5 @@
 import type { App, Plugin } from "vue";
 
-export function sleep(ms: number) {
-  return new Promise<void>((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, ms);
-  });
-}
-
 type WidgetPlugin<T> = T & Plugin;
 
 export function register<T>(app: App, name: string, widget: T) {
@@ -24,6 +16,6 @@ export function withInstall<T extends { name: string }>(widget: T) {
   return component;
 }
 
-export function PascalToCamel(name: string) {
+export function pascalToCamel(name: string) {
   return name.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
 }

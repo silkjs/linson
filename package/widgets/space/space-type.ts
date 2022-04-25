@@ -6,6 +6,7 @@ export interface SpaceProps {
    * @default middle
    */
   size?: "small" | "middle" | "large" | number;
+
   /**
    * 间距方向
    * @default horizontal

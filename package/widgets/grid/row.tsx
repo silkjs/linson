@@ -1,4 +1,4 @@
-import { defineComponent, provide, type PropType } from "vue";
+import { type PropType, defineComponent, provide } from "vue";
 import { withInstall } from "../../utils/common";
 import { RowProps, RowProviderType } from "./row-type";
 

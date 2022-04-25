@@ -106,25 +106,15 @@
   --td-bg-color-page: var(--td-gray-color-2); // 色彩 - page
   --td-bg-color-container: #fff; // 色彩 - 容器
   --td-bg-color-container-hover: var(--td-gray-color-1); // 色彩 - 容器 - hover
-  --td-bg-color-container-active: var(
-    --td-gray-color-3
-  ); // 色彩 - 容器 - active
+  --td-bg-color-container-active: var(--td-gray-color-3); // 色彩 - 容器 - active
   --td-bg-color-container-select: #fff; // 色彩 - 容器 - select
   --td-bg-color-secondarycontainer: var(--td-gray-color-1); // 色彩 - 次级容器
-  --td-bg-color-secondarycontainer-hover: var(
-    --td-gray-color-2
-  ); // 色彩 - 次级容器 - hover
-  --td-bg-color-secondarycontainer-active: var(
-    --td-gray-color-4
-  ); // 色彩 - 次级容器 - active
+  --td-bg-color-secondarycontainer-hover: var(--td-gray-color-2); // 色彩 - 次级容器 - hover
+  --td-bg-color-secondarycontainer-active: var(--td-gray-color-4); // 色彩 - 次级容器 - active
   --td-bg-color-component: var(--td-gray-color-3); // 色彩 - 组件
   --td-bg-color-component-hover: var(--td-gray-color-4); // 色彩 - 组件 - hover
-  --td-bg-color-component-active: var(
-    --td-gray-color-6
-  ); // 色彩 - 组件 - active
-  --td-bg-color-component-disabled: var(
-    --td-gray-color-2
-  ); // 色彩 - 组件 - disabled
+  --td-bg-color-component-active: var(--td-gray-color-6); // 色彩 - 组件 - active
+  --td-bg-color-component-disabled: var(--td-gray-color-2); // 色彩 - 组件 - disabled
 
   // 特殊组件背景色，目前只用于 button、input 组件多主题场景，浅色主题下固定为白色，深色主题下为 transparent 适配背景颜色
   --td-bg-color-specialcomponent: #fff;
@@ -146,14 +136,11 @@
   --td-component-border: var(--td-gray-color-4);
 
   // 基础/下层 投影 hover 使用的组件包括：表格 /
-  --td-shadow-1: 0 1px 10px rgba(0, 0, 0, 5%), 0 4px 5px rgba(0, 0, 0, 8%),
-    0 2px 4px -1px rgba(0, 0, 0, 12%);
+  --td-shadow-1: 0 1px 10px rgba(0, 0, 0, 5%), 0 4px 5px rgba(0, 0, 0, 8%), 0 2px 4px -1px rgba(0, 0, 0, 12%);
   // 中层投影 下拉 使用的组件包括：下拉菜单 / 气泡确认框 / 选择器 /
-  --td-shadow-2: 0 3px 14px 2px rgba(0, 0, 0, 5%),
-    0 8px 10px 1px rgba(0, 0, 0, 6%), 0 5px 5px -3px rgba(0, 0, 0, 10%);
+  --td-shadow-2: 0 3px 14px 2px rgba(0, 0, 0, 5%), 0 8px 10px 1px rgba(0, 0, 0, 6%), 0 5px 5px -3px rgba(0, 0, 0, 10%);
   // 上层投影（警示/弹窗）使用的组件包括：全局提示 / 消息通知
-  --td-shadow-3: 0 6px 30px 5px rgba(0, 0, 0, 5%),
-    0 16px 24px 2px rgba(0, 0, 0, 4%), 0 8px 10px -5px rgba(0, 0, 0, 8%);
+  --td-shadow-3: 0 6px 30px 5px rgba(0, 0, 0, 5%), 0 16px 24px 2px rgba(0, 0, 0, 4%), 0 8px 10px -5px rgba(0, 0, 0, 8%);
 
   // 内投影 用于弹窗类组件（气泡确认框 / 全局提示 / 消息通知）的内描边
   --td-shadow-inset-top: inset 0 0.5px 0 #dcdcdc;

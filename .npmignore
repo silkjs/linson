@@ -1,12 +1,21 @@
+.coverage
+.husky
 .vscode
 app
 docs
 node_modules
+package
 scripts
 
 .babelrc
 .editorconfig
+.eslintingore
+.eslintrc.json
+.lintstagedrc.json
 .prettierignore
 .prettierrc
+jest.config.json
+rollup.config.ts
+tsconfig.build.json
 tsconfig.json
 yarn.lock

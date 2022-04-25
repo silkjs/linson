@@ -1,6 +1,6 @@
-import { defineComponent, type PropType } from "vue";
+import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { CheckboxProps, CheckboxEmits } from "./checkbox-type";
+import { CheckboxEmits, CheckboxProps } from "./checkbox-type";
 
 const emits: CheckboxEmits = {};
 

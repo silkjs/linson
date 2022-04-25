@@ -4,13 +4,14 @@ import { babel } from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import json from "@rollup/plugin-json";
 import postcss from "rollup-plugin-postcss";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig([
   {
-    input: path.resolve(__dirname, "../package/linson.ts"),
+    input: path.resolve(__dirname, "./package/linson.ts"),
     output: [
       {
-        file: "dist/linson.iife.js",
+        file: path.resolve(__dirname, "./dist/linson.iife.js"),
         format: "iife",
         name: "linson",
         globals: {
@@ -19,11 +20,11 @@ export default defineConfig([
         extend: true,
       },
       {
-        file: "dist/linson.cjs.js",
+        file: path.resolve(__dirname, "./dist/linson.cjs.js"),
         format: "cjs",
       },
       {
-        file: "dist/linson.esm.js",
+        file: path.resolve(__dirname, "./dist/linson.esm.js"),
         format: "esm",
       },
     ],
@@ -36,6 +37,7 @@ export default defineConfig([
         extensions: [".ts", ".tsx"],
       }),
       postcss({
+        plugins: [autoprefixer()],
         extensions: [".css", ".scss"],
         extract: "linson.css",
       }),
