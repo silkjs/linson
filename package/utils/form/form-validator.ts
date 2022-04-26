@@ -1,9 +1,14 @@
+import { FormControl } from "./form";
+
 export interface ValidationErrors {
   [key: string]: string;
 }
 
 export interface ValidatorFn<T> {
   (control: FormControl<T>, errors: ValidationErrors, skip?: boolean): boolean;
+}
+export interface ValidatorCustomFn<T> {
+  (control: FormControl<T>): boolean;
 }
 
 export class Validators {
@@ -69,33 +74,14 @@ export class Validators {
       return true;
     };
   }
-}
 
-type Control = FormControl | FormGroup | FormArray;
-
-export class FormControl<T = any> {
-  value: T | undefined = undefined;
-  validators: ValidatorFn<T>[];
-  constructor(value?: T, validators?: ValidatorFn<T>[]) {
-    this.value = value;
-    this.validators = validators ?? [];
-  }
-}
-
-interface FormGroupType {
-  [name: string]: Control;
-}
-export class FormGroup<T extends FormGroupType = FormGroupType> {
-  group: T;
-  constructor(group: T) {
-    this.group = group;
-  }
-}
-
-type FormArrayType = Control[];
-export class FormArray<T extends FormArrayType = FormArrayType> {
-  array: T;
-  constructor(...array: T) {
-    this.array = array;
+  static custom<T>(fn: ValidatorCustomFn<T>, error: { key: string; message: string }): ValidatorFn<T> {
+    return (control, errors) => {
+      if (Validators.required()(control, errors, true) && !fn(control)) {
+        errors[error.key] = error.message;
+        return false;
+      }
+      return true;
+    };
   }
 }

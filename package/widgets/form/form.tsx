@@ -10,7 +10,6 @@ export const Form = withInstall(
     name: "l-form",
     props: {
       disabled: Boolean as PropType<FormProps["disabled"]>,
-      group: Object as PropType<FormProps["group"]>,
       readonly: Boolean as PropType<FormProps["readonly"]>,
       size: String as PropType<FormProps["size"]>,
     },
