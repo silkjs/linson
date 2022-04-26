@@ -6,9 +6,16 @@ const emits: UploadEmits = {};
 
 export const Upload = withInstall(
   defineComponent({
-    name: "l-upload",
-    props: {},
     emits: { ...emits },
+    name: "l-upload",
+    props: {
+      disabled: Boolean as PropType<UploadProps["disabled"]>,
+      placeholder: String as PropType<UploadProps["placeholder"]>,
+      readonly: Boolean as PropType<UploadProps["readonly"]>,
+      size: String as PropType<UploadProps["size"]>,
+      status: String as PropType<UploadProps["status"]>,
+      value: String as PropType<UploadProps["value"]>,
+    },
     setup() {
       return () => <div class={["l-upload", {}]}></div>;
     },

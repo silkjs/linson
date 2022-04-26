@@ -6,9 +6,9 @@ const emits: IconEmits = {};
 
 export const Icon = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-icon",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-icon", {}]}></div>;
     },

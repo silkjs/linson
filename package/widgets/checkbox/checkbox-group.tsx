@@ -3,20 +3,22 @@ import { withInstall } from "../../utils/common";
 import { CheckboxGroupEmits, CheckboxGroupProps } from "./checkbox-group-type";
 
 const emits: CheckboxGroupEmits = {
-  "update:value": (value) => typeof value === "boolean",
   change: (value) => typeof value === "boolean",
+  "update:value": (value) => typeof value === "boolean",
 };
 
 export const CheckboxGroup = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-checkbox",
     props: {
-      disabled: {
-        type: Boolean as PropType<CheckboxGroupProps["disabled"]>,
-        default: (): CheckboxGroupProps["disabled"] => false,
-      },
+      disabled: Boolean as PropType<CheckboxGroupProps["disabled"]>,
+      options: Array as PropType<CheckboxGroupProps["options"]>,
+      readonly: Boolean as PropType<CheckboxGroupProps["readonly"]>,
+      size: String as PropType<CheckboxGroupProps["size"]>,
+      status: String as PropType<CheckboxGroupProps["status"]>,
+      value: Array as PropType<CheckboxGroupProps["value"]>,
     },
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-checkbox", {}]}></div>;
     },

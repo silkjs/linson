@@ -6,9 +6,9 @@ const emits: DividerEmits = {};
 
 export const Divider = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-divider",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-divider", {}]}></div>;
     },

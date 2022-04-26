@@ -6,9 +6,9 @@ const emits: TabsEmits = {};
 
 export const Tabs = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-tabs",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-tabs", {}]}></div>;
     },

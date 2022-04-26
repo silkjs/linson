@@ -6,9 +6,9 @@ const emits: PopconfirmEmits = {};
 
 export const Popconfirm = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-popconfirm",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-popconfirm", {}]}></div>;
     },

@@ -6,9 +6,9 @@ const emits: MenuEmits = {};
 
 export const Menu = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-menu",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-menu", {}]}></div>;
     },

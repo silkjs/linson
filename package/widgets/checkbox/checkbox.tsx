@@ -3,29 +3,25 @@ import { withInstall } from "../../utils/common";
 import { CheckboxEmits, CheckboxProps } from "./checkbox-type";
 
 const emits: CheckboxEmits = {
-  "update:checked": (value) => typeof value === "boolean",
   change: (value) => typeof value === "boolean",
+  "update:checked": (value) => typeof value === "boolean",
 };
 
 export const Checkbox = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-checkbox",
     props: {
-      checked: {
-        type: Boolean as PropType<CheckboxProps["checked"]>,
-        default: (): CheckboxProps["checked"] => false,
-      },
-      label: {
-        type: String as PropType<CheckboxProps["label"]>,
-      },
-      disabled: {
-        type: Boolean as PropType<CheckboxProps["disabled"]>,
-        default: (): CheckboxProps["disabled"] => false,
-      },
+      checked: Boolean as PropType<CheckboxProps["checked"]>,
+      disabled: Boolean as PropType<CheckboxProps["disabled"]>,
+      label: String as PropType<CheckboxProps["label"]>,
     },
-    emits: { ...emits },
     setup() {
-      return () => <div class={["l-checkbox", {}]}></div>;
+      return () => (
+        <div class={["l-checkbox", {}]}>
+          <input type="checkbox" />
+        </div>
+      );
     },
   })
 );

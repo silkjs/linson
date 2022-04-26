@@ -1,5 +1,9 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LSize } from "../../common/linson-type";
 
-export interface FormItemProps {}
+export interface FormItemProps {
+  lable?: string;
+  name?: string;
+  size?: LSize;
+}
 
 export interface FormItemEmits {}

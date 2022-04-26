@@ -6,11 +6,16 @@ const emits: FormEmits = {};
 
 export const Form = withInstall(
   defineComponent({
-    name: "l-form",
-    props: {},
     emits: { ...emits },
-    setup() {
-      return () => <div class={["l-form", {}]}></div>;
+    name: "l-form",
+    props: {
+      disabled: Boolean as PropType<FormProps["disabled"]>,
+      group: Object as PropType<FormProps["group"]>,
+      readonly: Boolean as PropType<FormProps["readonly"]>,
+      size: String as PropType<FormProps["size"]>,
+    },
+    setup(props, { slots }) {
+      return () => <div class={["l-form", {}]}>{slots.default?.()}</div>;
     },
   })
 );

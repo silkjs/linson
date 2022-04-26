@@ -5,25 +5,19 @@ import { SpaceEmits, SpaceProps } from "./space-type";
 const emits: SpaceEmits = {};
 
 const GAP_MAP = {
-  small: 8,
-  middle: 16,
   large: 24,
+  middle: 16,
+  small: 8,
 };
 
 export const Space = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-space",
     props: {
-      size: {
-        type: [String, Number] as PropType<SpaceProps["size"]>,
-        default: (): SpaceProps["size"] => "middle",
-      },
-      direction: {
-        type: String as PropType<SpaceProps["direction"]>,
-        default: (): SpaceProps["direction"] => "horizontal",
-      },
+      direction: String as PropType<SpaceProps["direction"]>,
+      size: [String, Number] as PropType<SpaceProps["size"]>,
     },
-    emits: { ...emits },
     setup(props, { slots }) {
       const gap = computed(() => {
         return typeof props.size === "number" ? props.size : GAP_MAP[props.size ?? "middle"];

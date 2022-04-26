@@ -6,9 +6,16 @@ const emits: RadioGroupEmits = {};
 
 export const RadioGroup = withInstall(
   defineComponent({
-    name: "l-radio-group",
-    props: {},
     emits: { ...emits },
+    name: "l-radio-group",
+    props: {
+      disabled: Boolean as PropType<RadioGroupProps["disabled"]>,
+      placeholder: String as PropType<RadioGroupProps["placeholder"]>,
+      readonly: Boolean as PropType<RadioGroupProps["readonly"]>,
+      size: String as PropType<RadioGroupProps["size"]>,
+      status: String as PropType<RadioGroupProps["status"]>,
+      value: String as PropType<RadioGroupProps["value"]>,
+    },
     setup() {
       return () => <div class={["l-radio-group", {}]}></div>;
     },

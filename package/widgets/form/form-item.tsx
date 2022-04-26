@@ -6,11 +6,15 @@ const emits: FormItemEmits = {};
 
 export const FormItem = withInstall(
   defineComponent({
-    name: "l-form-item",
-    props: {},
     emits: { ...emits },
-    setup() {
-      return () => <div class={["l-form-item", {}]}></div>;
+    name: "l-form-item",
+    props: {
+      lable: String as PropType<FormItemProps["lable"]>,
+      name: String as PropType<FormItemProps["name"]>,
+      size: String as PropType<FormItemProps["size"]>,
+    },
+    setup(props, { slots }) {
+      return () => <div class={["l-form-item", {}]}>{slots.default?.()}</div>;
     },
   })
 );

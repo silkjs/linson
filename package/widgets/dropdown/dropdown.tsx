@@ -6,9 +6,9 @@ const emits: DropdownEmits = {};
 
 export const Dropdown = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-dropdown",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-dropdown", {}]}></div>;
     },

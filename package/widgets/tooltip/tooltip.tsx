@@ -6,9 +6,9 @@ const emits: TooltipEmits = {};
 
 export const Tooltip = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-tooltip",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-tooltip", {}]}></div>;
     },

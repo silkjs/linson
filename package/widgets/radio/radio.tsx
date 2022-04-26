@@ -6,11 +6,22 @@ const emits: RadioEmits = {};
 
 export const Radio = withInstall(
   defineComponent({
-    name: "l-radio",
-    props: {},
     emits: { ...emits },
+    name: "l-radio",
+    props: {
+      disabled: Boolean as PropType<RadioProps["disabled"]>,
+      placeholder: String as PropType<RadioProps["placeholder"]>,
+      readonly: Boolean as PropType<RadioProps["readonly"]>,
+      size: String as PropType<RadioProps["size"]>,
+      status: String as PropType<RadioProps["status"]>,
+      value: String as PropType<RadioProps["value"]>,
+    },
     setup() {
-      return () => <div class={["l-radio", {}]}></div>;
+      return () => (
+        <div class={["l-radio", {}]}>
+          <input type="radio" />
+        </div>
+      );
     },
   })
 );

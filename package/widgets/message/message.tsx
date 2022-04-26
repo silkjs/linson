@@ -6,9 +6,9 @@ const emits: MessageEmits = {};
 
 export const Message = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-message",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-message", {}]}></div>;
     },

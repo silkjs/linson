@@ -1,15 +1,16 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LSize } from "../../common/linson-type";
 
 export interface CheckboxProps {
   checked?: boolean;
+  disabled?: boolean;
+  size?: LSize;
   label?: string;
   value?: string | number;
   readonly?: boolean;
   name?: string;
-  disabled?: boolean;
 }
 
 export interface CheckboxEmits {
-  "update:checked": (value: boolean) => void;
   change: (value: boolean) => void;
+  "update:checked": (value: boolean) => void;
 }

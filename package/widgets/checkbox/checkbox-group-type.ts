@@ -1,13 +1,15 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LSize, LStatus } from "../../common/linson-type";
 
 export interface CheckboxGroupProps {
-  value?: Array<string | number>;
-  name?: string;
-  options?: Array<string | { lable: string; value: string }>;
   disabled?: boolean;
+  options?: Array<string | { lable: string; value: string }>;
+  readonly?: boolean;
+  size?: LSize;
+  status?: LStatus;
+  value?: Array<string | number>;
 }
 
 export interface CheckboxGroupEmits {
-  "update:value": (value: boolean) => void;
   change: (value: boolean) => void;
+  "update:value": (value: boolean) => void;
 }

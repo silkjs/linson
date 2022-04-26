@@ -17,7 +17,7 @@
     "rollup": "rimraf dist/* && rollup --config ./rollup.config.ts",
     "typescript": "rimraf types/* && tsc -b tsconfig.build.json",
     "test": "jest --config=jest.config.json",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix --quiet",
     "prettier": "prettier --write .",
     "prepare": "husky install"
   },

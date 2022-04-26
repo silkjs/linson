@@ -6,9 +6,9 @@ const emits: TableEmits = {};
 
 export const Table = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-table",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-table", {}]}></div>;
     },

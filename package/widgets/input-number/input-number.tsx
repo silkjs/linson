@@ -6,9 +6,16 @@ const emits: InputNumberEmits = {};
 
 export const InputNumber = withInstall(
   defineComponent({
-    name: "l-input-number",
-    props: {},
     emits: { ...emits },
+    name: "l-input-number",
+    props: {
+      disabled: Boolean as PropType<InputNumberProps["disabled"]>,
+      placeholder: String as PropType<InputNumberProps["placeholder"]>,
+      readonly: Boolean as PropType<InputNumberProps["readonly"]>,
+      size: String as PropType<InputNumberProps["size"]>,
+      status: String as PropType<InputNumberProps["status"]>,
+      value: Number as PropType<InputNumberProps["value"]>,
+    },
     setup() {
       return () => <div class={["l-input-number", {}]}></div>;
     },

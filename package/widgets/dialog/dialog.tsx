@@ -6,9 +6,9 @@ const emits: DialogEmits = {};
 
 export const Dialog = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-dialog",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-dialog", {}]}></div>;
     },

@@ -9,7 +9,7 @@ export { Cascader } from "./widgets/cascader";
 export { CheckboxGroup, Checkbox } from "./widgets/checkbox";
 export { DatePicker } from "./widgets/date-picker";
 export { Form, FormItem } from "./widgets/form";
-export { Input } from "./widgets/input";
+export { InputGroup, Input } from "./widgets/input";
 export { InputNumber } from "./widgets/input-number";
 export { RadioGroup, Radio } from "./widgets/radio";
 export { Select } from "./widgets/select";

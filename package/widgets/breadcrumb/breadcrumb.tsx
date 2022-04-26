@@ -6,9 +6,9 @@ const emits: BreadcrumbEmits = {};
 
 export const Breadcrumb = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-breadcrumb",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-breadcrumb", {}]}></div>;
     },

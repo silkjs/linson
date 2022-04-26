@@ -1,5 +1,12 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LSize, LStatus } from "../../common/linson-type";
 
-export interface InputNumberProps {}
+export interface InputNumberProps {
+  disabled?: boolean;
+  placeholder?: string;
+  readonly?: boolean;
+  size?: LSize;
+  status?: LStatus;
+  value?: number;
+}
 
 export interface InputNumberEmits {}

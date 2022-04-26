@@ -6,9 +6,9 @@ const emits: AlertEmits = {};
 
 export const Alert = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-alert",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-alert", {}]}></div>;
     },

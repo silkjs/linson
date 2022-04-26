@@ -6,9 +6,9 @@ const emits: CarouselEmits = {};
 
 export const Carousel = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-carousel",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-carousel", {}]}></div>;
     },

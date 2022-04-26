@@ -6,9 +6,9 @@ const emits: PaginationEmits = {};
 
 export const Pagination = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-pagination",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-pagination", {}]}></div>;
     },

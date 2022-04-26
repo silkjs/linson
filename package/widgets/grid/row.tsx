@@ -6,10 +6,7 @@ export const Row = withInstall(
   defineComponent({
     name: "l-row",
     props: {
-      gutter: {
-        type: [Number, Array] as PropType<RowProps["gutter"]>,
-        default: (): RowProps["gutter"] => 0,
-      },
+      gutter: [Number, Array] as PropType<RowProps["gutter"]>,
     },
     setup(props, { slots }) {
       provide<RowProviderType>("RowContext", {

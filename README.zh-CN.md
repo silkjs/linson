@@ -1,16 +1,16 @@
-# Linson
+# 林森
 
 A Vue 3 Component Library.
 
-## Usage
+## 用例 Usage
 
-install
+安装
 
 ```bash
 npm install @silkjs/linson
 ```
 
-import
+引用
 
 ```typescript
 // style
@@ -25,7 +25,7 @@ import { Button } from "@silkjs/linson";
 app.use(Button);
 ```
 
-template mode
+模板模式
 
 ```html
 <template>
@@ -46,7 +46,7 @@ template mode
 </script>
 ```
 
-tsx mode
+渲染函数模式
 
 ```typescript
 import { defineComponent } from "vue";
@@ -77,54 +77,54 @@ defineComponent({
 });
 ```
 
-## Widgets
+## 组件
 
-### General
+### 通用
 
-- Button
-- Divider
-- Dropdown
-- Icon
+- 按钮 Button
+- 分割线 Divider
+- 下拉菜单 Dropdown
+- 图标 Icon
 
-### Entry
+### 输入
 
-- Cascader
-- Checkbox
-- DatePicker
-- Form
-- Input
-- InputNumber
-- Radio
-- Select
-- Switch
-- TimePicker
-- Upload
+- 级联选择器 Cascader
+- 复选框 Checkbox
+- 日期选择器 DatePicker
+- 表单 Form
+- 输入框 Input
+- 数字输入框 InputNumber
+- 单选框 Radio
+- 选择器 Select
+- 开关 Switch
+- 时间选择器 TimePicker
+- 上传 Upload
 
-### Layout
+### 布局
 
-- Grid
-- Space
+- 栅格 Grid
+- 间距 Space
 
-### Display
+### 展示
 
-- Carousel
-- Skeleton
-- Table
-- Tag
+- 轮播图 Carousel
+- 骨架屏 Skeleton
+- 表格 Table
+- 标签 Tag
 
-### Feedback
+### 反馈
 
-- Alert
-- Dialog
-- Message
-- Popconfirm
-- Popover
-- Tooltip
+- 警告 Alert
+- 对话框 Dialog
+- 全局提示 Message
+- 气泡确认框 Popconfirm
+- 气泡卡片 Popover
+- 文字提示 Tooltip
 
-### Navigation
+### 导航
 
-- Breadcrumb
-- Menu
-- Pagination
-- Steps
-- Tabs
+- 面包屑 Breadcrumb
+- 导航菜单 Menu
+- 分页 Pagination
+- 步骤条 Steps
+- 选项卡 Tabs

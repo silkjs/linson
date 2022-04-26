@@ -6,9 +6,9 @@ const emits: TagEmits = {};
 
 export const Tag = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-tag",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-tag", {}]}></div>;
     },

@@ -6,9 +6,9 @@ const emits: SkeletonEmits = {};
 
 export const Skeleton = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-skeleton",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-skeleton", {}]}></div>;
     },

@@ -6,9 +6,9 @@ const emits: PopoverEmits = {};
 
 export const Popover = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-popover",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-popover", {}]}></div>;
     },

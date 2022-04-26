@@ -20,6 +20,7 @@ const configs = fs
 
 export default defineConfig(
   configs.map((config) => ({
+    external: ["vue"],
     input: config.input,
     output: [
       {
@@ -35,10 +36,9 @@ export default defineConfig(
         extensions: [".ts", ".tsx"],
       }),
       postcss({
-        plugins: [autoprefixer()],
         extensions: [".css", ".scss"],
+        plugins: [autoprefixer()],
       }),
     ],
-    external: ["vue"],
   }))
 );

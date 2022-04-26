@@ -7,10 +7,7 @@ export const Col = withInstall(
   defineComponent({
     name: "l-col",
     props: {
-      span: {
-        type: Number as PropType<ColProps["span"]>,
-        default: (): ColProps["span"] => 12,
-      },
+      span: Number as PropType<ColProps["span"]>,
     },
     setup(props, { slots }) {
       const context = inject<RowProviderType>("RowContext", {});

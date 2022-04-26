@@ -6,9 +6,16 @@ const emits: TimePickerEmits = {};
 
 export const TimePicker = withInstall(
   defineComponent({
-    name: "l-time-picker",
-    props: {},
     emits: { ...emits },
+    name: "l-time-picker",
+    props: {
+      disabled: Boolean as PropType<TimePickerProps["disabled"]>,
+      placeholder: String as PropType<TimePickerProps["placeholder"]>,
+      readonly: Boolean as PropType<TimePickerProps["readonly"]>,
+      size: String as PropType<TimePickerProps["size"]>,
+      status: String as PropType<TimePickerProps["status"]>,
+      value: String as PropType<TimePickerProps["value"]>,
+    },
     setup() {
       return () => <div class={["l-time-picker", {}]}></div>;
     },

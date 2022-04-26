@@ -6,9 +6,9 @@ const emits: StepsEmits = {};
 
 export const Steps = withInstall(
   defineComponent({
+    emits: { ...emits },
     name: "l-steps",
     props: {},
-    emits: { ...emits },
     setup() {
       return () => <div class={["l-steps", {}]}></div>;
     },

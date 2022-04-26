@@ -6,8 +6,8 @@ describe("utils common", () => {
     const app = createApp({});
     const Message = withInstall({
       name: "l-message",
-      template: "<p>{{ msg }}</p>",
       props: ["msg"],
+      template: "<p>{{ msg }}</p>",
     });
     expect(Message).toHaveProperty("install");
     app.use(Message);

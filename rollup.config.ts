@@ -8,16 +8,17 @@ import autoprefixer from "autoprefixer";
 
 export default defineConfig([
   {
+    external: ["vue"],
     input: path.resolve(__dirname, "./package/linson.ts"),
     output: [
       {
+        extend: true,
         file: path.resolve(__dirname, "./dist/linson.iife.js"),
         format: "iife",
-        name: "linson",
         globals: {
           vue: "Vue",
         },
-        extend: true,
+        name: "linson",
       },
       {
         file: path.resolve(__dirname, "./dist/linson.cjs.js"),
@@ -37,12 +38,11 @@ export default defineConfig([
         extensions: [".ts", ".tsx"],
       }),
       postcss({
-        plugins: [autoprefixer()],
         extensions: [".css", ".scss"],
         extract: "linson.css",
+        plugins: [autoprefixer()],
       }),
       json(),
     ],
-    external: ["vue"],
   },
 ]);
