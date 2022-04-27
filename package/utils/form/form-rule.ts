@@ -37,6 +37,11 @@ interface RuleCustom<T> {
   validator: ValidatorFn<T>;
 }
 
-export type RuleString = RuleMaxLength | RuleMinLength | RulePattern | RuleRequired<string> | RuleCustom<number>;
-export type RuleNumber = RuleMax | RuleMin | RuleRequired<number> | RuleCustom<string>;
-export type Rule<T = any> = RuleRequired<T> | RuleCustom<T>;
+export type Rule<T = any> =
+  | RuleMaxLength
+  | RuleMinLength
+  | RulePattern
+  | RuleMax
+  | RuleMin
+  | RuleRequired<T>
+  | RuleCustom<T>;

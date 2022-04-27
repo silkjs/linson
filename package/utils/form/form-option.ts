@@ -1,9 +1,9 @@
-import { Rule, RuleNumber, RuleString } from "./form-rule";
+import { Rule } from "./form-rule";
 
 type ControlOption = FormControlOption | FormArrayOption | FormGroupOption;
 
 type FormControlOption = {
-  rules: RuleNumber[] | RuleString[] | Rule[];
+  rules: Rule[];
 };
 type FormArrayOption = ControlOption[];
 type FormGroupOption = {

@@ -10,6 +10,7 @@ export const FormItem = withInstall(
     name: "l-form-item",
     props: {
       lable: String as PropType<FormItemProps["lable"]>,
+      rules: Array as PropType<FormItemProps["rules"]>,
       size: String as PropType<FormItemProps["size"]>,
     },
     setup(props, { slots }) {
