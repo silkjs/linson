@@ -6,12 +6,12 @@ export { Icon } from "./widgets/icon";
 
 // 输入 Entry
 export { Cascader } from "./widgets/cascader";
-export { CheckboxGroup, Checkbox } from "./widgets/checkbox";
+export { Checkbox, CheckboxGroup } from "./widgets/checkbox";
 export { DatePicker } from "./widgets/date-picker";
 export { Form, FormItem } from "./widgets/form";
-export { InputGroup, Input } from "./widgets/input";
+export { Input, InputGroup } from "./widgets/input";
 export { InputNumber } from "./widgets/input-number";
-export { RadioGroup, Radio } from "./widgets/radio";
+export { Radio, RadioGroup } from "./widgets/radio";
 export { Select } from "./widgets/select";
 export { Switch } from "./widgets/switch";
 export { TimePicker } from "./widgets/time-picker";
@@ -40,4 +40,4 @@ export { Breadcrumb } from "./widgets/breadcrumb";
 export { Menu } from "./widgets/menu";
 export { Pagination } from "./widgets/pagination";
 export { Steps } from "./widgets/steps";
-export { Tabs } from "./widgets/tabs";
+export { Tabs, TabPane } from "./widgets/tabs";
