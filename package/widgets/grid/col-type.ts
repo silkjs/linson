@@ -1,3 +1,3 @@
 export interface ColProps {
-  span?: number;
+  span: number;
 }

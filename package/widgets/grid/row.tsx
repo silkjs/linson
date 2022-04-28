@@ -6,7 +6,10 @@ export const Row = withInstall(
   defineComponent({
     name: "l-row",
     props: {
-      gutter: [Number, Array] as PropType<RowProps["gutter"]>,
+      gutter: {
+        default: (): RowProps["gutter"] => 0,
+        type: [Number, Array] as PropType<RowProps["gutter"]>,
+      },
     },
     setup(props, { slots }) {
       provide<RowInjection>(ROW_INJECTION_KEY, {

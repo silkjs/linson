@@ -13,15 +13,41 @@ export const Button = withInstall(
     emits: { ...emits },
     name: "l-button",
     props: {
-      block: Boolean as PropType<ButtonProps["block"]>,
-      content: [String, Function] as PropType<ButtonProps["content"]>,
-      disabled: Boolean as PropType<ButtonProps["disabled"]>,
-      ghost: Boolean as PropType<ButtonProps["ghost"]>,
-      loading: Boolean as PropType<ButtonProps["loading"]>,
-      size: String as PropType<ButtonProps["size"]>,
-      theme: String as PropType<ButtonProps["theme"]>,
-      type: String as PropType<ButtonProps["type"]>,
-      variant: String as PropType<ButtonProps["variant"]>,
+      block: {
+        default: (): ButtonProps["block"] => false,
+        type: Boolean as PropType<ButtonProps["block"]>,
+      },
+      content: {
+        type: [String, Function] as PropType<ButtonProps["content"]>,
+      },
+      disabled: {
+        default: (): ButtonProps["disabled"] => false,
+        type: Boolean as PropType<ButtonProps["disabled"]>,
+      },
+      ghost: {
+        default: (): ButtonProps["ghost"] => false,
+        type: Boolean as PropType<ButtonProps["ghost"]>,
+      },
+      loading: {
+        default: (): ButtonProps["loading"] => false,
+        type: Boolean as PropType<ButtonProps["loading"]>,
+      },
+      size: {
+        default: (): ButtonProps["size"] => "medium",
+        type: String as PropType<ButtonProps["size"]>,
+      },
+      theme: {
+        default: (): ButtonProps["theme"] => "default",
+        type: String as PropType<ButtonProps["theme"]>,
+      },
+      type: {
+        default: (): ButtonProps["type"] => "button",
+        type: String as PropType<ButtonProps["type"]>,
+      },
+      variant: {
+        default: (): ButtonProps["variant"] => "base",
+        type: String as PropType<ButtonProps["variant"]>,
+      },
     },
     setup(props, { emit, slots }) {
       props.variant;
