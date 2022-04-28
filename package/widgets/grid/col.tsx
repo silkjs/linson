@@ -1,7 +1,7 @@
 import { type PropType, defineComponent, inject } from "vue";
 import { withInstall } from "../../utils/common";
 import { ColProps } from "./col-type";
-import { RowProviderType } from "./row-type";
+import { ROW_INJECTION_KEY } from "./row-type";
 
 export const Col = withInstall(
   defineComponent({
@@ -10,7 +10,7 @@ export const Col = withInstall(
       span: Number as PropType<ColProps["span"]>,
     },
     setup(props, { slots }) {
-      const context = inject<RowProviderType>("RowContext", {});
+      const context = inject(ROW_INJECTION_KEY, {});
       const gutter = context.gutter ?? 0;
       const gap = { h: 0, v: 0 };
       if (typeof gutter === "number") {

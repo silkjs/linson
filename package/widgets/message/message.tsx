@@ -8,7 +8,19 @@ export const Message = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-message",
-    props: {},
+    props: {
+      content: {
+        type: [String, Function] as PropType<MessageProps["content"]>,
+      },
+      duration: {
+        default: (): MessageProps["duration"] => 1000,
+        type: Number as PropType<MessageProps["duration"]>,
+      },
+      theme: {
+        default: (): MessageProps["theme"] => "info",
+        type: String as PropType<MessageProps["theme"]>,
+      },
+    },
     setup() {
       return () => <div class={["l-message", {}]}></div>;
     },

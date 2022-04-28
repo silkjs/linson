@@ -1,5 +1,9 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LPlacement, LTrigger } from "../../common/linson-type";
 
-export interface PopconfirmProps {}
+export interface PopconfirmProps {
+  title: string;
+  placement: LPlacement;
+  trigger: LTrigger;
+}
 
 export interface PopconfirmEmits {}

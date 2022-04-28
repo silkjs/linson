@@ -6,6 +6,7 @@ import { version } from "../package.json";
 import * as components from "./components";
 
 export * from "./components";
+export * from "./composition";
 export const Linson = {
   install: (app: App) => {
     Object.keys(components).forEach((key) => {

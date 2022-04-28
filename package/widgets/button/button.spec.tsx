@@ -31,7 +31,7 @@ describe("按钮 Button", () => {
   it("props theme", () => {
     const wrapper = mount(Button, {});
     expect(wrapper.vm.$props.theme).toEqual("default");
-    expect(wrapper.classes()).toContain("l-button--theme-default");
+    expect(wrapper.classes()).toContain("l-button-theme-default");
   });
   const themes: Array<ButtonProps["theme"]> = ["default", "primary", "error", "warning", "success"];
   themes.forEach((theme) => {
@@ -40,14 +40,14 @@ describe("按钮 Button", () => {
         props: { theme },
       });
       expect(wrapper.vm.$props.theme).toEqual(theme);
-      expect(wrapper.classes()).toContain(`l-button--theme-${theme}`);
+      expect(wrapper.classes()).toContain(`l-button-theme-${theme}`);
     });
   });
   // variant
   it("props variant", () => {
     const wrapper = mount(Button, {});
     expect(wrapper.vm.$props.variant).toEqual("base");
-    expect(wrapper.classes()).toContain("l-button--variant-base");
+    expect(wrapper.classes()).toContain("l-button-variant-base");
   });
   const variants: Array<ButtonProps["variant"]> = ["base", "outline", "dashed", "text"];
   variants.forEach((variant) => {
@@ -56,7 +56,7 @@ describe("按钮 Button", () => {
         props: { variant },
       });
       expect(wrapper.vm.$props.variant).toEqual(variant);
-      expect(wrapper.classes()).toContain(`l-button--variant-${variant}`);
+      expect(wrapper.classes()).toContain(`l-button-variant-${variant}`);
     });
   });
 

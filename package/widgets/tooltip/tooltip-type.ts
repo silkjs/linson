@@ -1,5 +1,9 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LPlacement, LTrigger } from "../../common/linson-type";
 
-export interface TooltipProps {}
+export interface TooltipProps {
+  title: string;
+  placement: LPlacement;
+  trigger: LTrigger;
+}
 
 export interface TooltipEmits {}

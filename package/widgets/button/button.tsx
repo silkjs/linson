@@ -36,8 +36,8 @@ export const Button = withInstall(
           <button
             class={[
               "l-button",
-              `l-button--theme-${props.theme}`,
-              `l-button--variant-${props.variant}`,
+              `l-button-theme-${props.theme}`,
+              `l-button-variant-${props.variant}`,
               {
                 "l-size-full-width": props.block,
               },

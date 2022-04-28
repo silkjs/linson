@@ -1,5 +1,11 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LSize } from "../../common/linson-type";
 
-export interface TabsProps {}
+export interface TabsProps {
+  value: string;
+  size: LSize;
+  placement: "left" | "top" | "bottom" | "right";
+}
 
-export interface TabsEmits {}
+export interface TabsEmits {
+  "update:value": (value: string) => void;
+}

@@ -58,7 +58,6 @@ $board: (
   gray-13: (#242424, #eee),
   gray-14: (#181818, #f3f3f3)
 );
-
 $colors: (
   // 基础色
   default: map.get($board, "gray-4"),

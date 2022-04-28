@@ -8,9 +8,12 @@ export const TabPane = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-tab-pane",
-    props: {},
-    setup() {
-      return () => <div class={["l-tab-pane", {}]}></div>;
+    props: {
+      name: String as PropType<TabPaneProps["name"]>,
+      tab: [String, Function] as PropType<TabPaneProps["tab"]>,
+    },
+    setup(props, { slots }) {
+      return () => <div class={["l-tab-pane", {}]}>{slots.default?.()}</div>;
     },
   })
 );

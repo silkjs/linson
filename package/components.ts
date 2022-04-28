@@ -29,15 +29,15 @@ export { Tag } from "./widgets/tag";
 
 // 反馈 Feedback
 export { Alert } from "./widgets/alert";
-export { Dialog } from "./widgets/dialog";
-export { Message } from "./widgets/message";
+export { Dialog, DialogProvider } from "./widgets/dialog";
+export { Message, MessageProvider } from "./widgets/message";
 export { Popconfirm } from "./widgets/popconfirm";
 export { Popover } from "./widgets/popover";
 export { Tooltip } from "./widgets/tooltip";
 
 // 导航 Navigation
-export { Breadcrumb } from "./widgets/breadcrumb";
-export { Menu } from "./widgets/menu";
+export { Breadcrumb, BreadcrumbItem } from "./widgets/breadcrumb";
+export { Menu, MenuSub, MenuItem } from "./widgets/menu";
 export { Pagination } from "./widgets/pagination";
-export { Steps } from "./widgets/steps";
+export { Steps, StepItem } from "./widgets/steps";
 export { Tabs, TabPane } from "./widgets/tabs";

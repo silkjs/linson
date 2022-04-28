@@ -1,5 +1,9 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LSize } from "../../common/linson-type";
 
-export interface StepsProps {}
+export interface StepsProps {
+  current: number;
+  size: LSize;
+  vertical: boolean;
+}
 
 export interface StepsEmits {}

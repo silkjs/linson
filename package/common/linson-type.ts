@@ -17,3 +17,4 @@ export type LPlacement =
   | "left-start"
   | "left"
   | "left-end";
+export type LTrigger = "hover" | "focus" | "click" | "contextmenu";

@@ -3,196 +3,237 @@
 .l-button {
   position: relative;
   z-index: 0;
-  overflow: hidden;
-  font-size: 14px;
-  outline: none;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  background-color: transparent;
-  cursor: pointer;
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  vertical-align: middle;
-  white-space: nowrap;
+  align-items: center;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
   border-radius: 3px;
+  font-size: 14px;
+  white-space: nowrap;
+  background-color: transparent;
+  outline: none;
   transition: all 0.2s linear;
+  cursor: pointer;
+  vertical-align: middle;
   user-select: none;
   touch-action: manipulation;
+
   &.l-size-full-width {
     display: block;
     width: 100%;
   }
-  &.l-button--variant-base {
-    height: 32px;
-    font-size: 14px;
-    padding-left: 15px;
-    padding-right: 15px;
 
-    &.l-button--theme-default {
+  &.l-button-variant-base {
+    height: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+
+    &.l-button-theme-default {
       color: get-color("gray-12");
       background-color: get-color("default");
+
       &:hover {
         background-color: get-color("default-hover");
       }
     }
-    &.l-button--theme-primary {
+
+    &.l-button-theme-primary {
       color: get-color("gray-1");
       background-color: get-color("primary");
+
       &:hover {
         background-color: get-color("primary-hover");
       }
     }
-    &.l-button--theme-error {
+
+    &.l-button-theme-error {
       color: get-color("gray-1");
       background-color: get-color("error");
+
       &:hover {
         background-color: get-color("error-hover");
       }
     }
-    &.l-button--theme-warning {
+
+    &.l-button-theme-warning {
       color: get-color("gray-1");
       background-color: get-color("warning");
+
       &:hover {
         background-color: get-color("warning-hover");
       }
     }
-    &.l-button--theme-success {
+
+    &.l-button-theme-success {
       color: get-color("gray-1");
       background-color: get-color("success");
+
       &:hover {
         background-color: get-color("success-hover");
       }
     }
   }
-  &.l-button--variant-outline {
-    height: 32px;
-    font-size: 14px;
-    padding-left: 15px;
-    padding-right: 15px;
 
-    &.l-button--theme-default {
-      color: get-color("gray-14");
+  &.l-button-variant-outline {
+    height: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+
+    &.l-button-theme-default {
       border-color: get-color("default");
+      color: get-color("gray-14");
+
       &:hover {
-        color: get-color("primary-hover");
         border-color: get-color("primary-hover");
+        color: get-color("primary-hover");
       }
     }
-    &.l-button--theme-primary {
-      color: get-color("primary");
+
+    &.l-button-theme-primary {
       border-color: get-color("primary");
+      color: get-color("primary");
+
       &:hover {
-        color: get-color("primary-hover");
         border-color: get-color("primary-hover");
+        color: get-color("primary-hover");
       }
     }
-    &.l-button--theme-error {
-      color: get-color("error");
+
+    &.l-button-theme-error {
       border-color: get-color("error");
+      color: get-color("error");
+
       &:hover {
-        color: get-color("error-hover");
         border-color: get-color("error-hover");
+        color: get-color("error-hover");
       }
     }
-    &.l-button--theme-warning {
-      color: get-color("warning");
+
+    &.l-button-theme-warning {
       border-color: get-color("warning");
+      color: get-color("warning");
+
       &:hover {
-        color: get-color("warning-hover");
         border-color: get-color("warning-hover");
+        color: get-color("warning-hover");
       }
     }
-    &.l-button--theme-success {
-      color: get-color("success");
+
+    &.l-button-theme-success {
       border-color: get-color("success");
+      color: get-color("success");
+
       &:hover {
-        color: get-color("success-hover");
         border-color: get-color("success-hover");
+        color: get-color("success-hover");
       }
     }
   }
-  &.l-button--variant-dashed {
+
+  &.l-button-variant-dashed {
     height: 32px;
-    font-size: 14px;
-    padding-left: 15px;
-    padding-right: 15px;
     border-style: dashed;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 14px;
 
-    &.l-button--theme-default {
-      color: get-color("gray-14");
+    &.l-button-theme-default {
       border-color: get-color("default");
+      color: get-color("gray-14");
+
       &:hover {
-        color: get-color("primary-hover");
         border-color: get-color("primary-hover");
+        color: get-color("primary-hover");
       }
     }
-    &.l-button--theme-primary {
-      color: get-color("primary");
+
+    &.l-button-theme-primary {
       border-color: get-color("primary");
+      color: get-color("primary");
+
       &:hover {
-        color: get-color("primary-hover");
         border-color: get-color("primary-hover");
+        color: get-color("primary-hover");
       }
     }
-    &.l-button--theme-error {
-      color: get-color("error");
+
+    &.l-button-theme-error {
       border-color: get-color("error");
+      color: get-color("error");
+
       &:hover {
-        color: get-color("error-hover");
         border-color: get-color("error-hover");
+        color: get-color("error-hover");
       }
     }
-    &.l-button--theme-warning {
-      color: get-color("warning");
+
+    &.l-button-theme-warning {
       border-color: get-color("warning");
+      color: get-color("warning");
+
       &:hover {
-        color: get-color("warning-hover");
         border-color: get-color("warning-hover");
+        color: get-color("warning-hover");
       }
     }
-    &.l-button--theme-success {
-      color: get-color("success");
+
+    &.l-button-theme-success {
       border-color: get-color("success");
+      color: get-color("success");
+
       &:hover {
-        color: get-color("success-hover");
         border-color: get-color("success-hover");
+        color: get-color("success-hover");
       }
     }
   }
-  &.l-button--variant-text {
-    height: 32px;
-    font-size: 14px;
-    padding-left: 15px;
-    padding-right: 15px;
 
-    &.l-button--theme-default {
+  &.l-button-variant-text {
+    height: 32px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+
+    &.l-button-theme-default {
       color: get-color("gray-14");
+
       &:hover {
         background-color: get-color("gray-3");
       }
     }
-    &.l-button--theme-primary {
+
+    &.l-button-theme-primary {
       color: get-color("primary");
+
       &:hover {
         background-color: get-color("gray-3");
       }
     }
-    &.l-button--theme-error {
+
+    &.l-button-theme-error {
       color: get-color("error");
+
       &:hover {
         background-color: get-color("gray-3");
       }
     }
-    &.l-button--theme-warning {
+
+    &.l-button-theme-warning {
       color: get-color("warning");
+
       &:hover {
         background-color: get-color("gray-3");
       }
     }
-    &.l-button--theme-success {
+
+    &.l-button-theme-success {
       color: get-color("success");
+
       &:hover {
         background-color: get-color("gray-3");
       }

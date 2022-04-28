@@ -8,7 +8,20 @@ export const Menu = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-menu",
-    props: {},
+    props: {
+      collapsed: {
+        default: (): MenuProps["collapsed"] => false,
+        type: Boolean as PropType<MenuProps["collapsed"]>,
+      },
+      mode: {
+        default: (): MenuProps["mode"] => "vertical",
+        type: String as PropType<MenuProps["mode"]>,
+      },
+      theme: {
+        default: (): MenuProps["theme"] => "light",
+        type: String as PropType<MenuProps["theme"]>,
+      },
+    },
     setup() {
       return () => <div class={["l-menu", {}]}></div>;
     },

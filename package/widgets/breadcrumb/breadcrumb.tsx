@@ -8,7 +8,16 @@ export const Breadcrumb = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-breadcrumb",
-    props: {},
+    props: {
+      options: {
+        default: (): BreadcrumbProps["options"] => [],
+        type: Array as PropType<BreadcrumbProps["options"]>,
+      },
+      separator: {
+        default: (): BreadcrumbProps["separator"] => "/",
+        type: [String, Function] as PropType<BreadcrumbProps["separator"]>,
+      },
+    },
     setup() {
       return () => <div class={["l-breadcrumb", {}]}></div>;
     },

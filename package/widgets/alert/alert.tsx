@@ -8,7 +8,15 @@ export const Alert = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-alert",
-    props: {},
+    props: {
+      message: {
+        type: String as PropType<AlertProps["message"]>,
+      },
+      theme: {
+        default: (): AlertProps["theme"] => "success",
+        type: String as PropType<AlertProps["theme"]>,
+      },
+    },
     setup() {
       return () => <div class={["l-alert", {}]}></div>;
     },

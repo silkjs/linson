@@ -8,7 +8,17 @@ export const Tooltip = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-tooltip",
-    props: {},
+    props: {
+      placement: {
+        default: (): TooltipProps["placement"] => "top",
+        type: String as PropType<TooltipProps["placement"]>,
+      },
+      title: String as PropType<TooltipProps["title"]>,
+      trigger: {
+        default: (): TooltipProps["trigger"] => "hover",
+        type: String as PropType<TooltipProps["trigger"]>,
+      },
+    },
     setup() {
       return () => <div class={["l-tooltip", {}]}></div>;
     },

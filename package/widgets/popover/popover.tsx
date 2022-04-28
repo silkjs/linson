@@ -8,7 +8,17 @@ export const Popover = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-popover",
-    props: {},
+    props: {
+      placement: {
+        default: (): PopoverProps["placement"] => "top",
+        type: String as PropType<PopoverProps["placement"]>,
+      },
+      title: String as PropType<PopoverProps["title"]>,
+      trigger: {
+        default: (): PopoverProps["trigger"] => "hover",
+        type: String as PropType<PopoverProps["trigger"]>,
+      },
+    },
     setup() {
       return () => <div class={["l-popover", {}]}></div>;
     },
