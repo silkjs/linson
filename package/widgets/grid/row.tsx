@@ -1,6 +1,6 @@
 import { type PropType, defineComponent, provide } from "vue";
 import { withInstall } from "../../utils/common";
-import { ROW_INJECTION_KEY, RowInjection, RowProps } from "./row-type";
+import { ROW_INJECTION_KEY, RowProps } from "./row-type";
 
 export const Row = withInstall(
   defineComponent({
@@ -12,7 +12,7 @@ export const Row = withInstall(
       },
     },
     setup(props, { slots }) {
-      provide<RowInjection>(ROW_INJECTION_KEY, {
+      provide(ROW_INJECTION_KEY, {
         gutter: props.gutter,
       });
       return () => <div class={["l-row", {}]}>{slots.default?.()}</div>;

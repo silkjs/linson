@@ -1,1 +1,65 @@
 @import "../../common/styles/theme.scss";
+
+.l-tabs {
+  display: flex;
+  width: 100%;
+
+  &.l-tabs-position-top {
+    flex-direction: column;
+  }
+
+  &.l-tabs-position-right {
+    flex-direction: row;
+  }
+
+  &.l-tabs-position-bottom {
+    flex-direction: column;
+  }
+
+  &.l-tabs-position-left {
+    flex-direction: row;
+  }
+
+  .l-tabs-nav {
+    position: relative;
+    display: flex;
+    gap: "16px";
+    border-bottom: 1px solid get-color("gray-2");
+
+    .l-tabs-tab {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 0;
+      font-size: 14px;
+      cursor: pointer;
+
+      & + .l-tabs-tab {
+        margin-left: 32px;
+      }
+
+      &.l-tabs-tab-active {
+        color: get-color("primary");
+      }
+    }
+
+    .l-tabs-bar {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: get-color("primary");
+    }
+  }
+
+  .l-tabs-content {
+    .l-tabs-pane {
+      display: none;
+
+      &.l-tabs-pane-active {
+        display: block;
+      }
+    }
+  }
+}

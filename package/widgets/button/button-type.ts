@@ -10,7 +10,7 @@ export interface ButtonProps {
   /**
    * 按钮内容
    */
-  content: string | LNode;
+  content: string | object | LNode;
 
   /**
    * 是否禁用按钮

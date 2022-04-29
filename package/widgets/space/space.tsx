@@ -15,12 +15,18 @@ export const Space = withInstall(
     emits: { ...emits },
     name: "l-space",
     props: {
-      direction: String as PropType<SpaceProps["direction"]>,
-      size: [String, Number] as PropType<SpaceProps["size"]>,
+      direction: {
+        default: (): SpaceProps["direction"] => "horizontal",
+        type: String as PropType<SpaceProps["direction"]>,
+      },
+      size: {
+        default: (): SpaceProps["size"] => "middle",
+        type: [String, Number] as PropType<SpaceProps["size"]>,
+      },
     },
     setup(props, { slots }) {
       const gap = computed(() => {
-        return typeof props.size === "number" ? props.size : GAP_MAP[props.size ?? "middle"];
+        return typeof props.size === "number" ? props.size : GAP_MAP[props.size];
       });
 
       return () => {

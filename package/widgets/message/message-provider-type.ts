@@ -1,8 +1,13 @@
-import { LNode } from "../../common/linson-type";
+import { LNode, LPlacement } from "../../common/linson-type";
 import { createInjectionKey } from "../../utils/context";
 import { MessageProps } from "./message-type";
 
-export interface MessageProviderProps {}
+export interface MessageProviderProps {
+  duration: number;
+  max: number;
+  placement: LPlacement;
+  to: string | HTMLElement;
+}
 
 export interface MessageProviderEmits {}
 

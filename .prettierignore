@@ -1,6 +1,5 @@
 .coverage/
 .husky/
-app/
 dist/
 node_modules/
 types/

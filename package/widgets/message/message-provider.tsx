@@ -13,8 +13,24 @@ export const MessageProvider = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-message-provider",
-    props: {},
-    setup() {
+    props: {
+      duration: {
+        default: (): MessageProviderProps["duration"] => 1000,
+        type: Number as PropType<MessageProviderProps["duration"]>,
+      },
+      max: {
+        default: (): MessageProviderProps["max"] => 10,
+        type: Number as PropType<MessageProviderProps["max"]>,
+      },
+      placement: {
+        default: (): MessageProviderProps["placement"] => "top",
+        type: String as PropType<MessageProviderProps["placement"]>,
+      },
+      to: {
+        type: [String, Object] as PropType<MessageProviderProps["to"]>,
+      },
+    },
+    setup(props, { slots }) {
       const api: MessageApiInjection = {
         create() {
           //
@@ -36,7 +52,7 @@ export const MessageProvider = withInstall(
         },
       };
       provide(MESSAGE_API_INJECTION_KEY, api);
-      return () => <div class={["l-message-provider", {}]}></div>;
+      return () => slots.default?.();
     },
   })
 );

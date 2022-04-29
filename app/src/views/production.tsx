@@ -1,4 +1,3 @@
-import { defineComponent, reactive } from "vue";
 import {
   Alert,
   Breadcrumb,
@@ -8,6 +7,7 @@ import {
   Col,
   ConfigProvider,
   Dialog,
+  DialogProvider,
   Divider,
   Dropdown,
   Form,
@@ -17,6 +17,7 @@ import {
   MenuItem,
   MenuSub,
   Message,
+  MessageProvider,
   Pagination,
   Popconfirm,
   Popover,
@@ -25,27 +26,33 @@ import {
   Space,
   StepItem,
   Steps,
-  TabPane,
   Table,
+  TabPane,
   Tabs,
   Tag,
   Tooltip,
-} from "./components";
-import { useDialog, useMessage } from "./composition";
-import { Validators } from "./utils/form";
+  useDialog,
+  useMessage,
+  Validators,
+} from "@silkjs/linson";
+import { defineComponent } from "vue";
 
-export const Usage = defineComponent({
+export const Production = defineComponent({
   setup() {
     const message = useMessage();
-    const dialog = useDialog();
-    const data = reactive({
-      age: 0,
-      phone: "",
-    });
+    // const dialog = useDialog();
+    // const data = reactive({
+    //   age: 0,
+    //   phone: "",
+    // });
     return () => (
-      <>
+      <div
+        style={{
+          padding: "16px",
+        }}
+      >
         <h3>General</h3>
-        <Button>Action</Button>
+        <Button theme="primary">Action</Button>
         <p>
           这个
           <Divider direction="vertical" />
@@ -53,6 +60,19 @@ export const Usage = defineComponent({
           <Divider direction="vertical" />
           好像不是很显眼
         </p>
+        <div>
+          <p>
+            这是第一种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+          </p>
+          <Divider />
+          <p>
+            这是第二种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+          </p>
+          <Divider dashed />
+          <p>
+            这是第三种类型的内容元素或信息数据，通过分割线进行分割。分割线方便用户清晰明确的读取和预览，减少信息符合，提高用户使用效率。避免大段内容的聚集、信息负荷过多，导致信息获取或内容操作效率降低。
+          </p>
+        </div>
         <Dropdown
           v-slots={{
             overlay: () => (
@@ -85,9 +105,9 @@ export const Usage = defineComponent({
         </Form>
         <h3>Layout</h3>
         <Row>
-          <Col>8</Col>
-          <Col>8</Col>
-          <Col>8</Col>
+          <Col></Col>
+          <Col></Col>
+          <Col></Col>
         </Row>
         <Space>
           <Button>Action</Button>
@@ -108,10 +128,10 @@ export const Usage = defineComponent({
         <Dialog title="确认" content="你确定" />
         <Button
           onClick={() => {
-            dialog.create({
-              content: "你确定",
-              title: "确认",
-            });
+            // dialog.create({
+            //   content: "你确定",
+            //   title: "确认",
+            // });
           }}
         >
           Confirm
@@ -119,9 +139,9 @@ export const Usage = defineComponent({
         <Message theme="success">用于表示操作顺利达成</Message>
         <Button
           onClick={() => {
-            message.create({
-              content: "Are you sure delete this task?",
-            });
+            // message.create({
+            //   content: "Are you sure delete this task?",
+            // });
           }}
         >
           Confirm
@@ -178,7 +198,7 @@ export const Usage = defineComponent({
             七里香
           </TabPane>
         </Tabs>
-      </>
+      </div>
     );
   },
 });

@@ -1,5 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
+import { getContent } from "../../utils/context";
 import { ButtonEmits, ButtonProps } from "./button-type";
 
 const emits: ButtonEmits = {
@@ -18,7 +19,7 @@ export const Button = withInstall(
         type: Boolean as PropType<ButtonProps["block"]>,
       },
       content: {
-        type: [String, Function] as PropType<ButtonProps["content"]>,
+        type: [String, Object, Function] as PropType<ButtonProps["content"]>,
       },
       disabled: {
         default: (): ButtonProps["disabled"] => false,
@@ -50,14 +51,8 @@ export const Button = withInstall(
       },
     },
     setup(props, { emit, slots }) {
-      props.variant;
       return () => {
-        const content =
-          typeof props.content === "undefined"
-            ? slots.default?.()
-            : typeof props.content === "string"
-            ? props.content
-            : props.content();
+        const content = getContent(props, slots, "content");
         return (
           <button
             class={[

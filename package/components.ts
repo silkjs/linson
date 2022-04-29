@@ -1,3 +1,6 @@
+// 配置 Config
+export { ConfigProvider } from "./widgets/config-provider";
+
 // 通用 General
 export { Button } from "./widgets/button";
 export { Divider } from "./widgets/divider";

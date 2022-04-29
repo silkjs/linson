@@ -5,6 +5,7 @@ import { pascalToCamel, register } from "./utils/common";
 import { version } from "../package.json";
 import * as components from "./components";
 
+export * from "./utils/form";
 export * from "./components";
 export * from "./composition";
 export const Linson = {

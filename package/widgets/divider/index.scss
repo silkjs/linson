@@ -1,1 +1,21 @@
 @import "../../common/styles/theme.scss";
+
+.l-divider {
+  color: get-color("gray-12");
+  box-sizing: border-box;
+
+  &.l-divider-direction-horizontal {
+    display: flex;
+    width: 100%;
+    margin: 24px 0;
+    border-top: 1px solid get-color("default");
+  }
+
+  &.l-divider-direction-vertical {
+    display: inline-block;
+    height: 0.9em;
+    margin: 0 12px;
+    border-left: 1px solid get-color("default");
+    vertical-align: middle;
+  }
+}

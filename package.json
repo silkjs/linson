@@ -1,6 +1,6 @@
 {
   "name": "@silkjs/linson",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A Vue 3 Component Library.",
   "main": "dist/linson.cjs.js",
   "module": "dist/linson.esm.js",
@@ -20,6 +20,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix --quiet",
     "style": "stylelint 'package/**/*.(scss|css)' --fix",
     "prettier": "prettier --write .",
+    "local": "npm run build && npm link",
     "prepare": "husky install"
   },
   "repository": {

@@ -24,7 +24,21 @@ export const Tabs = withInstall(
       },
     },
     setup(props, { slots, emit }) {
-      return () => <div class={["l-tabs", {}]}>{slots.default?.()}</div>;
+      return () => (
+        <div class={["l-tabs", "l-tabs-position-top", {}]}>
+          <div class="l-tabs-nav">
+            <div class="l-tabs-tab l-tabs-tab-active">Oasis</div>
+            <div class="l-tabs-tab">the Beatles</div>
+            <div class="l-tabs-tab">周杰伦</div>
+            <span class="l-tabs-bar"></span>
+          </div>
+          <div class="l-tabs-content">
+            <div class="l-tabs-pane l-tabs-pane-active">Wonderwall</div>
+            <div class="l-tabs-pane">Hey Jude</div>
+            <div class="l-tabs-pane">七里香</div>
+          </div>
+        </div>
+      );
     },
   })
 );
