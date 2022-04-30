@@ -1,1 +1,15 @@
 @import "../../common/styles/theme.scss";
+
+.l-skeleton {
+  .l-skeleton_row {
+    font-size: 14px;
+  }
+
+  .l-skeleton_col {
+    font-size: 14px;
+  }
+
+  .l-skeleton--type-text {
+    font-size: 14px;
+  }
+}

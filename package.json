@@ -13,6 +13,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "dev": "cd app && npm run dev",
     "build": "npm run rollup && npm run typescript",
     "rollup": "rimraf dist/* && rollup --config ./rollup.config.ts",
     "typescript": "rimraf types/* && tsc -b tsconfig.build.json",

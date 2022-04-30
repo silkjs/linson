@@ -54,3 +54,7 @@
 - database_connection
 - linked_list
 - event_handler
+
+## CSS 命名规则
+
+类名由`[a-z]`、`-`、`--`、`_`组成
