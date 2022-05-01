@@ -26,8 +26,16 @@ export const Skeleton = withInstall(
         type: Boolean as PropType<SkeletonProps["text"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-skeleton", {}]}></div>;
+    setup(props, { slots }) {
+      return () => (
+        <div class={["l-skeleton", {}]}>
+          {new Array(props.repeat).fill(1).map(() => (
+            <div class="l-skeleton_row">
+              <div class="l-skeleton_col l-skeleton--type-text"></div>
+            </div>
+          ))}
+        </div>
+      );
     },
   })
 );

@@ -1,6 +1,5 @@
 import { defineComponent } from "vue";
-import { Button, Col, Row, Space, TabPane, Tabs } from "../../../package/linson";
-import { ShowCase } from "../widgets/showcase";
+import { Button, Col, Row, Skeleton, Space, TabPane, Tabs } from "../../../package/linson";
 
 export const Development = defineComponent({
   setup() {
@@ -51,6 +50,9 @@ export const Development = defineComponent({
             <Button theme="primary" content={<span>Prop Span</span>} />
             <Button theme="primary" content={() => <span>Prop Function</span>} />
           </Space>
+        </Col>
+        <Col span={24}>
+          <Skeleton repeat={3} />
         </Col>
       </Row>
     );

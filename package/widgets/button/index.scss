@@ -26,13 +26,13 @@
     width: 100%;
   }
 
-  &.l-button-variant-base {
+  &.l-button--variant-base {
     height: 32px;
     padding-right: 15px;
     padding-left: 15px;
     font-size: 14px;
 
-    &.l-button-theme-default {
+    &.l-button--theme-default {
       color: get-color("gray-12");
       background-color: get-color("default");
 
@@ -41,7 +41,7 @@
       }
     }
 
-    &.l-button-theme-primary {
+    &.l-button--theme-primary {
       color: get-color("gray-1");
       background-color: get-color("primary");
 
@@ -50,7 +50,7 @@
       }
     }
 
-    &.l-button-theme-error {
+    &.l-button--theme-error {
       color: get-color("gray-1");
       background-color: get-color("error");
 
@@ -59,7 +59,7 @@
       }
     }
 
-    &.l-button-theme-warning {
+    &.l-button--theme-warning {
       color: get-color("gray-1");
       background-color: get-color("warning");
 
@@ -68,7 +68,7 @@
       }
     }
 
-    &.l-button-theme-success {
+    &.l-button--theme-success {
       color: get-color("gray-1");
       background-color: get-color("success");
 
@@ -78,13 +78,13 @@
     }
   }
 
-  &.l-button-variant-outline {
+  &.l-button--variant-outline {
     height: 32px;
     padding-right: 15px;
     padding-left: 15px;
     font-size: 14px;
 
-    &.l-button-theme-default {
+    &.l-button--theme-default {
       border-color: get-color("default");
       color: get-color("gray-14");
 
@@ -94,7 +94,7 @@
       }
     }
 
-    &.l-button-theme-primary {
+    &.l-button--theme-primary {
       border-color: get-color("primary");
       color: get-color("primary");
 
@@ -104,7 +104,7 @@
       }
     }
 
-    &.l-button-theme-error {
+    &.l-button--theme-error {
       border-color: get-color("error");
       color: get-color("error");
 
@@ -114,7 +114,7 @@
       }
     }
 
-    &.l-button-theme-warning {
+    &.l-button--theme-warning {
       border-color: get-color("warning");
       color: get-color("warning");
 
@@ -124,7 +124,7 @@
       }
     }
 
-    &.l-button-theme-success {
+    &.l-button--theme-success {
       border-color: get-color("success");
       color: get-color("success");
 
@@ -135,14 +135,14 @@
     }
   }
 
-  &.l-button-variant-dashed {
+  &.l-button--variant-dashed {
     height: 32px;
     border-style: dashed;
     padding-right: 15px;
     padding-left: 15px;
     font-size: 14px;
 
-    &.l-button-theme-default {
+    &.l-button--theme-default {
       border-color: get-color("default");
       color: get-color("gray-14");
 
@@ -152,7 +152,7 @@
       }
     }
 
-    &.l-button-theme-primary {
+    &.l-button--theme-primary {
       border-color: get-color("primary");
       color: get-color("primary");
 
@@ -162,7 +162,7 @@
       }
     }
 
-    &.l-button-theme-error {
+    &.l-button--theme-error {
       border-color: get-color("error");
       color: get-color("error");
 
@@ -172,7 +172,7 @@
       }
     }
 
-    &.l-button-theme-warning {
+    &.l-button--theme-warning {
       border-color: get-color("warning");
       color: get-color("warning");
 
@@ -182,7 +182,7 @@
       }
     }
 
-    &.l-button-theme-success {
+    &.l-button--theme-success {
       border-color: get-color("success");
       color: get-color("success");
 
@@ -193,13 +193,13 @@
     }
   }
 
-  &.l-button-variant-text {
+  &.l-button--variant-text {
     height: 32px;
     padding-right: 15px;
     padding-left: 15px;
     font-size: 14px;
 
-    &.l-button-theme-default {
+    &.l-button--theme-default {
       color: get-color("gray-14");
 
       &:hover {
@@ -207,7 +207,7 @@
       }
     }
 
-    &.l-button-theme-primary {
+    &.l-button--theme-primary {
       color: get-color("primary");
 
       &:hover {
@@ -215,7 +215,7 @@
       }
     }
 
-    &.l-button-theme-error {
+    &.l-button--theme-error {
       color: get-color("error");
 
       &:hover {
@@ -223,7 +223,7 @@
       }
     }
 
-    &.l-button-theme-warning {
+    &.l-button--theme-warning {
       color: get-color("warning");
 
       &:hover {
@@ -231,7 +231,7 @@
       }
     }
 
-    &.l-button-theme-success {
+    &.l-button--theme-success {
       color: get-color("success");
 
       &:hover {
