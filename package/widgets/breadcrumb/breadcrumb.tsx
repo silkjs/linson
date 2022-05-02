@@ -18,8 +18,8 @@ export const Breadcrumb = withInstall(
         type: [String, Function] as PropType<BreadcrumbProps["separator"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-breadcrumb", {}]}></div>;
+    setup(props, { slots }) {
+      return () => <div class={["l-breadcrumb", {}]}>{slots.default?.()}</div>;
     },
   })
 );

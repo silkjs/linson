@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import { Button, Col, Row, Skeleton, Space, TabPane, Tabs } from "../../../package/linson";
+import { Breadcrumb, BreadcrumbItem, Button, Col, Row, Skeleton, Space, TabPane, Tabs } from "../../../package/linson";
 
 export const Development = defineComponent({
   setup() {
@@ -53,6 +53,13 @@ export const Development = defineComponent({
         </Col>
         <Col span={24}>
           <Skeleton repeat={3} />
+        </Col>
+        <Col span={24}>
+          <Breadcrumb>
+            <BreadcrumbItem>湖北</BreadcrumbItem>
+            <BreadcrumbItem>武汉</BreadcrumbItem>
+            <BreadcrumbItem>洪山</BreadcrumbItem>
+          </Breadcrumb>
         </Col>
       </Row>
     );

@@ -17,8 +17,13 @@ export const BreadcrumbItem = withInstall(
         type: Boolean as PropType<BreadcrumbItemProps["disabled"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-breadcrumb-item", {}]}></div>;
+    setup(props, { slots }) {
+      return () => (
+        <div class={["l-breadcrumb-item", {}]}>
+          <a class="l-breadcrumb--text-overflow">{slots.default?.()}</a>
+          <span class="l-breadcrumb_separator">-</span>
+        </div>
+      );
     },
   })
 );

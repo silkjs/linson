@@ -1,1 +1,34 @@
 @import "../../common/styles/theme.scss";
+
+.l-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+
+  .l-breadcrumb-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: get-color("gray-8");
+
+    .l-breadcrumb--text-overflow {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .l-breadcrumb_separator {
+      display: flex;
+      align-items: center;
+      margin: 0 4px;
+    }
+
+    &:last-child {
+      color: get-color("gray-12");
+
+      .l-breadcrumb_separator {
+        display: none;
+      }
+    }
+  }
+}
