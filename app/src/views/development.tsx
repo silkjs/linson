@@ -1,5 +1,16 @@
 import { defineComponent } from "vue";
-import { Breadcrumb, BreadcrumbItem, Button, Col, Row, Skeleton, Space, TabPane, Tabs } from "../../../package/linson";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Button,
+  Col,
+  Row,
+  Skeleton,
+  Space,
+  TabPane,
+  Tabs,
+  Tag,
+} from "../../../package/linson";
 
 export const Development = defineComponent({
   setup() {
@@ -42,6 +53,15 @@ export const Development = defineComponent({
                 default: () => <span>VSlot Function</span>,
               }}
             />
+          </Space>
+        </Col>
+        <Col span={24}>
+          <Space>
+            <Tag>标签一</Tag>
+            <Tag theme="error">标签一</Tag>
+            <Tag theme="primary">标签一</Tag>
+            <Tag theme="success">标签一</Tag>
+            <Tag theme="warning">标签一</Tag>
           </Space>
         </Col>
         <Col span={24}>

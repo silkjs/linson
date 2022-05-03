@@ -22,8 +22,21 @@ export const Tag = withInstall(
         type: String as PropType<TagProps["theme"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-tag", {}]}></div>;
+    setup(props, { slots }) {
+      return () => (
+        <div
+          class={[
+            "l-tag",
+            `l-tag--theme-${props.theme}`,
+            `l-tag-size--${props.size}`,
+            {
+              "l-tag-round": props.round,
+            },
+          ]}
+        >
+          {slots.default?.()}
+        </div>
+      );
     },
   })
 );

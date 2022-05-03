@@ -1,1 +1,36 @@
 @import "../../common/styles/theme.scss";
+
+.l-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  color: get-color("gray-1");
+  flex-direction: row;
+  line-height: 22px;
+  box-sizing: border-box;
+
+  &.l-tag--theme-primary {
+    background-color: get-color("primary");
+  }
+
+  &.l-tag--theme-warning {
+    background-color: get-color("warning");
+  }
+
+  &.l-tag--theme-error {
+    background-color: get-color("error");
+  }
+
+  &.l-tag--theme-success {
+    background-color: get-color("success");
+  }
+
+  &.l-tag--theme-default {
+    color: get-color("gray-14");
+    background-color: get-color("default");
+  }
+}
