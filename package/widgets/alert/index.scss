@@ -1,1 +1,35 @@
 @import "../../common/styles/theme.scss";
+
+.l-alert {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border-radius: 2px;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #000000d9;
+  color: get-color("gray-10");
+  list-style: none;
+  box-sizing: border-box;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  font-feature-settings: "tnum";
+  word-wrap: break-word;
+
+  &.l-alert--theme-info {
+    background-color: get-color("success-focus");
+  }
+
+  &.l-alert--theme-success {
+    background-color: get-color("success-focus");
+  }
+
+  &.l-alert--theme-warning {
+    background-color: get-color("warning-focus");
+  }
+
+  &.l-alert--theme-error {
+    background-color: get-color("error-focus");
+  }
+}

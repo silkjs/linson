@@ -17,8 +17,8 @@ export const Alert = withInstall(
         type: String as PropType<AlertProps["theme"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-alert", {}]}></div>;
+    setup(props, { slots }) {
+      return () => <div class={["l-alert", `l-alert--theme-${props.theme}`, {}]}>{slots.default?.()}</div>;
     },
   })
 );

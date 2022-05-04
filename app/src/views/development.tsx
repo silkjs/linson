@@ -1,5 +1,6 @@
 import { defineComponent } from "vue";
 import {
+  Alert,
   Breadcrumb,
   BreadcrumbItem,
   Button,
@@ -54,6 +55,9 @@ export const Development = defineComponent({
               }}
             />
           </Space>
+        </Col>
+        <Col span={24}>
+          <Alert>这是一条成功的消息提示</Alert>
         </Col>
         <Col span={24}>
           <Space>
