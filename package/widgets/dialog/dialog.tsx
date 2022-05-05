@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { DialogEmits, DialogProps } from "./dialog-type";
+import { DialogEmits, DialogProps } from "./types";
 
 const emits: DialogEmits = {};
 
