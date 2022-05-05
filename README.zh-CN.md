@@ -2,7 +2,31 @@
 
 A Vue 3 Component Library.
 
-## 用例 Usage
+[English](./README.md) | 简体中文
+
+<div>
+    <p>
+      <a href="https://github.com/silkjs/linson/actions"><img src="https://img.shields.io/github/workflow/status/silkjs/linson/main" alt="action"></a>
+      <a href="https://github.com/silkjs/linson/issues"><img src="https://img.shields.io/github/issues-raw/silkjs/linson" alt="issues"></a>
+      <a href="https://github.com/silkjs/linson/blob/main/LICENSE"><img src="https://img.shields.io/github/license/silkjs/linson" alt="license"></a>
+      <a href="https://www.npmjs.com/package/@silkjs/linson"><img src="https://img.shields.io/npm/v/@silkjs/linson" alt="package"></a>
+      <a href="https://codecov.io/gh/silkjs/linson"><img src="https://img.shields.io/codecov/c/github/silkjs/linson" alt="Coverage Status" /></a>
+      <br>
+      <img src="https://img.shields.io/github/tag/silkjs/linson" alt="tag">
+      <img src="https://img.shields.io/github/issues-pr/silkjs/linson" alt="pr">
+      <img src="https://img.shields.io/github/release/silkjs/linson" alt="release">
+      <img src="https://img.shields.io/github/languages/top/silkjs/linson" alt="languages">
+      <img src="https://img.shields.io/github/languages/code-size/silkjs/linson" alt="size">
+      <img src="https://img.shields.io/github/last-commit/silkjs/linson" alt="commit">
+    </p>
+</div>
+
+## 特点
+
+- An enterprise-class UI design system for desktop applications.
+- A set of high-quality Vue components out of the box.
+
+## 用例
 
 安装
 
