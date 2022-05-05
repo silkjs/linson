@@ -4,22 +4,18 @@ A Vue 3 Component Library.
 
 English | [简体中文](./README.zh-CN.md)
 
-<div>
-    <p>
-      <a href="https://github.com/silkjs/linson/actions"><img src="https://img.shields.io/github/workflow/status/silkjs/linson/main-action" alt="action"></a>
-      <a href="https://github.com/silkjs/linson/issues"><img src="https://img.shields.io/github/issues-raw/silkjs/linson" alt="issues"></a>
-      <a href="https://github.com/silkjs/linson/blob/main/LICENSE"><img src="https://img.shields.io/github/license/silkjs/linson" alt="license"></a>
-      <a href="https://www.npmjs.com/package/@silkjs/linson"><img src="https://img.shields.io/npm/v/@silkjs/linson" alt="package"></a>
-      <a href="https://codecov.io/gh/silkjs/linson"><img src="https://img.shields.io/codecov/c/github/silkjs/linson" alt="Coverage Status" /></a>
-      <br>
-      <a href="javascript:void();"><img src="https://img.shields.io/github/tag/silkjs/linson" alt="tag"></a>
-      <a href="javascript:void();"><img src="https://img.shields.io/github/issues-pr/silkjs/linson" alt="pr"></a>
-      <a href="javascript:void();"><img src="https://img.shields.io/github/release/silkjs/linson" alt="release"></a>
-      <a href="javascript:void();"><img src="https://img.shields.io/github/languages/top/silkjs/linson" alt="languages"></a>
-      <a href="javascript:void();"><img src="https://img.shields.io/github/languages/code-size/silkjs/linson" alt="size"></a>
-      <a href="javascript:void();"><img src="https://img.shields.io/github/last-commit/silkjs/linson" alt="commit"></a>
-    </p>
-</div>
+[![Action](https://img.shields.io/github/workflow/status/silkjs/linson/main-action)](https://github.com/silkjs/linson/actions)
+[![Issues](https://img.shields.io/github/issues-raw/silkjs/linson)](https://github.com/silkjs/linson/issues)
+[![License](https://img.shields.io/github/license/silkjs/linson)](https://github.com/silkjs/linson/blob/main/LICENSE)
+[![Package](https://img.shields.io/npm/v/@silkjs/linson)](https://www.npmjs.com/package/@silkjs/linson)
+[![Coverage Status](https://img.shields.io/coveralls/github/silkjs/linson)](https://codecov.io/gh/silkjs/linson)
+
+![Tag](https://img.shields.io/github/tag/silkjs/linson.svg)
+![Pull Request](https://img.shields.io/github/issues-pr/silkjs/linson.svg)
+![Release](https://img.shields.io/github/release/silkjs/linson.svg)
+![Languages Top](https://img.shields.io/github/languages/top/silkjs/linson.svg)
+![Code Size](https://img.shields.io/github/languages/code-size/silkjs/linson.svg)
+![Last Commit](https://img.shields.io/github/last-commit/silkjs/linson.svg)
 
 ## Features
 

@@ -1,6 +1,6 @@
 {
   "name": "@silkjs/linson",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "A Vue 3 Component Library.",
   "main": "dist/linson.cjs.js",
   "module": "dist/linson.esm.js",
