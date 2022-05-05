@@ -13,7 +13,7 @@ export const Alert = withInstall(
         type: String as PropType<AlertProps["message"]>,
       },
       theme: {
-        default: (): AlertProps["theme"] => "success",
+        default: (): AlertProps["theme"] => "info",
         type: String as PropType<AlertProps["theme"]>,
       },
     },
