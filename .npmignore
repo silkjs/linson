@@ -1,4 +1,5 @@
 .coverage
+.github
 .husky
 .vscode
 app
@@ -14,6 +15,7 @@ scripts
 .lintstagedrc.json
 .prettierignore
 .prettierrc
+.stylelintrc
 jest.config.json
 rollup.config.ts
 tsconfig.build.json
