@@ -1,11 +1,6 @@
 import { type PropType, defineComponent, inject, provide } from "vue";
 import { withInstall } from "../../utils/common";
-import {
-  MESSAGE_API_INJECTION_KEY,
-  MessageApiInjection,
-  MessageProviderEmits,
-  MessageProviderProps,
-} from "./message-provider-type";
+import { MESSAGE_API_INJECTION_KEY, MessageApiInjection, MessageProviderEmits, MessageProviderProps } from "./types";
 
 const emits: MessageProviderEmits = {};
 

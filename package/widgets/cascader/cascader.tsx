@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { CascaderEmits, CascaderProps } from "./cascader-type";
+import { CascaderEmits, CascaderProps } from "./types";
 
 const emits: CascaderEmits = {
   blur: () => true,

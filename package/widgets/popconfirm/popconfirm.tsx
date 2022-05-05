@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { PopconfirmEmits, PopconfirmProps } from "./popconfirm-type";
+import { PopconfirmEmits, PopconfirmProps } from "./types";
 
 const emits: PopconfirmEmits = {};
 

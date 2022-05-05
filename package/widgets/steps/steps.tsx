@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { StepsEmits, StepsProps } from "./steps-type";
+import { StepsEmits, StepsProps } from "./types";
 
 const emits: StepsEmits = {};
 

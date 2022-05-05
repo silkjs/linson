@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { PaginationEmits, PaginationProps } from "./pagination-type";
+import { PaginationEmits, PaginationProps } from "./types";
 
 const emits: PaginationEmits = {
   change: (type, value) => ["page", "size"].includes(type) && typeof value === "number",

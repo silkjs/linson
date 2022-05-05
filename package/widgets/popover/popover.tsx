@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { PopoverEmits, PopoverProps } from "./popover-type";
+import { PopoverEmits, PopoverProps } from "./types";
 
 const emits: PopoverEmits = {};
 

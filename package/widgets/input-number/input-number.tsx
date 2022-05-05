@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { InputNumberEmits, InputNumberProps } from "./input-number-type";
+import { InputNumberEmits, InputNumberProps } from "./types";
 
 const emits: InputNumberEmits = {};
 

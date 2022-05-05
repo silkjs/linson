@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { AlertEmits, AlertProps } from "./alert-type";
+import { AlertEmits, AlertProps } from "./types";
 
 const emits: AlertEmits = {};
 

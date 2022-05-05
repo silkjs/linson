@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { MenuEmits, MenuProps } from "./menu-type";
+import { MenuEmits, MenuProps } from "./types";
 
 const emits: MenuEmits = {};
 

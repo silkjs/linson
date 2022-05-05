@@ -1,7 +1,6 @@
 import { type PropType, defineComponent, inject } from "vue";
 import { withInstall } from "../../utils/common";
-import { ColProps } from "./col-type";
-import { ROW_INJECTION_KEY } from "./row-type";
+import { ColProps, ROW_INJECTION_KEY } from "./types";
 
 export const Col = withInstall(
   defineComponent({

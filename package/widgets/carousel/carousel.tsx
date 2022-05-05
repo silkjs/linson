@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { CarouselEmits, CarouselProps } from "./carousel-type";
+import { CarouselEmits, CarouselProps } from "./types";
 
 const emits: CarouselEmits = {};
 

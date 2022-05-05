@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { InputGroupEmits, InputGroupProps } from "./input-group-type";
+import { InputGroupEmits, InputGroupProps } from "./types";
 
 const emits: InputGroupEmits = {};
 

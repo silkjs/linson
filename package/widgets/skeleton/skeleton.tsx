@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { SkeletonEmits, SkeletonProps } from "./skeleton-type";
+import { SkeletonEmits, SkeletonProps } from "./types";
 
 const emits: SkeletonEmits = {};
 

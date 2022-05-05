@@ -1,5 +1,5 @@
 import "../../common/styles/common.scss";
 import "./index.scss";
 
-export * from "./date-picker-type";
+export * from "./types";
 export * from "./date-picker";

@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { TabsEmits, TabsProps } from "./tabs-type";
+import { TabsEmits, TabsProps } from "./types";
 
 const emits: TabsEmits = {
   "update:value": (value) => typeof value === "string",

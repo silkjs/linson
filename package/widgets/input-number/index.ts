@@ -1,5 +1,5 @@
 import "../../common/styles/common.scss";
 import "./index.scss";
 
-export * from "./input-number-type";
+export * from "./types";
 export * from "./input-number";

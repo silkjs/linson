@@ -1,6 +1,6 @@
 import { type PropType, defineComponent, provide } from "vue";
 import { withInstall } from "../../utils/common";
-import { ROW_INJECTION_KEY, RowProps } from "./row-type";
+import { ROW_INJECTION_KEY, RowProps } from "./types";
 
 export const Row = withInstall(
   defineComponent({

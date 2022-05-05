@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { TooltipEmits, TooltipProps } from "./tooltip-type";
+import { TooltipEmits, TooltipProps } from "./types";
 
 const emits: TooltipEmits = {};
 

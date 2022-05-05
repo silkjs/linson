@@ -10,4 +10,8 @@ export interface RowProps {
 
 export type RowInjection = Pick<RowProps, "gutter">;
 
+export interface ColProps {
+  span: number;
+}
+
 export const ROW_INJECTION_KEY = createInjectionKey<RowInjection>("l-row");

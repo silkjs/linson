@@ -1,7 +1,7 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
 import { getContent } from "../../utils/context";
-import { ButtonEmits, ButtonProps } from "./button-type";
+import { ButtonEmits, ButtonProps } from "./types";
 
 const emits: ButtonEmits = {
   click: (e: MouseEvent) => {

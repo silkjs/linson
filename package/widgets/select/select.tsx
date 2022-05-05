@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { SelectEmits, SelectProps } from "./select-type";
+import { SelectEmits, SelectProps } from "./types";
 
 const emits: SelectEmits = {};
 

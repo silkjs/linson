@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { TableEmits, TableProps } from "./table-type";
+import { TableEmits, TableProps } from "./types";
 
 const emits: TableEmits = {};
 

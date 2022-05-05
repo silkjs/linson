@@ -9,3 +9,10 @@ export interface TabsProps {
 export interface TabsEmits {
   "update:value": (value: string) => void;
 }
+
+export interface TabPaneProps {
+  name: string | number;
+  tab: string | LNode;
+}
+
+export interface TabPaneEmits {}

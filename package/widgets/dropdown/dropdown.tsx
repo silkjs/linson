@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { DropdownEmits, DropdownProps } from "./dropdown-type";
+import { DropdownEmits, DropdownProps } from "./types";
 
 const emits: DropdownEmits = {};
 

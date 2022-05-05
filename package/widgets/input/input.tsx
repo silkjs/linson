@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { InputEmits, InputProps } from "./input-type";
+import { InputEmits, InputProps } from "./types";
 
 const emits: InputEmits = {
   blur: () => true,

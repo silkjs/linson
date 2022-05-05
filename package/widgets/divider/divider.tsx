@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { DividerEmits, DividerProps } from "./divider-type";
+import { DividerEmits, DividerProps } from "./types";
 
 const emits: DividerEmits = {};
 

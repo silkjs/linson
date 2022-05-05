@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { RadioGroupEmits, RadioGroupProps } from "./radio-group-type";
+import { RadioGroupEmits, RadioGroupProps } from "./types";
 
 const emits: RadioGroupEmits = {};
 

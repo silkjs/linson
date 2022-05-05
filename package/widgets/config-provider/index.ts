@@ -1,2 +1,2 @@
-export * from "./config-provider-type";
+export * from "./types";
 export * from "./config-provider";

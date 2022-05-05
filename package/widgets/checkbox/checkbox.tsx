@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { CheckboxEmits, CheckboxProps } from "./checkbox-type";
+import { CheckboxEmits, CheckboxProps } from "./types";
 
 const emits: CheckboxEmits = {
   change: (value) => typeof value === "boolean",

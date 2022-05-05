@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { DatePickerEmits, DatePickerProps } from "./date-picker-type";
+import { DatePickerEmits, DatePickerProps } from "./types";
 
 const emits: DatePickerEmits = {};
 

@@ -1,7 +1,6 @@
 import "../../common/styles/common.scss";
 import "./index.scss";
 
-export * from "./checkbox-type";
+export * from "./types";
 export * from "./checkbox";
-export * from "./checkbox-group-type";
 export * from "./checkbox-group";

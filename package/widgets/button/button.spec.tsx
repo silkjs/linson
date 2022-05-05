@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { Button } from "./button";
-import { ButtonProps } from "./button-type";
+import { ButtonProps } from "./types";
 
 describe("按钮 Button", () => {
   // block

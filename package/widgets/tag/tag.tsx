@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { TagEmits, TagProps } from "./tag-type";
+import { TagEmits, TagProps } from "./types";
 
 const emits: TagEmits = {};
 

@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { BreadcrumbItemEmits, BreadcrumbItemProps } from "./breadcrumb-item-type";
+import { BreadcrumbItemEmits, BreadcrumbItemProps } from "./types";
 
 const emits: BreadcrumbItemEmits = {};
 

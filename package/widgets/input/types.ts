@@ -24,3 +24,10 @@ export interface InputEmits {
   change: (value: string) => void;
   blur: () => void;
 }
+
+export interface InputGroupProps {
+  separate?: boolean;
+  size?: LSize;
+}
+
+export interface InputGroupEmits {}

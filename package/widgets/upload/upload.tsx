@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { UploadEmits, UploadProps } from "./upload-type";
+import { UploadEmits, UploadProps } from "./types";
 
 const emits: UploadEmits = {};
 

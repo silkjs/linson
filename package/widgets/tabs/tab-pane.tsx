@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { TabPaneEmits, TabPaneProps } from "./tab-pane-type";
+import { TabPaneEmits, TabPaneProps } from "./types";
 
 const emits: TabPaneEmits = {};
 

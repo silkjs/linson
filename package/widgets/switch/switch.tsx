@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { SwitchEmits, SwitchProps } from "./switch-type";
+import { SwitchEmits, SwitchProps } from "./types";
 
 const emits: SwitchEmits = {};
 

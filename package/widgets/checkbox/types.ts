@@ -13,3 +13,18 @@ export interface CheckboxGroupEmits {
   change: (value: boolean) => void;
   "update:value": (value: boolean) => void;
 }
+
+export interface CheckboxProps {
+  checked?: boolean;
+  disabled?: boolean;
+  size?: LSize;
+  label?: string;
+  value?: string | number;
+  readonly?: boolean;
+  name?: string;
+}
+
+export interface CheckboxEmits {
+  change: (value: boolean) => void;
+  "update:checked": (value: boolean) => void;
+}

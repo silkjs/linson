@@ -1,7 +1,7 @@
 import { type PropType, defineComponent, inject, provide } from "vue";
 import { enUS } from "../../locales";
 import { withInstall } from "../../utils/common";
-import { ConfigProviderEmits, ConfigProviderProps } from "./config-provider-type";
+import { ConfigProviderEmits, ConfigProviderProps } from "./types";
 
 const emits: ConfigProviderEmits = {};
 

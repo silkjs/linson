@@ -1,11 +1,6 @@
 import { type PropType, defineComponent, inject, provide } from "vue";
 import { withInstall } from "../../utils/common";
-import {
-  DIALOG_API_INJECTION_KEY,
-  DialogApiInjection,
-  DialogProviderEmits,
-  DialogProviderProps,
-} from "./dialog-provider-type";
+import { DIALOG_API_INJECTION_KEY, DialogApiInjection, DialogProviderEmits, DialogProviderProps } from "./types";
 
 const emits: DialogProviderEmits = {};
 

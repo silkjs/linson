@@ -10,3 +10,14 @@ export interface RadioProps {
 }
 
 export interface RadioEmits {}
+
+export interface RadioGroupProps {
+  disabled?: boolean;
+  placeholder?: string;
+  readonly?: boolean;
+  size?: LSize;
+  status?: LStatus;
+  value?: any;
+}
+
+export interface RadioGroupEmits {}

@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { TimePickerEmits, TimePickerProps } from "./time-picker-type";
+import { TimePickerEmits, TimePickerProps } from "./types";
 
 const emits: TimePickerEmits = {};
 

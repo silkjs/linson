@@ -1,6 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
-import { IconEmits, IconProps } from "./icon-type";
+import { IconEmits, IconProps } from "./types";
 
 const emits: IconEmits = {};
 
