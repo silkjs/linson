@@ -8,7 +8,7 @@ English | [简体中文](./README.zh-CN.md)
 [![Issues](https://img.shields.io/github/issues-raw/silkjs/linson)](https://github.com/silkjs/linson/issues)
 [![License](https://img.shields.io/github/license/silkjs/linson)](https://github.com/silkjs/linson/blob/main/LICENSE)
 [![Package](https://img.shields.io/npm/v/@silkjs/linson)](https://www.npmjs.com/package/@silkjs/linson)
-[![Coverage Status](https://img.shields.io/coveralls/github/silkjs/linson)](https://codecov.io/gh/silkjs/linson)
+[![Coverage Status](https://img.shields.io/coveralls/github/silkjs/linson)](https://coveralls.io/github/silkjs/linson)
 
 ![Tag](https://img.shields.io/github/tag/silkjs/linson.svg)
 ![Pull Request](https://img.shields.io/github/issues-pr/silkjs/linson.svg)
