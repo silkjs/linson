@@ -6,7 +6,7 @@ English | [简体中文](./README.zh-CN.md)
 
 <div>
     <p>
-      <a href="https://github.com/silkjs/linson/actions"><img src="https://img.shields.io/github/workflow/status/silkjs/linson/main" alt="action"></a>
+      <a href="https://github.com/silkjs/linson/actions"><img src="https://img.shields.io/github/workflow/status/silkjs/linson/action-main/main" alt="action"></a>
       <a href="https://github.com/silkjs/linson/issues"><img src="https://img.shields.io/github/issues-raw/silkjs/linson" alt="issues"></a>
       <a href="https://github.com/silkjs/linson/blob/main/LICENSE"><img src="https://img.shields.io/github/license/silkjs/linson" alt="license"></a>
       <a href="https://www.npmjs.com/package/@silkjs/linson"><img src="https://img.shields.io/npm/v/@silkjs/linson" alt="package"></a>
