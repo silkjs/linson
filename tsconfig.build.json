@@ -7,5 +7,6 @@
     "rootDir": "package",
     "outDir": "./types"
   },
-  "include": ["./package/**/*.ts", "./package/**/*.tsx"]
+  "include": ["./package/**/*.ts", "./package/**/*.tsx"],
+  "exclude": ["./package/**/*.spec.ts", "./package/**/*.spec.tsx"]
 }
