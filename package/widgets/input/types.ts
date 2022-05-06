@@ -20,9 +20,9 @@ export interface InputProps {
 
 export interface InputEmits {
   "update:value": (value: string) => void;
-  input: (value: string) => void;
-  change: (value: string) => void;
-  blur: () => void;
+  input: (e: Event) => void;
+  change: (e: Event) => void;
+  blur: (e: FocusEvent) => void;
 }
 
 export interface InputGroupProps {

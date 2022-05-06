@@ -18,3 +18,7 @@ export type LPlacement =
   | "left"
   | "left-end";
 export type LTrigger = "hover" | "focus" | "click" | "contextmenu";
+
+export interface HTMLElementEvent<T extends HTMLElement> extends Event {
+  target: T;
+}

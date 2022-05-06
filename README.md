@@ -10,12 +10,12 @@ English | [简体中文](./README.zh-CN.md)
 [![Package](https://img.shields.io/npm/v/@silkjs/linson)](https://www.npmjs.com/package/@silkjs/linson)
 [![Coverage Status](https://img.shields.io/coveralls/github/silkjs/linson)](https://coveralls.io/github/silkjs/linson)
 
-![Tag](https://img.shields.io/github/tag/silkjs/linson.svg)
-![Pull Request](https://img.shields.io/github/issues-pr/silkjs/linson.svg)
-![Release](https://img.shields.io/github/release/silkjs/linson.svg)
-![Languages Top](https://img.shields.io/github/languages/top/silkjs/linson.svg)
-![Code Size](https://img.shields.io/github/languages/code-size/silkjs/linson.svg)
-![Last Commit](https://img.shields.io/github/last-commit/silkjs/linson.svg)
+[![Tag](https://img.shields.io/github/tag/silkjs/linson.svg)](#)
+[![Pull Request](https://img.shields.io/github/issues-pr/silkjs/linson.svg)](#)
+[![Release](https://img.shields.io/github/release/silkjs/linson.svg)](#)
+[![Languages Top](https://img.shields.io/github/languages/top/silkjs/linson.svg)](#)
+[![Code Size](https://img.shields.io/github/languages/code-size/silkjs/linson.svg)](#)
+[![Last Commit](https://img.shields.io/github/last-commit/silkjs/linson.svg)](#)
 
 ## Features
 
@@ -66,7 +66,7 @@ template mode
 </script>
 ```
 
-tsx mode
+render-function mode
 
 ```typescript
 import { defineComponent } from "vue";

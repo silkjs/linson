@@ -8,8 +8,12 @@ export const DialogProvider = withInstall(
   defineComponent({
     emits: { ...emits },
     name: "l-dialog-provider",
-    props: {},
-    setup() {
+    props: {
+      to: {
+        type: [String, Object] as PropType<DialogProviderProps["to"]>,
+      },
+    },
+    setup(props, { slots }) {
       const api: DialogApiInjection = {
         create() {
           //
@@ -28,7 +32,7 @@ export const DialogProvider = withInstall(
         },
       };
       provide(DIALOG_API_INJECTION_KEY, api);
-      return () => <div class={["l-dialog-provider", {}]}></div>;
+      return () => slots.default?.();
     },
   })
 );
