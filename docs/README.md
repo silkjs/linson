@@ -1,5 +1,38 @@
 # Doc
 
+## 项目说明
+
+```bash
+├── .github # github相关配置
+├── .husky # githook
+├── .vscode # vscode 配置
+├── app # 测试预览应用（vite+vue）
+├── docs # 文档说明
+├── package # 主目录
+│   ├── common # 公用
+│   ├── locales # 国际化
+│   ├── utils # 工具包
+│   └── widgets # 组件
+├── scripts # 脚本
+```
+
+### 开发预览
+
+1. 分别在 linson 和 linson/app 目录下安装依赖
+1. 在 linson 目录下运行 dev 预设命令
+1. 编辑 app 里的视图组件即可实时查看界面变化
+
+### 其他预设命令
+
+- dev 开发预览
+- build 打包输出包文件
+- rollup 组件库的编译
+- typescript 类型文件的编译
+- test 单元测试
+- lint 脚本格式检查
+- style 样式格式检查
+- prettier 代码格式化
+
 ##   命名规范
 
 - Pascal 帕斯卡命名法（大驼峰）
