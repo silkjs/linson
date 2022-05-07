@@ -9,6 +9,7 @@
     "local": "npm unlink @silkjs/linson && npm link @silkjs/linson --save"
   },
   "dependencies": {
+    "@emotion/css": "^11.9.0",
     "@silkjs/linson": "file:..",
     "sass": "^1.50.1",
     "vue": "^3.2.25"
