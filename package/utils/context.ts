@@ -1,5 +1,7 @@
 import type { DefineComponent, InjectionKey, Slots } from "vue";
 
+type FnContent = () => DefineComponent;
+
 export function createInjectionKey<T>(key: string): InjectionKey<T> {
   return Symbol(key);
 }
@@ -9,7 +11,14 @@ export function getContent<P extends Record<string, any>, S extends Slots>(
   slots: S,
   prop: keyof P,
   slot = "default"
-): DefineComponent {
-  const content = props[prop];
-  return typeof content === "undefined" ? slots[slot]?.() : typeof content === "function" ? content() : content;
+): DefineComponent | null {
+  const content = props[prop] ?? slots[slot];
+
+  if (typeof content === "undefined") {
+    return null;
+  }
+  if (typeof content === "function") {
+    return (content as FnContent)();
+  }
+  return content;
 }

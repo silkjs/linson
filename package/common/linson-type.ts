@@ -1,6 +1,7 @@
 import { type VNode } from "vue";
 
-export type LNode = () => VNode;
+export type FnNode = () => VNode;
+export type LNode = string | VNode | FnNode;
 
 export type LSize = "small" | "medium" | "large";
 export type LStatus = "success" | "warning" | "error";

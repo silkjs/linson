@@ -1,0 +1,16 @@
+@import "../../common/styles/theme.scss";
+
+.l-card {
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+
+  .l-card-head {
+    border-bottom: 1px solid #eaeaea;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .l-card-content {
+    padding: 16px;
+  }
+}

@@ -25,6 +25,7 @@ export { Row, Col } from "./widgets/grid";
 export { Space } from "./widgets/space";
 
 // 展示 Display
+export { Card } from "./widgets/card";
 export { Carousel } from "./widgets/carousel";
 export { Skeleton } from "./widgets/skeleton";
 export { Table } from "./widgets/table";
