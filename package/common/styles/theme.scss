@@ -1,6 +1,37 @@
 @use "sass:map";
 @use "sass:list";
 
+// 间距
+$spacer: (
+  s1: "4px",
+  s2: "8px",
+  s3: "12px",
+  s4: "16px",
+  s5: "24px",
+  s6: "32px",
+  s7: "40px",
+  s8: "48px",
+  s9: "64px",
+  s10: "96px",
+  s11: "160px",
+);
+
+// 字号
+$font: (
+  // 字号 行高
+  f1: ("36px", "44px"),
+  f2: ("20px", "28px"),
+  f3: ("16px", "24px"),
+  f4: ("14px", "22px"),
+  f5: ("12px", "20px")
+);
+
+// 圆角
+$radius: (
+  r1: "3px",
+);
+
+// 颜色
 $board: (
   // 基础色
   primary-1: (#ecf2fe, #1b2f51),
