@@ -1,22 +1,17 @@
 import { defineComponent } from "vue";
-import { ConfigProvider, DialogProvider, MessageProvider } from "../../package/components";
-
-import { Development } from "./views/development";
-import { Production } from "./views/production";
+import { ModeDevelopment } from "./mode-development";
+import { ModeProduction } from "./mode-production";
 
 export const App = defineComponent({
   setup() {
-    return () =>
-      import.meta.env.DEV ? (
-        <ConfigProvider>
-          <MessageProvider>
-            <DialogProvider>
-              <Development />
-            </DialogProvider>
-          </MessageProvider>
-        </ConfigProvider>
-      ) : (
-        <Production />
-      );
+    return () => {
+      switch (import.meta.env.MODE) {
+        case "pkg":
+          return <ModeProduction />;
+
+        default:
+          return <ModeDevelopment />;
+      }
+    };
   },
 });
