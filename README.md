@@ -19,8 +19,10 @@ English | [简体中文](./README.zh-CN.md)
 
 ## Features
 
-- An enterprise-class UI design system for desktop applications.
-- A set of high-quality Vue components out of the box.
+- Linson UI is written in TypeScript, providing powerful type support for silky-smooth coding.
+- Components support treeshaking and can be referenced on-demand without third-party plugins.
+- Dark mode is supported, and the theme is freely customizable, following CSS standards and changing CSS variables to achieve a hundred different themes.
+- Support both template mode and rendering function mode, and do optimization for rendering function mode, more suitable for declarative programming.
 
 ## Usage
 
@@ -99,6 +101,10 @@ defineComponent({
 
 ## Widgets
 
+### Setting
+
+- ConfigProvider
+
 ### General
 
 - Button
@@ -127,6 +133,7 @@ defineComponent({
 
 ### Display
 
+- Card
 - Carousel
 - Skeleton
 - Table

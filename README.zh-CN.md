@@ -19,8 +19,10 @@ A Vue 3 Component Library.
 
 ## 特点
 
-- An enterprise-class UI design system for desktop applications.
-- A set of high-quality Vue components out of the box.
+- Linson UI 使用 TypeScript 编写，提供强大的类型支持，使编码过程丝般顺滑。
+- 组件支持 treeshaking，无需第三方插件即可按需引用。
+- 支持暗黑模式，主题可自由定制，紧跟 CSS 标准，通过更改 CSS 变量即可实现百变主题。
+- 同时支持模板模式和渲染函数模式的使用，并对渲染函数模式做了优化，更贴合声明式编程
 
 ## 用例
 
@@ -99,6 +101,10 @@ defineComponent({
 
 ## 组件
 
+### 设置
+
+- 配置 ConfigProvider
+
 ### 通用
 
 - 按钮 Button
@@ -127,6 +133,7 @@ defineComponent({
 
 ### 展示
 
+- 卡片 Card
 - 轮播图 Carousel
 - 骨架屏 Skeleton
 - 表格 Table
