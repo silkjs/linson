@@ -7,7 +7,10 @@ import {
   Button,
   Card,
   Carousel,
+  Cascader,
+  Checkbox,
   Col,
+  DatePicker,
   Dialog,
   Divider,
   Dropdown,
@@ -15,6 +18,7 @@ import {
   FormItem,
   Icon,
   Input,
+  InputNumber,
   Menu,
   MenuItem,
   MenuSub,
@@ -22,20 +26,35 @@ import {
   Pagination,
   Popconfirm,
   Popover,
+  Radio,
   Row,
+  Select,
   Skeleton,
   Space,
   StepItem,
   Steps,
+  Switch,
   Table,
   TabPane,
   Tabs,
   Tag,
+  TimePicker,
   Tooltip,
+  Upload,
   useDialog,
   useMessage,
   Validators,
 } from "../../../package/linson";
+
+import styled from "@emotion/styled";
+
+const SomeComp = styled.div({
+  color: "hotpink",
+});
+
+const AnotherComp = styled.div`
+  color: ${(props) => props.color};
+`;
 
 export const Development = defineComponent({
   setup() {
@@ -54,8 +73,21 @@ export const Development = defineComponent({
             width: "100%",
             marginBottom: "16px",
           },
+          ".box": {
+            display: "flex",
+            width: "100%",
+            height: "20px",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#fff",
+            fontSize: "12px",
+            backgroundColor: "#b3bcff",
+          },
         })}
       >
+        <SomeComp>
+          <AnotherComp color="green" />
+        </SomeComp>
         <Row gutter={[16, 16]}>
           <Col span={24}>
             <h3>### 通用</h3>
@@ -97,9 +129,15 @@ export const Development = defineComponent({
 
             <h3>### 输入</h3>
 
-            <Card title="级联选择器 Cascader"></Card>
-            <Card title="复选框 Checkbox"></Card>
-            <Card title="日期选择器 DatePicker"></Card>
+            <Card title="级联选择器 Cascader">
+              <Cascader />
+            </Card>
+            <Card title="复选框 Checkbox">
+              <Checkbox />
+            </Card>
+            <Card title="日期选择器 DatePicker">
+              <DatePicker />
+            </Card>
             <Card title="表单 Form">
               <Form>
                 <FormItem
@@ -122,17 +160,55 @@ export const Development = defineComponent({
             <Card title="输入框 Input">
               <Input v-model:value={data.name} />
             </Card>
-            <Card title="数字输入框 InputNumber"></Card>
-            <Card title="单选框 Radio"></Card>
-            <Card title="选择器 Select"></Card>
-            <Card title="开关 Switch"></Card>
-            <Card title="时间选择器 TimePicker"></Card>
-            <Card title="上传 Upload"></Card>
+            <Card title="数字输入框 InputNumber">
+              <InputNumber />
+            </Card>
+            <Card title="单选框 Radio">
+              <Radio />
+            </Card>
+            <Card title="选择器 Select">
+              <Select />
+            </Card>
+            <Card title="开关 Switch">
+              <Switch />
+            </Card>
+            <Card title="时间选择器 TimePicker">
+              <TimePicker />
+            </Card>
+            <Card title="上传 Upload">
+              <Upload />
+            </Card>
 
             <h3>### 布局</h3>
 
-            <Card title="栅格 Grid"></Card>
-            <Card title="间距 Space"></Card>
+            <Card title="栅格 Grid">
+              <Row gutter={[8, 8]}>
+                <Col span={24}>
+                  <div class="box">24</div>
+                </Col>
+                <Col>
+                  <div class="box">12</div>
+                </Col>
+                <Col span={6}>
+                  <div class="box">6</div>
+                </Col>
+                <Col span={3}>
+                  <div class="box">3</div>
+                </Col>
+                <Col span={2}>
+                  <div class="box">2</div>
+                </Col>
+                <Col span={1}>
+                  <div class="box">1</div>
+                </Col>
+              </Row>
+            </Card>
+            <Card title="间距 Space">
+              <Space>
+                <div class="box" style={{ width: "150px" }}></div>
+                <div class="box" style={{ width: "150px" }}></div>
+              </Space>
+            </Card>
 
             <h3>### 展示</h3>
 
