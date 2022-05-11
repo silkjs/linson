@@ -14,7 +14,12 @@ export const FormItem = withInstall(
       size: String as PropType<FormItemProps["size"]>,
     },
     setup(props, { slots }) {
-      return () => <div class={["l-form-item", {}]}>{slots.default?.()}</div>;
+      return () => (
+        <div class={["l-form-item", {}]}>
+          <div>{props.lable}</div>
+          <div>{slots.default?.()}</div>
+        </div>
+      );
     },
   })
 );

@@ -128,20 +128,26 @@ export const Development = defineComponent({
             <Card title="表单 Form">
               <Form>
                 <FormItem
+                  lable="年龄"
                   rules={[
                     { message: "必填项", type: "required" },
                     { message: "数值不小于0", type: "min", value: 0 },
                     { message: "数值不大于200", type: "max", value: 200 },
                   ]}
-                ></FormItem>
+                >
+                  <Input />
+                </FormItem>
                 <FormItem
+                  lable="手机号"
                   rules={[
                     Validators.required(),
                     Validators.minLength(0),
                     Validators.maxLength(200),
                     Validators.pattern(/^(13[0-9]|15[0|1|3|6|7|8|9]|18[8|9])\d{8}$/),
                   ]}
-                ></FormItem>
+                >
+                  <Input />
+                </FormItem>
               </Form>
             </Card>
             <Card title="输入框 Input">
