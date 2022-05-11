@@ -1,1 +1,23 @@
 @import "../../common/styles/theme.scss";
+
+.l-dropdown {
+  position: relative;
+  display: inline-block;
+
+  .l-dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 200px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 16%);
+  }
+
+  &:hover {
+    .l-dropdown-options {
+      display: block;
+    }
+  }
+}

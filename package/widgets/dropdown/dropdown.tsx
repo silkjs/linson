@@ -30,7 +30,12 @@ export const Dropdown = withInstall(
         const options = getContent(props, slots, "options", "options");
         const content = getContent(props, slots, "content");
 
-        return <div class={["l-dropdown", {}]}>{content}</div>;
+        return (
+          <div class={["l-dropdown", {}]}>
+            {content}
+            <div class="l-dropdown-options">{options}</div>
+          </div>
+        );
       };
     },
   })

@@ -15,13 +15,13 @@ export interface CheckboxGroupEmits {
 }
 
 export interface CheckboxProps {
-  checked?: boolean;
-  disabled?: boolean;
-  size?: LSize;
-  label?: string;
-  value?: string | number;
-  readonly?: boolean;
-  name?: string;
+  checked: boolean;
+  disabled: boolean;
+  size: LSize;
+  label: LNode;
+  value: string | number;
+  readonly: boolean;
+  name: string;
 }
 
 export interface CheckboxEmits {

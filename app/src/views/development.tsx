@@ -46,16 +46,6 @@ import {
   Validators,
 } from "../../../package/linson";
 
-import styled from "@emotion/styled";
-
-const SomeComp = styled.div({
-  color: "hotpink",
-});
-
-const AnotherComp = styled.div`
-  color: ${(props) => props.color};
-`;
-
 export const Development = defineComponent({
   setup() {
     const dialog = useDialog();
@@ -85,9 +75,6 @@ export const Development = defineComponent({
           },
         })}
       >
-        <SomeComp>
-          <AnotherComp color="green" />
-        </SomeComp>
         <Row gutter={[16, 16]}>
           <Col span={24}>
             <h3>### 通用</h3>
@@ -133,7 +120,7 @@ export const Development = defineComponent({
               <Cascader />
             </Card>
             <Card title="复选框 Checkbox">
-              <Checkbox />
+              <Checkbox label="Apple" />
             </Card>
             <Card title="日期选择器 DatePicker">
               <DatePicker />
