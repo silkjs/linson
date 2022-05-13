@@ -52,7 +52,7 @@ export const Development = defineComponent({
     const message = useMessage();
     const data = reactive({
       name: "",
-      switch: false,
+      switch: true,
     });
     return () => (
       <div
@@ -164,7 +164,10 @@ export const Development = defineComponent({
               <Select />
             </Card>
             <Card title="开关 Switch">
-              <Switch v-model:checked={data.switch} />
+              <Space>
+                <Switch v-model:checked={data.switch} />
+                <Switch />
+              </Space>
             </Card>
             <Card title="时间选择器 TimePicker">
               <TimePicker />

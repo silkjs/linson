@@ -35,16 +35,15 @@
 
 ##   命名规范
 
-- Pascal 帕斯卡命名法（大驼峰）
-- Camel 驼峰命名法（小驼峰）
+- Pascal 帕斯卡命名法
+- Camel 驼峰命名法
+- Upper 大写命名法
 - Kebab 串式命名法
 - Snake 蛇形命名法
 
 ### Pascal
 
 单个命名中，每个词都是以大写字母开始。
-
-帕斯卡命名样例：
 
 - OutOfMemoryException
 - DateFormat
@@ -56,19 +55,25 @@
 
 单个命名中，首个词是以小写字母开头，后面每个词都是以大写字母开始。
 
-驼峰命名样例：
-
 - outOfMemoryException
 - dateFormat
 - databaseConnection
 - linkedList
 - eventHandler
 
+### Upper
+
+单个命名中，每个单词都是大写的，之间用连字符连接`_`。
+
+- OUT_OF_MEMORY_EXCEPTION
+- DATE_FORMAT
+- DATABASE_CONNECTION
+- LINKED_LIST
+- EVENT_HANDLER
+
 ### Kebab
 
-单个命名中，每个单词都是小写的，之间用连字符连接（-），因为像把肉串起来，所以我叫它串式命名。
-
-烤串命名样例：
+单个命名中，每个单词都是小写的，之间用连字符连接`-`。
 
 - out-of-memory-exception
 - date-format
@@ -78,9 +83,7 @@
 
 ### Snake
 
-单个命名中，每个词都是以大写字母开始。
-
-帕斯卡命名样例：
+单个命名中，每个单词都是小写的，之间用连字符连接`_`。
 
 - out_of_memory_exception
 - date_format

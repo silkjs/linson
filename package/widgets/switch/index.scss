@@ -1,12 +1,16 @@
+@use "sass:math";
 @import "../../common/styles/theme.scss";
+
+$height: 1.5em;
+$size: $height * 0.8;
 
 .l-switch {
   position: relative;
-  display: block;
-  width: 3em;
-  height: 1.5em;
-  border-radius: 3em;
-  background-color: rgb(198 198 198);
+  display: inline-block;
+  width: $height * 2;
+  height: $height;
+  border-radius: $height;
+  background-color: get-color("gray-5");
   outline: 0;
   cursor: pointer;
   user-select: none;
@@ -15,22 +19,36 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    border-radius: 3em;
-    background-color: #fff;
-    transform-origin: center;
-    transform: translate(-100%, -50%) scale(0.8);
-    transition: transform 0.3s;
+    top: $height * 0.1;
+    left: $height * 0.1;
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    background-color: get-color("white");
+    transform-origin: left;
+    transition-duration: 0.3s;
+    transition-property: width, left;
   }
 
   &.l-switch-checked {
-    background-color: rgb(104 63 228);
+    background-color: get-color("primary");
 
     &::after {
-      transform: translate(0, -50%) scale(0.8);
+      left: $height * 1.1;
+      transform-origin: right;
+    }
+  }
+
+  &:active {
+    &::after {
+      left: $height * 0.1;
+      width: $size * 1.3;
+    }
+
+    &.l-switch-checked {
+      &::after {
+        left: $height * 0.86;
+      }
     }
   }
 }
