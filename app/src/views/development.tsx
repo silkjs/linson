@@ -122,6 +122,7 @@ export const Development = defineComponent({
             </Card>
             <Card title="复选框 Checkbox">
               <Checkbox label="Apple" />
+              <Checkbox v-model:checked={data.switch} label="Apple" />
             </Card>
             <Card title="日期选择器 DatePicker">
               <DatePicker />

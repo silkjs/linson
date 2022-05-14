@@ -13,16 +13,34 @@ export const Checkbox = withInstall(
     emits: { ...emits },
     name: "l-checkbox",
     props: {
-      checked: Boolean as PropType<CheckboxProps["checked"]>,
-      disabled: Boolean as PropType<CheckboxProps["disabled"]>,
-      label: String as PropType<CheckboxProps["label"]>,
+      checked: {
+        default: (): CheckboxProps["checked"] => false,
+        type: Boolean as PropType<CheckboxProps["checked"]>,
+      },
+      disabled: {
+        default: (): CheckboxProps["disabled"] => false,
+        type: Boolean as PropType<CheckboxProps["disabled"]>,
+      },
+      label: {
+        type: String as PropType<CheckboxProps["label"]>,
+      },
     },
-    setup(props, { slots }) {
+    setup(props, { emit, slots }) {
       return () => {
         const label = getContent(props, slots, "label");
         return (
-          <div class={["l-checkbox", {}]}>
-            <input type="checkbox" />
+          <div
+            onClick={() => {
+              emit("update:checked", !props.checked);
+            }}
+            class={[
+              "l-checkbox",
+              {
+                "l-checkbox-checked": props.checked,
+                "l-checkbox-disabled": props.disabled,
+              },
+            ]}
+          >
             <label>{label}</label>
           </div>
         );

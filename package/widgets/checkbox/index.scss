@@ -1,6 +1,43 @@
 @import "../../common/styles/theme.scss";
 
+$size: 16px;
+
 .l-checkbox {
-  display: inline-block;
-  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 6px;
+  padding-left: $size + 6px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: $size;
+    height: $size;
+    border: 1px solid get-color("gray-3");
+    content: "";
+    border-radius: 2px;
+    transform: translateY(-50%);
+  }
+
+  &.l-checkbox-checked {
+    &::before {
+      border-color: get-color("primary");
+      background-color: get-color("primary");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 5px;
+      width: $size * 0.3;
+      height: $size * 0.5;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform-origin: center;
+      transform: rotate(45deg);
+    }
+  }
 }

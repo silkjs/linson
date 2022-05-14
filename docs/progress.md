@@ -12,24 +12,24 @@
 | General    | Button         | 🟡     |
 |            | Divider        | 🟡     |
 |            | Dropdown       | ⚪️    |
-|            | Icon           | ⚪️    |
+|            | Icon           | 🔵     |
 | Entry      | Cascader       | ⚪️    |
-|            | Checkbox       | ⚪️    |
+|            | Checkbox       | 🔵     |
 |            | DatePicker     | ⚪️    |
-|            | Form           | ⚪️    |
+|            | Form           | 🔵     |
 |            | Input          | 🟡     |
-|            | InputNumber    | ⚪️    |
-|            | Radio          | ⚪️    |
+|            | InputNumber    | 🔵     |
+|            | Radio          | 🔵     |
 |            | Select         | ⚪️    |
-|            | Switch         | ⚪️    |
+|            | Switch         | 🟡     |
 |            | TimePicker     | ⚪️    |
-|            | Upload         | ⚪️    |
+|            | Upload         | 🔵     |
 | Layout     | Grid           | 🟡     |
 |            | Space          | 🟡     |
 | Display    | Card           | 🟡     |
 |            | Carousel       | ⚪️    |
 |            | Skeleton       | 🟡     |
-|            | Table          | ⚪️    |
+|            | Table          | 🔵     |
 |            | Tag            | 🟡     |
 | Feedback   | Alert          | 🟡     |
 |            | Dialog         | ⚪️    |
@@ -39,6 +39,6 @@
 |            | Tooltip        | ⚪️    |
 | Navigation | Breadcrumb     | 🟡     |
 |            | Menu           | ⚪️    |
-|            | Pagination     | ⚪️    |
+|            | Pagination     | 🔵     |
 |            | Steps          | ⚪️    |
 |            | Tabs           | 🔵     |
