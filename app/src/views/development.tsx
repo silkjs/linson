@@ -159,7 +159,8 @@ export const Development = defineComponent({
               <InputNumber />
             </Card>
             <Card title="单选框 Radio">
-              <Radio />
+              <Radio label="Apple" />
+              <Radio v-model:checked={data.switch} label="Apple" />
             </Card>
             <Card title="选择器 Select">
               <Select />

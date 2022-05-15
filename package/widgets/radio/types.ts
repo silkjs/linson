@@ -6,7 +6,8 @@ export interface RadioProps {
   readonly?: boolean;
   size?: LSize;
   status?: LStatus;
-  value?: any;
+  checked?: boolean;
+  label: LNode;
 }
 
 export interface RadioEmits {}

@@ -1,1 +1,42 @@
 @import "../../common/styles/theme.scss";
+
+$size: 16px;
+
+.l-radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 6px;
+  padding-left: $size + 6px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: $size;
+    height: $size;
+    border: 1px solid get-color("gray-3");
+    content: "";
+    border-radius: $size;
+    transform: translateY(-50%);
+  }
+
+  &.l-radio-checked {
+    &::before {
+      border-color: get-color("primary");
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: $size;
+      height: $size;
+      content: "";
+      border-radius: $size;
+      transform-origin: center;
+      transform: translateY(-50%) scale(0.6);
+      background-color: get-color("primary");
+    }
+  }
+}

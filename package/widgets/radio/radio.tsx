@@ -1,5 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
+import { getContent } from "../../utils/context";
 import { RadioEmits, RadioProps } from "./types";
 
 const emits: RadioEmits = {};
@@ -9,19 +10,52 @@ export const Radio = withInstall(
     emits: { ...emits },
     name: "l-radio",
     props: {
-      disabled: Boolean as PropType<RadioProps["disabled"]>,
-      placeholder: String as PropType<RadioProps["placeholder"]>,
-      readonly: Boolean as PropType<RadioProps["readonly"]>,
-      size: String as PropType<RadioProps["size"]>,
-      status: String as PropType<RadioProps["status"]>,
-      value: String as PropType<RadioProps["value"]>,
+      checked: {
+        default: (): RadioProps["checked"] => false,
+        type: Boolean as PropType<RadioProps["checked"]>,
+      },
+      disabled: {
+        default: (): RadioProps["disabled"] => false,
+        type: Boolean as PropType<RadioProps["disabled"]>,
+      },
+      label: {
+        type: [String, Object, Function] as PropType<RadioProps["label"]>,
+      },
+      placeholder: {
+        type: String as PropType<RadioProps["placeholder"]>,
+      },
+      readonly: {
+        default: (): RadioProps["readonly"] => false,
+        type: Boolean as PropType<RadioProps["readonly"]>,
+      },
+      size: {
+        default: (): RadioProps["size"] => "medium",
+        type: String as PropType<RadioProps["size"]>,
+      },
+      status: {
+        type: String as PropType<RadioProps["status"]>,
+      },
     },
-    setup() {
-      return () => (
-        <div class={["l-radio", {}]}>
-          <input type="radio" />
-        </div>
-      );
+    setup(props, { slots, emit }) {
+      return () => {
+        const label = getContent(props, slots, "label");
+        return (
+          <div
+            onClick={() => {
+              emit("update:checked", !props.checked);
+            }}
+            class={[
+              "l-radio",
+              {
+                "l-radio-checked": props.checked,
+                "l-radio-disabled": props.disabled,
+              },
+            ]}
+          >
+            <label>{label}</label>
+          </div>
+        );
+      };
     },
   })
 );
