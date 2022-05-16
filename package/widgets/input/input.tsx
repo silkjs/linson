@@ -49,21 +49,20 @@ export const Input = withInstall(
     },
     setup(props, { slots, emit }) {
       return () => (
-        <div class={["l-input", {}]}>
-          <input
-            value={props.value}
-            onBlur={(e) => {
-              emit("input", e);
-            }}
-            onChange={(e) => {
-              emit("input", e);
-            }}
-            onInput={(e) => {
-              emit("input", e);
-              emit("update:value", (e as HTMLElementEvent<HTMLInputElement>).target.value);
-            }}
-          />
-        </div>
+        <input
+          class={["l-input", {}]}
+          value={props.value}
+          onBlur={(e) => {
+            emit("input", e);
+          }}
+          onChange={(e) => {
+            emit("input", e);
+          }}
+          onInput={(e) => {
+            emit("input", e);
+            emit("update:value", (e as HTMLElementEvent<HTMLInputElement>).target.value);
+          }}
+        />
       );
     },
   })

@@ -1,1 +1,13 @@
 @import "../../common/styles/theme.scss";
+
+.l-input {
+  display: inline-flex;
+  border: 1px solid #999;
+  border-radius: 2px;
+  padding: 0.3em 0.5em;
+  outline: none;
+
+  &:focus {
+    border-color: get-color("primary");
+  }
+}
