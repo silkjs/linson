@@ -24,7 +24,7 @@ $size: $height * 0.8;
     width: $size;
     height: $size;
     border-radius: $size;
-    background-color: get-color("white");
+    background-color: get-color("gray-white");
     transform-origin: left;
     transition-duration: 0.3s;
     transition-property: width, left;
