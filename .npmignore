@@ -15,6 +15,7 @@ scripts
 .lintstagedrc.json
 .prettierignore
 .prettierrc
+.stylelintignore
 .stylelintrc
 jest.config.json
 rollup.config.ts
