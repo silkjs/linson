@@ -24,6 +24,11 @@ English | [简体中文](./README.zh-CN.md)
 - Dark mode is supported, and the theme is freely customizable, following CSS standards and changing CSS variables to achieve a hundred different themes.
 - Support both template mode and rendering function mode, and do optimization for rendering function mode, more suitable for declarative programming.
 
+## Design Resources
+
+- [Linson for Desktop](https://mastergo.com/file/60302553924982?source=link_share)
+- Linson for Mobile (In Planning)
+
 ## Usage
 
 install
