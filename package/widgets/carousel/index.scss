@@ -1,1 +1,17 @@
 @import "../../common/styles/theme.scss";
+
+.l-carousel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  flex-direction: row;
+
+  .l-carousel-item {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    flex: 0 0 auto;
+  }
+}

@@ -38,8 +38,8 @@ export const Carousel = withInstall(
         type: Boolean as PropType<CarouselProps["loop"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-carousel", {}]}></div>;
+    setup(props, { slots }) {
+      return () => <div class={["l-carousel", {}]}>{slots.default?.()}</div>;
     },
   })
 );
