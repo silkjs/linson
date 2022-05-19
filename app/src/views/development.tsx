@@ -7,6 +7,7 @@ import {
   Button,
   Card,
   Carousel,
+  CarouselItem,
   Cascader,
   Checkbox,
   Col,
@@ -214,22 +215,30 @@ export const Development = defineComponent({
             <Card title="轮播图 Carousel">
               {" "}
               <Carousel>
-                <img
-                  class="carousel-img"
-                  src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
-                />
-                <img
-                  class="carousel-img"
-                  src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-                />
-                <img
-                  class="carousel-img"
-                  src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-                />
-                <img
-                  class="carousel-img"
-                  src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-                />
+                <CarouselItem>
+                  <img
+                    style={{ height: "200px", width: "100%", objectFit: "cover" }}
+                    src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <img
+                    style={{ height: "200px", width: "100%", objectFit: "cover" }}
+                    src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <img
+                    style={{ height: "200px", width: "100%", objectFit: "cover" }}
+                    src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <img
+                    style={{ height: "200px", width: "100%", objectFit: "cover" }}
+                    src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
+                  />
+                </CarouselItem>
               </Carousel>
             </Card>
             <Card title="骨架屏 Skeleton">

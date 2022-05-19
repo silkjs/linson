@@ -1,1 +1,27 @@
 @import "../../common/styles/theme.scss";
+
+.l-pagination {
+  .l-pagination-pager {
+    .l-pagination-pager_number {
+      display: inline-block;
+      min-width: 32px;
+      height: 32px;
+      margin-right: 8px;
+      border: 1px solid get-color("gray-5");
+      border-radius: 3px;
+      padding-right: 4px;
+      padding-left: 4px;
+      font-size: 14px;
+      text-align: center;
+      color: get-color("gray-10");
+      background-color: get-color("gray-white");
+      cursor: pointer;
+      line-height: 30px;
+
+      &:hover {
+        border-color: get-color("primary-hover");
+        color: get-color("primary-hover");
+      }
+    }
+  }
+}

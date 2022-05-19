@@ -36,8 +36,20 @@ export const Pagination = withInstall(
         type: Number as PropType<PaginationProps["total"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-pagination", {}]}></div>;
+    setup(props) {
+      return () => (
+        <div class={["l-pagination", {}]}>
+          <ul class="l-pagination-pager">
+            <li class="l-pagination-pager_number">1</li>
+            <li class="l-pagination-pager_number">2</li>
+            <li class="l-pagination-pager_number">3</li>
+            <li class="l-pagination-pager_number">4</li>
+            <li class="l-pagination-pager_number">5</li>
+            <li class="l-pagination-pager_number">6</li>
+            <li class="l-pagination-pager_number">7</li>
+          </ul>
+        </div>
+      );
     },
   })
 );
