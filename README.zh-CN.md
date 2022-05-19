@@ -160,3 +160,7 @@ defineComponent({
 - 分页 Pagination
 - 步骤条 Steps
 - 选项卡 Tabs
+
+## 进度
+
+详细进度可在这里[查看](./docs/progress.md)，目前项目处于施工期，不推荐在生产环境使用。

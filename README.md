@@ -160,3 +160,7 @@ defineComponent({
 - Pagination
 - Steps
 - Tabs
+
+## Progress
+
+Detailed progress view [here](./docs/progress.md), The project is currently under construction and is not recommended for use in a production environment.
