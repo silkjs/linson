@@ -1,6 +1,6 @@
 # 林森
 
-A Vue 3 Component Library.
+Linson 是一个基于 Vue3 的组件库，取自汉字“林森”，意为 Linson 为用户提供最基础的物料，快速无缝的组合出规范化的 UI 界面
 
 [English](./README.md) | 简体中文
 
