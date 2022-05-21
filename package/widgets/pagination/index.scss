@@ -22,6 +22,12 @@
         border-color: get-color("primary-hover");
         color: get-color("primary-hover");
       }
+
+      &.current {
+        border-color: get-color("primary");
+        color: get-color("gray-white");
+        background-color: get-color("primary");
+      }
     }
   }
 }
