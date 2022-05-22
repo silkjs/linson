@@ -47,6 +47,28 @@ import {
   Validators,
 } from "../../../package/linson";
 
+const styles = {
+  page: css({
+    h3: {
+      margin: "20px 0 10px",
+    },
+    ".l-card": {
+      width: "100%",
+      marginBottom: "16px",
+    },
+    ".box": {
+      display: "flex",
+      width: "100%",
+      height: "20px",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "#fff",
+      fontSize: "12px",
+      backgroundColor: "#b3bcff",
+    },
+  }),
+};
+
 export const Development = defineComponent({
   setup() {
     const dialog = useDialog();
@@ -56,27 +78,7 @@ export const Development = defineComponent({
       switch: true,
     });
     return () => (
-      <div
-        class={css({
-          h3: {
-            margin: "20px 0 10px",
-          },
-          ".l-card": {
-            width: "100%",
-            marginBottom: "16px",
-          },
-          ".box": {
-            display: "flex",
-            width: "100%",
-            height: "20px",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "#fff",
-            fontSize: "12px",
-            backgroundColor: "#b3bcff",
-          },
-        })}
-      >
+      <div class={styles.page}>
         <Row gutter={[16, 16]}>
           <Col span={24}>
             <h3>### 通用</h3>
@@ -213,7 +215,6 @@ export const Development = defineComponent({
             <h3>### 展示</h3>
 
             <Card title="轮播图 Carousel">
-              {" "}
               <Carousel>
                 <CarouselItem>
                   <img
@@ -242,7 +243,7 @@ export const Development = defineComponent({
               </Carousel>
             </Card>
             <Card title="骨架屏 Skeleton">
-              <Skeleton repeat={3} />
+              <Skeleton repeat={4} />
             </Card>
             <Card title="表格 Table">
               <Table />
