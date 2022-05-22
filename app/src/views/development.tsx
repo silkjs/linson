@@ -264,29 +264,80 @@ export const Development = defineComponent({
               <Alert theme="success" message="这是一条成功的消息提示" />
             </Card>
             <Card title="对话框 Dialog">
-              <Button
-                theme="primary"
-                onClick={() => [
-                  dialog.success({
-                    title: "成功",
-                    content: "厉害",
-                  }),
-                ]}
-              >
-                Dialog
-              </Button>
-              <Dialog title="确认" content="你确定" />
+              <Space>
+                <Button
+                  theme="primary"
+                  onClick={() => [
+                    dialog.info({
+                      title: "成功",
+                      content: "厉害",
+                    }),
+                  ]}
+                >
+                  Info
+                </Button>
+                <Button
+                  theme="primary"
+                  onClick={() => [
+                    dialog.success({
+                      title: "成功",
+                      content: "厉害",
+                    }),
+                  ]}
+                >
+                  Success
+                </Button>
+                <Button
+                  theme="primary"
+                  onClick={() => [
+                    dialog.error({
+                      title: "成功",
+                      content: "厉害",
+                    }),
+                  ]}
+                >
+                  Error
+                </Button>
+                <Button
+                  theme="primary"
+                  onClick={() => [
+                    dialog.warning({
+                      title: "成功",
+                      content: "厉害",
+                    }),
+                  ]}
+                >
+                  Warning
+                </Button>
+              </Space>
             </Card>
             <Card title="全局提示 Message">
-              <Button
-                theme="primary"
-                onClick={() => {
-                  message.success("这是一条成功提示");
-                }}
-              >
-                Message
-              </Button>
-              <Message theme="success">用于表示操作顺利达成</Message>
+              <Space>
+                <Button
+                  theme="primary"
+                  onClick={() => {
+                    message.success("用于表示操作顺利达成");
+                  }}
+                >
+                  Success
+                </Button>
+                <Button
+                  theme="primary"
+                  onClick={() => {
+                    message.error("用于表示操作顺利达成");
+                  }}
+                >
+                  Error
+                </Button>
+                <Button
+                  theme="primary"
+                  onClick={() => {
+                    message.warning("用于表示操作顺利达成");
+                  }}
+                >
+                  Warning
+                </Button>
+              </Space>
             </Card>
             <Card title="气泡确认框 Popconfirm">
               <Button theme="primary">Popconfirm</Button>

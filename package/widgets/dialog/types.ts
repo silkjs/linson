@@ -9,10 +9,10 @@ export interface DialogProviderEmits {}
 
 export interface DialogApiInjection {
   create(props: DialogProps): void;
-  info(): void;
+  info(props: DialogProps): void;
   success(props: DialogProps): void;
-  warning(): void;
-  error(): void;
+  warning(props: DialogProps): void;
+  error(props: DialogProps): void;
 }
 
 export interface DialogProps {

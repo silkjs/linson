@@ -12,11 +12,11 @@ export interface MessageProviderEmits {}
 
 export interface MessageApiInjection {
   create(props: MessageProps): void;
-  info(): void;
+  info(content: LNode): void;
   success(content: LNode): void;
-  warning(): void;
-  error(): void;
-  loading(): void;
+  warning(content: LNode): void;
+  error(content: LNode): void;
+  loading(content: LNode): void;
 }
 
 export const MESSAGE_API_INJECTION_KEY = createInjectionKey<MessageApiInjection>("l-message-api");
