@@ -3,15 +3,45 @@
 .l-carousel {
   position: relative;
   z-index: 1;
-  display: flex;
   overflow: hidden;
   height: 100%;
-  flex-direction: row;
 
-  .l-carousel-item {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    flex: 0 0 auto;
+  .l-carousel-content {
+    display: flex;
+    flex-direction: row;
+
+    .l-carousel-content_item {
+      display: inline-block;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex: 0 0 auto;
+      flex-direction: row;
+    }
+  }
+
+  .l-carousel-navigation {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+
+    .l-carousel-navigation_item {
+      width: 14px;
+      height: 3px;
+      margin: 0 0 0 6px;
+      background-color: get-color("gray-1");
+      cursor: pointer;
+
+      &.active {
+        width: 20px;
+      }
+    }
+  }
+
+  img {
+    display: block;
   }
 }

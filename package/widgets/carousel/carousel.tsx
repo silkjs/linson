@@ -39,7 +39,17 @@ export const Carousel = withInstall(
       },
     },
     setup(props, { slots }) {
-      return () => <div class={["l-carousel", {}]}>{slots.default?.()}</div>;
+      return () => (
+        <div class={["l-carousel", {}]}>
+          <div class="l-carousel-content">{slots.default?.()}</div>
+          <div class="l-carousel-navigation">
+            <div class="l-carousel-navigation_item active"></div>
+            <div class="l-carousel-navigation_item"></div>
+            <div class="l-carousel-navigation_item"></div>
+            <div class="l-carousel-navigation_item"></div>
+          </div>
+        </div>
+      );
     },
   })
 );
