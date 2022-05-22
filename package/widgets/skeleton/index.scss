@@ -6,7 +6,10 @@
   .l-skeleton_row {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   .l-skeleton_col {
