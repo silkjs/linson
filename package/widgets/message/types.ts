@@ -13,7 +13,7 @@ export interface MessageProviderEmits {}
 export interface MessageApiInjection {
   create(props: MessageProps): void;
   info(): void;
-  success(): void;
+  success(content: LNode): void;
   warning(): void;
   error(): void;
   loading(): void;

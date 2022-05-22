@@ -264,17 +264,38 @@ export const Development = defineComponent({
               <Alert theme="success" message="这是一条成功的消息提示" />
             </Card>
             <Card title="对话框 Dialog">
+              <Button
+                theme="primary"
+                onClick={() => [
+                  dialog.success({
+                    title: "成功",
+                    content: "厉害",
+                  }),
+                ]}
+              >
+                Dialog
+              </Button>
               <Dialog title="确认" content="你确定" />
             </Card>
             <Card title="全局提示 Message">
+              <Button
+                theme="primary"
+                onClick={() => {
+                  message.success("这是一条成功提示");
+                }}
+              >
+                Message
+              </Button>
               <Message theme="success">用于表示操作顺利达成</Message>
             </Card>
             <Card title="气泡确认框 Popconfirm">
+              <Button theme="primary">Popconfirm</Button>
               <Popconfirm title="Are you sure delete this task?">
                 <a href="#">Delete</a>
               </Popconfirm>
             </Card>
             <Card title="气泡卡片 Popover">
+              <Button theme="primary">Popover</Button>
               <Popover
                 title="Title"
                 v-slots={{
@@ -290,6 +311,7 @@ export const Development = defineComponent({
               </Popover>
             </Card>
             <Card title="文字提示 Tooltip">
+              <Button theme="primary">Tooltip</Button>
               <Tooltip title="prompt text">Tooltip will show when mouse enter.</Tooltip>
             </Card>
 
