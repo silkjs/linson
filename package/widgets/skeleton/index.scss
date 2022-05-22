@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
 
+    &:last-child {
+      width: 70%;
+    }
+
     &:not(:last-child) {
       margin-bottom: 10px;
     }
