@@ -1,6 +1,13 @@
-import { type PropType, defineComponent, inject, provide } from "vue";
+import { type PropType, Teleport, defineComponent, inject, provide, reactive } from "vue";
 import { withInstall } from "../../utils/common";
-import { MESSAGE_API_INJECTION_KEY, MessageApiInjection, MessageProviderEmits, MessageProviderProps } from "./types";
+import { Message } from "./message";
+import {
+  MESSAGE_API_INJECTION_KEY,
+  MessageApiInjection,
+  MessageProps,
+  MessageProviderEmits,
+  MessageProviderProps,
+} from "./types";
 
 const emits: MessageProviderEmits = {};
 
@@ -21,17 +28,21 @@ export const MessageProvider = withInstall(
         default: (): MessageProviderProps["placement"] => "top",
         type: String as PropType<MessageProviderProps["placement"]>,
       },
-      to: {
-        type: [String, Object] as PropType<MessageProviderProps["to"]>,
-      },
     },
     setup(props, { slots }) {
+      const data = reactive<{ messages: MessageProps[] }>({
+        messages: [],
+      });
       const api: MessageApiInjection = {
         create() {
           //
         },
-        error() {
-          //
+        error(content) {
+          data.messages.push({
+            content: content,
+            duration: 1000,
+            theme: "error",
+          });
         },
         info() {
           //
@@ -39,15 +50,32 @@ export const MessageProvider = withInstall(
         loading() {
           //
         },
-        success() {
-          //
+        success(content) {
+          data.messages.push({
+            content: content,
+            duration: 1000,
+            theme: "success",
+          });
         },
-        warning() {
-          //
+        warning(content) {
+          data.messages.push({
+            content: content,
+            duration: 1000,
+            theme: "warning",
+          });
         },
       };
       provide(MESSAGE_API_INJECTION_KEY, api);
-      return () => slots.default?.();
+      return () => (
+        <>
+          {slots.default?.()}
+          <Teleport to="body">
+            {data.messages.map((item) => (
+              <Message {...item} />
+            ))}
+          </Teleport>
+        </>
+      );
     },
   })
 );

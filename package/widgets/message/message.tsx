@@ -1,5 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
+import { getContent } from "../../utils/context";
 import { MessageEmits, MessageProps } from "./types";
 
 const emits: MessageEmits = {};
@@ -21,8 +22,12 @@ export const Message = withInstall(
         type: String as PropType<MessageProps["theme"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-message", {}]}></div>;
+    setup(props, { slots }) {
+      return () => {
+        const content = getContent(props, slots, "content");
+
+        return <div class={["l-message"]}>{content}</div>;
+      };
     },
   })
 );

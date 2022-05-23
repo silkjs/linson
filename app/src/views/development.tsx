@@ -316,7 +316,7 @@ export const Development = defineComponent({
                 <Button
                   theme="primary"
                   onClick={() => {
-                    message.success("用于表示操作顺利达成");
+                    message.success("用于表示操作顺利达成[Success]");
                   }}
                 >
                   Success
@@ -324,7 +324,7 @@ export const Development = defineComponent({
                 <Button
                   theme="primary"
                   onClick={() => {
-                    message.error("用于表示操作顺利达成");
+                    message.error("用于表示操作顺利达成[Error]");
                   }}
                 >
                   Error
@@ -332,7 +332,7 @@ export const Development = defineComponent({
                 <Button
                   theme="primary"
                   onClick={() => {
-                    message.warning("用于表示操作顺利达成");
+                    message.warning("用于表示操作顺利达成[Warning]");
                   }}
                 >
                   Warning

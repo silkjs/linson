@@ -5,7 +5,6 @@ export interface MessageProviderProps {
   duration: number;
   max: number;
   placement: LPlacement;
-  to: string | HTMLElement;
 }
 
 export interface MessageProviderEmits {}
@@ -22,9 +21,9 @@ export interface MessageApiInjection {
 export const MESSAGE_API_INJECTION_KEY = createInjectionKey<MessageApiInjection>("l-message-api");
 
 export interface MessageProps {
-  content?: string | LNode;
-  duration?: number;
-  theme?: "info" | "success" | "warning" | "error" | "loading";
+  content: LNode;
+  duration: number;
+  theme: "info" | "success" | "warning" | "error" | "loading";
 }
 
 export interface MessageEmits {}

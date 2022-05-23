@@ -1,1 +1,14 @@
 @import "../../common/styles/theme.scss";
+
+.l-message {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: flex;
+  width: fit-content;
+  max-width: 400px;
+  padding: 13px 16px;
+  background-color: get-color("gray-white");
+  transform: translateX(-50%);
+  box-shadow: 0 0 6px 0 get-color("gray-3");
+}
