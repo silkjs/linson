@@ -1,1 +1,26 @@
 @import "../../common/styles/theme.scss";
+
+.l-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 500px;
+  max-height: 85vh;
+  border-radius: 6px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: rgb(14 18 22 / 35%) 0 10px 38px -10px, rgb(14 18 22 / 20%) 0 10px 20px -15px;
+  transform: translate(-50%, -50%);
+
+  .l-dialog_head {
+    font-size: 12px;
+  }
+
+  .l-dialog_body {
+    font-size: 12px;
+  }
+
+  .l-dialog_foot {
+    font-size: 12px;
+  }
+}

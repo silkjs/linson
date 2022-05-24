@@ -27,6 +27,7 @@ export { Space } from "./widgets/space";
 // 展示 Display
 export { Card } from "./widgets/card";
 export { Carousel, CarouselItem } from "./widgets/carousel";
+export { ContextMenu } from "./widgets/context-menu";
 export { Skeleton } from "./widgets/skeleton";
 export { Table } from "./widgets/table";
 export { Tag } from "./widgets/tag";

@@ -16,8 +16,9 @@ export interface DialogApiInjection {
 }
 
 export interface DialogProps {
-  title: string | LNode;
-  content: string | LNode;
+  head: LNode;
+  body: LNode;
+  foot: LNode;
 }
 
 export interface DialogEmits {}

@@ -11,6 +11,7 @@ import {
   Cascader,
   Checkbox,
   Col,
+  ContextMenu,
   DatePicker,
   Dialog,
   Divider,
@@ -242,6 +243,9 @@ export const Development = defineComponent({
                 </CarouselItem>
               </Carousel>
             </Card>
+            <Card title="右键菜单 ContextMenu">
+              <ContextMenu />
+            </Card>
             <Card title="骨架屏 Skeleton">
               <Skeleton repeat={4} />
             </Card>
@@ -265,48 +269,16 @@ export const Development = defineComponent({
             </Card>
             <Card title="对话框 Dialog">
               <Space>
-                <Button
-                  theme="primary"
-                  onClick={() => [
-                    dialog.info({
-                      title: "成功",
-                      content: "厉害",
-                    }),
-                  ]}
-                >
+                <Button theme="primary" onClick={() => []}>
                   Info
                 </Button>
-                <Button
-                  theme="primary"
-                  onClick={() => [
-                    dialog.success({
-                      title: "成功",
-                      content: "厉害",
-                    }),
-                  ]}
-                >
+                <Button theme="primary" onClick={() => []}>
                   Success
                 </Button>
-                <Button
-                  theme="primary"
-                  onClick={() => [
-                    dialog.error({
-                      title: "成功",
-                      content: "厉害",
-                    }),
-                  ]}
-                >
+                <Button theme="primary" onClick={() => []}>
                   Error
                 </Button>
-                <Button
-                  theme="primary"
-                  onClick={() => [
-                    dialog.warning({
-                      title: "成功",
-                      content: "厉害",
-                    }),
-                  ]}
-                >
+                <Button theme="primary" onClick={() => []}>
                   Warning
                 </Button>
               </Space>

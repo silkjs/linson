@@ -95,7 +95,7 @@
     "semi-style": ["error", "last"],
     "sort-vars": ["error"],
     "sort-imports": ["error", { "ignoreDeclarationSort": true }],
-    "sort-keys": ["error"],
+    "sort-keys": ["warn"],
     "space-infix-ops": ["error"],
     "spaced-comment": ["error", "always", { "exceptions": ["-", "+"] }],
 
