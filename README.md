@@ -1,6 +1,6 @@
 # Linson
 
-Linson is a Vue 3 Component Library. translates from the Chinese character "林森", meaning Linson provides users with the most basic materials to quickly and seamlessly assemble a standardized UI interface
+Linson is a Vue 3 Component Library. translates from the Chinese character "林森", meaning Linson provides users with the most basic materials to quickly and seamlessly assemble a standardized User Interface
 
 English | [简体中文](./README.zh-CN.md)
 
