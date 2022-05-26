@@ -1,4 +1,4 @@
-import { type PropType, defineComponent } from "vue";
+import { type PropType, defineComponent, onMounted } from "vue";
 import { withInstall } from "../../utils/common";
 import { getContent } from "../../utils/context";
 import { MessageEmits, MessageProps } from "./types";
@@ -23,9 +23,11 @@ export const Message = withInstall(
       },
     },
     setup(props, { slots }) {
+      onMounted(() => {
+        //
+      });
       return () => {
         const content = getContent(props, slots, "content");
-
         return <div class={["l-message"]}>{content}</div>;
       };
     },

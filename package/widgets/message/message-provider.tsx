@@ -34,8 +34,8 @@ export const MessageProvider = withInstall(
         messages: [],
       });
       const api: MessageApiInjection = {
-        create() {
-          //
+        create(value) {
+          data.messages.push(value);
         },
         error(content) {
           data.messages.push({
@@ -44,11 +44,19 @@ export const MessageProvider = withInstall(
             theme: "error",
           });
         },
-        info() {
-          //
+        info(content) {
+          data.messages.push({
+            content: content,
+            duration: 1000,
+            theme: "info",
+          });
         },
-        loading() {
-          //
+        loading(content) {
+          data.messages.push({
+            content: content,
+            duration: 1000,
+            theme: "loading",
+          });
         },
         success(content) {
           data.messages.push({
@@ -70,9 +78,11 @@ export const MessageProvider = withInstall(
         <>
           {slots.default?.()}
           <Teleport to="body">
-            {data.messages.map((item) => (
-              <Message {...item} />
-            ))}
+            <div class="l-message-provider">
+              {data.messages.map((item) => (
+                <Message {...item} />
+              ))}
+            </div>
           </Teleport>
         </>
       );

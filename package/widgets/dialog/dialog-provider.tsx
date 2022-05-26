@@ -1,6 +1,13 @@
-import { type PropType, defineComponent, inject, provide } from "vue";
+import { type PropType, Teleport, defineComponent, inject, provide, reactive } from "vue";
 import { withInstall } from "../../utils/common";
-import { DIALOG_API_INJECTION_KEY, DialogApiInjection, DialogProviderEmits, DialogProviderProps } from "./types";
+import { Dialog } from "./dialog";
+import {
+  DIALOG_API_INJECTION_KEY,
+  DialogApiInjection,
+  DialogProps,
+  DialogProviderEmits,
+  DialogProviderProps,
+} from "./types";
 
 const emits: DialogProviderEmits = {};
 
@@ -14,25 +21,39 @@ export const DialogProvider = withInstall(
       },
     },
     setup(props, { slots }) {
+      const data = reactive<{ dialogs: DialogProps[] }>({
+        dialogs: [],
+      });
       const api: DialogApiInjection = {
-        create() {
-          //
+        create(value) {
+          data.dialogs.push(value);
         },
-        error() {
-          //
+        error(value) {
+          data.dialogs.push(value);
         },
-        info() {
-          //
+        info(value) {
+          data.dialogs.push(value);
         },
-        success() {
-          //
+        success(value) {
+          data.dialogs.push(value);
         },
-        warning() {
-          //
+        warning(value) {
+          data.dialogs.push(value);
         },
       };
       provide(DIALOG_API_INJECTION_KEY, api);
-      return () => slots.default?.();
+      return () => (
+        <>
+          {slots.default?.()}
+          <Teleport to="body">
+            <div class="l-dialog-provider">
+              {data.dialogs.map((item) => (
+                <Dialog {...item} />
+              ))}
+            </div>
+          </Teleport>
+        </>
+      );
     },
   })
 );
