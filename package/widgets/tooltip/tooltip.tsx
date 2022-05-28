@@ -19,8 +19,8 @@ export const Tooltip = withInstall(
         type: String as PropType<TooltipProps["trigger"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-tooltip", {}]}></div>;
+    setup(props, { slots }) {
+      return () => <div class={["l-tooltip", {}]}>{slots.default?.()}</div>;
     },
   })
 );

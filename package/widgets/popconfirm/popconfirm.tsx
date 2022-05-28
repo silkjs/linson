@@ -19,8 +19,8 @@ export const Popconfirm = withInstall(
         type: String as PropType<PopconfirmProps["trigger"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-popconfirm", {}]}></div>;
+    setup(props, { slots }) {
+      return () => <div class={["l-popconfirm", {}]}>{slots.default?.()}</div>;
     },
   })
 );

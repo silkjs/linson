@@ -312,13 +312,11 @@ export const Development = defineComponent({
               </Space>
             </Card>
             <Card title="气泡确认框 Popconfirm">
-              <Button theme="primary">Popconfirm</Button>
               <Popconfirm title="Are you sure delete this task?">
-                <a href="#">Delete</a>
+                <Button theme="primary">Popconfirm</Button>
               </Popconfirm>
             </Card>
             <Card title="气泡卡片 Popover">
-              <Button theme="primary">Popover</Button>
               <Popover
                 title="Title"
                 v-slots={{
@@ -330,12 +328,11 @@ export const Development = defineComponent({
                   ),
                 }}
               >
-                <Button theme="primary">Hover me</Button>
+                <Button theme="primary">Popover</Button>
               </Popover>
             </Card>
             <Card title="文字提示 Tooltip">
-              <Button theme="primary">Tooltip</Button>
-              <Tooltip title="prompt text">Tooltip will show when mouse enter.</Tooltip>
+              Tooltip will <Tooltip title="prompt text">show</Tooltip> when mouse enter.
             </Card>
 
             <h3>### 导航</h3>

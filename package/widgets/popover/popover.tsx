@@ -1,4 +1,4 @@
-import { type PropType, defineComponent } from "vue";
+import { type PropType, defineComponent, onMounted, ref } from "vue";
 import { withInstall } from "../../utils/common";
 import { PopoverEmits, PopoverProps } from "./types";
 
@@ -19,8 +19,19 @@ export const Popover = withInstall(
         type: String as PropType<PopoverProps["trigger"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-popover", {}]}></div>;
+    setup(propd, { slots }) {
+      const el = ref<HTMLDivElement>();
+      onMounted(() => {
+        el.value!.addEventListener("click", (e) => {
+          console.log(e);
+          console.log(el.value?.getBoundingClientRect());
+        });
+      });
+      return () => (
+        <div class={["l-popover", {}]} ref={el}>
+          {slots.default?.()}
+        </div>
+      );
     },
   })
 );
