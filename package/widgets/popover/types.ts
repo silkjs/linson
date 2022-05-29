@@ -1,7 +1,8 @@
 import { LNode, LPlacement, LTrigger } from "../../common/linson-type";
 
 export interface PopoverProps {
-  title: string;
+  title: LNode;
+  content: LNode;
   placement: LPlacement;
   trigger: LTrigger;
 }
