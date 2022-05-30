@@ -27,18 +27,18 @@
 | Layout     | Grid           | 🟡     |
 |            | Space          | 🟡     |
 | Display    | Card           | 🟡     |
-|            | Carousel       | ⚪️    |
+|            | Carousel       | 🔵     |
 |            | Skeleton       | 🟡     |
 |            | Table          | 🔵     |
 |            | Tag            | 🟡     |
 | Feedback   | Alert          | 🟡     |
-|            | Dialog         | ⚪️    |
-|            | Message        | ⚪️    |
+|            | Dialog         | 🔵     |
+|            | Message        | 🔵     |
 |            | Popconfirm     | ⚪️    |
 |            | Popover        | ⚪️    |
 |            | Tooltip        | ⚪️    |
 | Navigation | Breadcrumb     | 🟡     |
 |            | Menu           | ⚪️    |
 |            | Pagination     | 🔵     |
-|            | Steps          | ⚪️    |
+|            | Steps          | 🔵     |
 |            | Tabs           | 🔵     |
