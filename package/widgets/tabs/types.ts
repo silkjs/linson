@@ -11,8 +11,8 @@ export interface TabsEmits {
 }
 
 export interface TabPaneProps {
-  name: string | number;
-  tab: string | LNode;
+  name: string;
+  tab: LNode;
 }
 
 export interface TabPaneEmits {}

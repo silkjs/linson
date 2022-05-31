@@ -1,4 +1,4 @@
-import { type PropType, defineComponent } from "vue";
+import { type PropType, defineComponent, reactive } from "vue";
 import { withInstall } from "../../utils/common";
 import { TabsEmits, TabsProps } from "./types";
 
@@ -24,21 +24,51 @@ export const Tabs = withInstall(
       },
     },
     setup(props, { slots, emit }) {
-      return () => (
-        <div class={["l-tabs", "l-tabs-position-top", {}]}>
-          <div class="l-tabs-nav">
-            <div class="l-tabs-tab l-tabs-tab-active">Oasis</div>
-            <div class="l-tabs-tab">the Beatles</div>
-            <div class="l-tabs-tab">周杰伦</div>
-            <span class="l-tabs-bar"></span>
+      const data = reactive({
+        active: props.value,
+      });
+      return () => {
+        const children = slots.default?.();
+        if (!data.active) {
+          data.active = children?.at(0)?.props?.name;
+        }
+        return (
+          <div class={["l-tabs", "l-tabs-position-top", {}]}>
+            <div class="l-tabs-nav">
+              {children?.map((item) => (
+                <div
+                  class={[
+                    "l-tabs-tab",
+                    {
+                      "l-tabs-tab-active": data.active === item.props?.name,
+                    },
+                  ]}
+                  onClick={() => {
+                    data.active = item.props?.name;
+                  }}
+                >
+                  {item.props?.tab}
+                </div>
+              ))}
+              <span class="l-tabs-bar"></span>
+            </div>
+            <div class="l-tabs-content">
+              {children?.map((item) => (
+                <div
+                  class={[
+                    "l-tabs-pane",
+                    {
+                      "l-tabs-pane-active": data.active === item.props?.name,
+                    },
+                  ]}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
-          <div class="l-tabs-content">
-            <div class="l-tabs-pane l-tabs-pane-active">Wonderwall</div>
-            <div class="l-tabs-pane">Hey Jude</div>
-            <div class="l-tabs-pane">七里香</div>
-          </div>
-        </div>
-      );
+        );
+      };
     },
   })
 );
