@@ -1,6 +1,6 @@
-import { type PropType, defineComponent } from "vue";
+import { type PropType, defineComponent, inject } from "vue";
 import { withInstall } from "../../utils/common";
-import { TabPaneEmits, TabPaneProps } from "./types";
+import { TABS_API_INJECTION_KEY, TabPaneEmits, TabPaneProps } from "./types";
 
 const emits: TabPaneEmits = {};
 
@@ -13,7 +13,13 @@ export const TabPane = withInstall(
       tab: [String, Function] as PropType<TabPaneProps["tab"]>,
     },
     setup(props, { slots }) {
-      return () => <div class={["l-tab-pane", {}]}>{slots.default?.()}</div>;
+      const tabs = inject(TABS_API_INJECTION_KEY);
+      return () => (
+        <div class={["l-tab-pane", {}]}>
+          {tabs?.active}
+          {slots.default?.()}
+        </div>
+      );
     },
   })
 );

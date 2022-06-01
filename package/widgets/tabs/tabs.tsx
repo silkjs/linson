@@ -1,6 +1,6 @@
-import { type PropType, defineComponent, reactive } from "vue";
+import { type PropType, defineComponent, provide, reactive } from "vue";
 import { withInstall } from "../../utils/common";
-import { TabsEmits, TabsProps } from "./types";
+import { TABS_API_INJECTION_KEY, TabsEmits, TabsProps } from "./types";
 
 const emits: TabsEmits = {
   "update:value": (value) => typeof value === "string",
@@ -27,6 +27,9 @@ export const Tabs = withInstall(
       const data = reactive({
         active: props.value,
       });
+      provide(TABS_API_INJECTION_KEY, {
+        active: data.active,
+      });
       return () => {
         const children = slots.default?.();
         if (!data.active) {
@@ -52,20 +55,7 @@ export const Tabs = withInstall(
               ))}
               <span class="l-tabs-bar"></span>
             </div>
-            <div class="l-tabs-content">
-              {children?.map((item) => (
-                <div
-                  class={[
-                    "l-tabs-pane",
-                    {
-                      "l-tabs-pane-active": data.active === item.props?.name,
-                    },
-                  ]}
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
+            <div class="l-tabs-content">{children}</div>
           </div>
         );
       };
