@@ -22,6 +22,20 @@
 1. 在 linson 目录下运行 dev 预设命令
 1. 编辑 app 里的视图组件即可实时查看界面变化
 
+### 本地调试
+
+```bash
+# 包根目录
+npm link # 会在全局创建一个链接，指向我们创建的包。
+
+# 项目根目录
+npm link <package_name>
+
+# 更新
+npm unlink <package_name>
+npm link <package_name>
+```
+
 ### 其他预设命令
 
 - dev 开发预览
