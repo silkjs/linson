@@ -2,9 +2,15 @@
 @import "./theme.scss";
 
 :root {
-  @each $name, $value in $colors {
+  @each $name, $value in $board {
     --linson-light-#{$name}: #{list.nth($value, 1)};
     --linson-dark-#{$name}: #{list.nth($value, 2)};
+    --linson-color-#{$name}: var(--linson-light-#{$name});
+  }
+
+  @each $name, $value in $colors {
+    --linson-light-#{$name}: var(--linson-light-#{$value});
+    --linson-dark-#{$name}: var(--linson-dark-#{$value});
     --linson-color-#{$name}: var(--linson-light-#{$name});
   }
 }
@@ -13,6 +19,10 @@ html {
   // color-scheme: light;
   &[data-theme="dark"] {
     // color-scheme: dark;
+    @each $name, $_ in $board {
+      --linson-color-#{$name}: var(--linson-dark-#{$name});
+    }
+
     @each $name, $_ in $colors {
       --linson-color-#{$name}: var(--linson-dark-#{$name});
     }

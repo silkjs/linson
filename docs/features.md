@@ -18,6 +18,12 @@ Vue 中可以通过 slot 和 props 专递自定义 template，其中 slot 分为
 
 ## 功能实现
 
+### Icon
+
+Icon 的几种实现方案：图片、雪碧图（精灵图）、iconfont、svg
+
+- icon resource [xicons](https://www.xicons.org/)
+
 ### 浮动层的现实和隐藏
 
 涉及到浮动层的组件有复杂浮动 Dropdown、Cascader、DatePicker、Select、TimePicker、ContextMenu、Popconfirm、Popover、Tooltip 和简单浮动 Dialog、Message
