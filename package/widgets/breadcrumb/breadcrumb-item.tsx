@@ -21,7 +21,7 @@ export const BreadcrumbItem = withInstall(
       return () => (
         <div class={["l-breadcrumb-item", {}]}>
           <a class="l-breadcrumb--text-overflow">{slots.default?.()}</a>
-          <span class="l-breadcrumb_separator">-</span>
+          <span class="l-breadcrumb_separator">/</span>
         </div>
       );
     },

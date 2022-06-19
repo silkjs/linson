@@ -2,12 +2,19 @@
 
 .l-input {
   display: inline-flex;
-  border: 1px solid #999;
+  border: 1px solid get-color("gray-4");
   border-radius: 2px;
-  padding: 0.3em 0.5em;
+  padding: 4px 11px;
   outline: none;
+  line-height: 18px;
+  transition: all 0.3s;
+
+  &:focus,
+  &:hover {
+    border-color: get-color("primary-5");
+  }
 
   &:focus {
-    border-color: get-color("primary");
+    box-shadow: 0 0 0 2px get-color("primary-1");
   }
 }

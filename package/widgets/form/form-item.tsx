@@ -16,7 +16,9 @@ export const FormItem = withInstall(
     setup(props, { slots }) {
       return () => (
         <div class={["l-form-item", {}]}>
-          <div>{props.lable}</div>
+          <div class="l-form-item-label">
+            <label>{props.lable}</label>
+          </div>
           <div>{slots.default?.()}</div>
         </div>
       );

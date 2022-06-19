@@ -1,1 +1,33 @@
 @import "../../common/styles/theme.scss";
+
+.l-form-item {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 24px;
+
+  .l-form-item-label {
+    label {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 28px;
+
+      &::before {
+        display: inline-block;
+        margin-right: 4px;
+        font-size: 14px;
+        font-family: SimSun, sans-serif;
+        color: #ff4d4f;
+        line-height: 1;
+        content: "*";
+      }
+
+      &::after {
+        content: ":";
+        position: relative;
+        top: -0.5px;
+        margin: 0 8px 0 2px;
+      }
+    }
+  }
+}
