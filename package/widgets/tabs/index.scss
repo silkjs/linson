@@ -46,10 +46,12 @@
     .l-tabs-bar {
       position: absolute;
       bottom: 0;
+      left: 0;
       display: block;
       width: 30px;
       height: 2px;
       background-color: get-color("primary");
+      transition: all 0.3s;
     }
   }
 

@@ -26,6 +26,7 @@ export const Tabs = withInstall(
     setup(props, { slots, emit }) {
       const data = reactive({
         active: props.value,
+        left: 0,
       });
       provide(TABS_API_INJECTION_KEY, {
         active: data.active,
@@ -46,14 +47,21 @@ export const Tabs = withInstall(
                       "l-tabs-tab-active": data.active === item.props?.name,
                     },
                   ]}
-                  onClick={() => {
+                  onClick={(e) => {
+                    const info = e.target as HTMLElement;
+                    data.left = info.offsetLeft;
                     data.active = item.props?.name;
                   }}
                 >
                   {item.props?.tab}
                 </div>
               ))}
-              <span class="l-tabs-bar"></span>
+              <span
+                class="l-tabs-bar"
+                style={{
+                  left: `${data.left}px`,
+                }}
+              ></span>
             </div>
             <div class="l-tabs-content">{children}</div>
           </div>
