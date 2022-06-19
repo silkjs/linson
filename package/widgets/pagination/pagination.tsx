@@ -1,5 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
+import { DoubleLeftOutlined, DoubleRightOutlined, EllipsisOutlined, Icon, LeftOutlined, RightOutlined } from "../icon";
 import { PaginationEmits, PaginationProps } from "./types";
 
 const emits: PaginationEmits = {
@@ -40,13 +41,35 @@ export const Pagination = withInstall(
       return () => (
         <div class={["l-pagination", {}]}>
           <ul class="l-pagination-pager">
-            <li class="l-pagination-pager_number current">1</li>
-            <li class="l-pagination-pager_number">2</li>
-            <li class="l-pagination-pager_number">3</li>
-            <li class="l-pagination-pager_number">4</li>
-            <li class="l-pagination-pager_number">5</li>
-            <li class="l-pagination-pager_number">6</li>
+            <li class="l-pagination-pager_number">
+              <Icon content={LeftOutlined} />
+            </li>
+            <li class="l-pagination-pager_number ">1</li>
+            <li class="l-pagination-jump-prev">
+              <span class="l-pagination-item-link ellipsis">
+                <Icon content={EllipsisOutlined} />
+              </span>
+              <span class="l-pagination-item-link action">
+                <Icon content={DoubleLeftOutlined} />
+              </span>
+            </li>
             <li class="l-pagination-pager_number">7</li>
+            <li class="l-pagination-pager_number">8</li>
+            <li class="l-pagination-pager_number current">9</li>
+            <li class="l-pagination-pager_number">10</li>
+            <li class="l-pagination-pager_number">11</li>
+            <li class="l-pagination-jump-next">
+              <span class="l-pagination-item-link ellipsis">
+                <Icon content={EllipsisOutlined} />
+              </span>
+              <span class="l-pagination-item-link action">
+                <Icon content={DoubleRightOutlined} />
+              </span>
+            </li>
+            <li class="l-pagination-pager_number">50</li>
+            <li class="l-pagination-pager_number">
+              <Icon content={RightOutlined} />
+            </li>
           </ul>
         </div>
       );
