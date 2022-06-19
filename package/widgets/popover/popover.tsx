@@ -29,13 +29,12 @@ export const Popover = withInstall(
         left: 0,
       });
       onMounted(() => {
-        el.value!.addEventListener("click", () => {
-          const res = el.value!.getBoundingClientRect();
-          console.log(res);
-          data.top = res.top + window.pageYOffset + res.height;
-          data.left = res.left;
-          data.show = true;
-        });
+        // el.value!.addEventListener("click", () => {
+        //   const res = el.value!.getBoundingClientRect();
+        //   data.top = res.top + window.scrollY + res.height;
+        //   data.left = res.left;
+        //   data.show = true;
+        // });
       });
       return () => {
         const title = getContent(props, slots, "title", "title");

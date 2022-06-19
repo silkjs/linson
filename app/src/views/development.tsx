@@ -47,6 +47,7 @@ import {
   useMessage,
   Validators,
 } from "../../../package/linson";
+import { SettingOutline } from "../../../package/widgets/icon";
 
 const styles = {
   page: css({
@@ -116,7 +117,7 @@ export const Development = defineComponent({
               </Dropdown>
             </Card>
             <Card title="图标 Icon">
-              <Icon size={16} color="yellow" name="home" />
+              <Icon size={16} color="yellow" content={SettingOutline} />
             </Card>
 
             <h3>### 输入</h3>
