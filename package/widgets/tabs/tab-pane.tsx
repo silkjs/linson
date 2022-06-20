@@ -13,13 +13,7 @@ export const TabPane = withInstall(
       tab: [String, Function] as PropType<TabPaneProps["tab"]>,
     },
     setup(props, { slots }) {
-      const tabs = inject(TABS_API_INJECTION_KEY);
-      return () => (
-        <div class={["l-tab-pane", {}]}>
-          {tabs?.active}
-          {slots.default?.()}
-        </div>
-      );
+      return () => <div class={["l-tab-pane", {}]}>{slots.default?.()}</div>;
     },
   })
 );

@@ -22,8 +22,8 @@ export const Menu = withInstall(
         type: String as PropType<MenuProps["theme"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-menu", {}]}></div>;
+    setup(props, { slots }) {
+      return () => <div class={["l-menu", {}]}>{slots.default?.()}</div>;
     },
   })
 );

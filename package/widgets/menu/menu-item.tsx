@@ -20,8 +20,8 @@ export const MenuItem = withInstall(
         type: String as PropType<MenuItemProps["title"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-menu-item", {}]}></div>;
+    setup(props, { slots }) {
+      return () => <div class={["l-menu-item", {}]}>{slots.default?.()}</div>;
     },
   })
 );

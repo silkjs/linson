@@ -20,8 +20,8 @@ export const MenuSub = withInstall(
         type: String as PropType<MenuSubProps["title"]>,
       },
     },
-    setup() {
-      return () => <div class={["l-menu-sub", {}]}></div>;
+    setup(props, { slots }) {
+      return () => <div class={["l-menu-sub", {}]}>{slots.default?.()}</div>;
     },
   })
 );
