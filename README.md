@@ -75,7 +75,7 @@ template mode
 
 render-function mode
 
-```typescript
+```tsx
 import { defineComponent } from "vue";
 import { Button, Row, Col } from "@silkjs/linson";
 

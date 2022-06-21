@@ -75,7 +75,7 @@ app.use(Button);
 
 渲染函数模式
 
-```typescript
+```tsx
 import { defineComponent } from "vue";
 import { Button, Row, Col } from "@silkjs/linson";
 
