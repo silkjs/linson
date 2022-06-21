@@ -1,5 +1,6 @@
 import { type PropType, defineComponent } from "vue";
 import { withInstall } from "../../utils/common";
+import { Icon, RightOutlined } from "../icon";
 import {
   ContextMenuEmits,
   ContextMenuProps,
@@ -21,13 +22,38 @@ const ContextMenuContext = defineComponent({
     },
   },
   setup(props) {
-    return () => (
-      <div>
-        <div>{props.context.content}</div>
-        <div>{props.context.suffix}</div>
-        <div>{props.context.children?.map}</div>
-      </div>
-    );
+    return () => {
+      if ("children" in props.context) {
+        return (
+          <div
+            class={[
+              "l-context-menu-context",
+              {
+                "l-context-menu-context_disabled": props.context.disabled ?? false,
+              },
+            ]}
+          >
+            <div>{props.context.content}</div>
+            <div class={["l-context-menu-context-suffix"]}>
+              <Icon content={RightOutlined} />
+            </div>
+          </div>
+        );
+      }
+      return (
+        <div
+          class={[
+            "l-context-menu-context",
+            {
+              "l-context-menu-context_disabled": props.context.disabled ?? false,
+            },
+          ]}
+        >
+          <div>{props.context.content}</div>
+          <div class={["l-context-menu-context-suffix"]}>{props.context.suffix}</div>
+        </div>
+      );
+    };
   },
 });
 const ContextMenuCheckbox = defineComponent({
@@ -37,8 +63,15 @@ const ContextMenuCheckbox = defineComponent({
       required: true,
     },
   },
-  setup() {
-    return () => <div></div>;
+  setup(props) {
+    return () => {
+      return props.context.checkbox.map((item) => (
+        <div class={["l-context-menu-checkbox"]}>
+          <div>{item.content}</div>
+          <div class={["l-context-menu-context-suffix"]}>{item.suffix}</div>
+        </div>
+      ));
+    };
   },
 });
 const ContextMenuRadio = defineComponent({
@@ -48,8 +81,15 @@ const ContextMenuRadio = defineComponent({
       required: true,
     },
   },
-  setup() {
-    return () => <div></div>;
+  setup(props) {
+    return () => {
+      return props.context.radio.map((item) => (
+        <div class={["l-context-menu-radio"]}>
+          <div>{item.content}</div>
+          <div class={["l-context-menu-context-suffix"]}>{item.suffix}</div>
+        </div>
+      ));
+    };
   },
 });
 const ContextMenuLabel = defineComponent({
@@ -59,8 +99,8 @@ const ContextMenuLabel = defineComponent({
       required: true,
     },
   },
-  setup() {
-    return () => <div></div>;
+  setup(props) {
+    return () => <div class={["l-context-menu-label"]}>{props.context.label}</div>;
   },
 });
 const ContextMenuSeparator = defineComponent({
@@ -71,7 +111,7 @@ const ContextMenuSeparator = defineComponent({
     },
   },
   setup() {
-    return () => <div></div>;
+    return () => <div class={["l-context-menu-separator"]}></div>;
   },
 });
 

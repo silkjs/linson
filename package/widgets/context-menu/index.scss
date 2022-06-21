@@ -1,1 +1,59 @@
 @import "../../common/styles/theme.scss";
+
+.l-context-menu {
+  display: flex;
+  overflow: hidden;
+  max-width: 220px;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 10px 38px -10px rgb(22 23 24 / 35%), 0 10px 20px -15px rgb(22 23 24 / 20%);
+  flex-direction: column;
+
+  .l-context-menu-context,
+  .l-context-menu-checkbox,
+  .l-context-menu-radio {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    border-radius: 3px;
+    padding: 0 5px 0 25px;
+    font-size: 13px;
+    user-select: none;
+
+    .l-context-menu-context-suffix {
+      display: inline-flex;
+      padding-left: 20px;
+      color: rgb(111 110 119);
+    }
+
+    &:hover {
+      color: rgb(253 252 254);
+      background-color: rgb(110 86 207);
+
+      .l-context-menu-context-suffix {
+        color: rgb(253 252 254);
+      }
+    }
+
+    &.l-context-menu-context_disabled {
+      color: rgb(200 199 203);
+      pointer-events: none;
+    }
+  }
+
+  .l-context-menu-separator {
+    height: 1px;
+    margin: 5px;
+    background-color: rgb(215 207 249);
+  }
+
+  .l-context-menu-label {
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: 25px;
+    color: rgb(111 110 119);
+  }
+}
