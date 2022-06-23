@@ -15,11 +15,21 @@ export const FormItem = withInstall(
     },
     setup(props, { slots }) {
       return () => (
-        <div class={["l-form-item", {}]}>
+        <div
+          class={[
+            "l-form-item",
+            {
+              "l-form-item-has-error": props.lable === "年龄",
+            },
+          ]}
+        >
           <div class="l-form-item-label">
             <label>{props.lable}</label>
           </div>
-          <div>{slots.default?.()}</div>
+          <div class="l-form-item-control">
+            <div class="l-form-item-control-content">{slots.default?.()}</div>
+            <div class="l-form-item-control-explain">必填项</div>
+          </div>
         </div>
       );
     },

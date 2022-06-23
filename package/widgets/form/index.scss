@@ -16,8 +16,7 @@
         display: inline-block;
         margin-right: 4px;
         font-size: 14px;
-        font-family: SimSun, sans-serif;
-        color: #ff4d4f;
+        color: get-color("error");
         line-height: 1;
         content: "*";
       }
@@ -28,6 +27,21 @@
         top: -0.5px;
         margin: 0 8px 0 2px;
       }
+    }
+  }
+
+  .l-form-item-control-explain {
+    display: none;
+    height: 24px;
+    color: red;
+  }
+
+  &.l-form-item-has-error {
+    margin-bottom: 0;
+
+    .l-form-item-control-explain {
+      display: block;
+      font-size: 14px;
     }
   }
 }
