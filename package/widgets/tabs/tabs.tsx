@@ -1,6 +1,6 @@
-import { type PropType, defineComponent, provide, reactive } from "vue";
+import { type PropType, computed, defineComponent, provide, reactive } from "vue";
 import { withInstall } from "../../utils/common";
-import { TABS_API_INJECTION_KEY, TabsEmits, TabsProps } from "./types";
+import { TABS_API_INJECTION_KEY, TabsApiInjection, TabsEmits, TabsProps } from "./types";
 
 const emits: TabsEmits = {
   "update:value": (value) => typeof value === "string",
@@ -25,16 +25,16 @@ export const Tabs = withInstall(
     },
     setup(props, { slots, emit }) {
       const data = reactive({
-        active: props.value,
         left: 0,
       });
-      provide(TABS_API_INJECTION_KEY, {
-        active: data.active,
+      const tabs_api_injection = reactive<TabsApiInjection>({
+        active: props.value,
       });
+      provide(TABS_API_INJECTION_KEY, tabs_api_injection);
       return () => {
         const children = slots.default?.();
-        if (!data.active) {
-          data.active = children?.at(0)?.props?.name;
+        if (!tabs_api_injection.active) {
+          tabs_api_injection.active = children?.at(0)?.props?.name;
         }
         return (
           <div class={["l-tabs", "l-tabs-position-top", {}]}>
@@ -44,13 +44,13 @@ export const Tabs = withInstall(
                   class={[
                     "l-tabs-tab",
                     {
-                      "l-tabs-tab-active": data.active === item.props?.name,
+                      "l-tabs-tab-active": tabs_api_injection.active === item.props?.name,
                     },
                   ]}
                   onClick={(e) => {
                     const info = e.target as HTMLElement;
                     data.left = info.offsetLeft;
-                    data.active = item.props?.name;
+                    tabs_api_injection.active = item.props?.name;
                   }}
                 >
                   {item.props?.tab}

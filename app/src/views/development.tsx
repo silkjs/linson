@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import { defineComponent, reactive } from "vue";
+import { defineComponent, PropType, reactive, ref, toRaw } from "vue";
 import {
   Alert,
   Breadcrumb,
@@ -126,7 +126,7 @@ export const Development = defineComponent({
               <Cascader />
             </Card>
             <Card title="复选框 Checkbox">
-              <Checkbox label="Apple" />
+              <Checkbox label="Applsde" />
               <Checkbox v-model:checked={data.switch} label="Apple" />
             </Card>
             <Card title="日期选择器 DatePicker">
@@ -269,22 +269,68 @@ export const Development = defineComponent({
               <Alert theme="success" message="这是一条成功的消息提示" />
             </Card>
             <Card title="对话框 Dialog">
-              <Space>
-                <Button theme="primary" onClick={() => []}>
+              <Dialog
+                style={{
+                  boxShadow: "0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d",
+                  borderRadius: "2px",
+                  marginBottom: "20px",
+                }}
+              />
+              {/* <Space>
+                <Button
+                  theme="primary"
+                  onClick={() => {
+                    dialog.info({
+                      title: "提示反馈",
+                      content: "",
+                    });
+                  }}
+                >
                   Info
                 </Button>
-                <Button theme="primary" onClick={() => []}>
+                <Button
+                  theme="primary"
+                  onClick={() => {
+                    dialog.success({
+                      title: "成功反馈",
+                      content: "对话框内容",
+                    });
+                  }}
+                >
                   Success
                 </Button>
-                <Button theme="primary" onClick={() => []}>
+                <Button
+                  theme="primary"
+                  onClick={() => {
+                    dialog.error({
+                      title: "错误反馈",
+                      content: "对话框内容",
+                    });
+                  }}
+                >
                   Error
                 </Button>
-                <Button theme="primary" onClick={() => []}>
+                <Button
+                  theme="primary"
+                  onClick={() => {
+                    dialog.warning({
+                      title: "警示反馈",
+                      content: "对话框内容",
+                    });
+                  }}
+                >
                   Warning
                 </Button>
-              </Space>
+              </Space> */}
             </Card>
             <Card title="全局提示 Message">
+              <div style={{ display: "flex", flexDirection: "column", gap: "20px", marginBottom: "20px" }}>
+                <Message theme="info" content="用于表示普通操作信息提示" />
+                <Message theme="success" content="用于表示操作顺利达成" />
+                <Message theme="warning" content="用于表示操作引起一定后果" />
+                <Message theme="error" content="用于表示操作引起严重的后果" />
+                <Message theme="loading" content="用于表示操作正在生效的过程中" />
+              </div>
               <Space>
                 <Button
                   theme="primary"

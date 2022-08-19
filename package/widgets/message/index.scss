@@ -1,14 +1,47 @@
 @import "../../common/styles/theme.scss";
 
 .l-message {
-  position: fixed;
-  top: 0;
-  left: 50%;
   display: flex;
+  align-items: center;
   width: fit-content;
-  max-width: 400px;
+  column-gap: 8px;
   padding: 13px 16px;
   background-color: get-color("gray-white");
-  transform: translateX(-50%);
   box-shadow: 0 0 6px 0 get-color("gray-3");
+}
+
+.l-message-provider {
+  position: fixed;
+  top: 12px;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  height: 0;
+  row-gap: 8px;
+  flex-direction: column;
+}
+
+.bounce-enter-active {
+  animation: bounce-in cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transform-origin: top center;
+}
+
+.bounce-leave-active {
+  animation: bounce-in cubic-bezier(0.4, 0, 0.2, 1) 0.3s reverse;
+  transform-origin: top center;
+}
+
+@keyframes bounce-in {
+  0% {
+    height: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    height: 46px;
+    transform: scale(1);
+  }
 }

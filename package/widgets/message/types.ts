@@ -21,6 +21,8 @@ export interface MessageApiInjection {
 export const MESSAGE_API_INJECTION_KEY = createInjectionKey<MessageApiInjection>("l-message-api");
 
 export interface MessageProps {
+  id: string;
+  show: boolean;
   content: LNode;
   duration: number;
   theme: "info" | "success" | "warning" | "error" | "loading";

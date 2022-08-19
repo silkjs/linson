@@ -1,6 +1,7 @@
 import { type PropType, defineComponent, onMounted } from "vue";
 import { withInstall } from "../../utils/common";
 import { getContent } from "../../utils/context";
+import { Icon, SettingOutline } from "../icon";
 import { MessageEmits, MessageProps } from "./types";
 
 const emits: MessageEmits = {};
@@ -28,7 +29,12 @@ export const Message = withInstall(
       });
       return () => {
         const content = getContent(props, slots, "content");
-        return <div class={["l-message"]}>{content}</div>;
+        return (
+          <div class={["l-message"]}>
+            <Icon size={16} color="yellow" content={SettingOutline} />
+            {content}
+          </div>
+        );
       };
     },
   })

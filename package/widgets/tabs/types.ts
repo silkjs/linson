@@ -21,7 +21,7 @@ export interface TabPaneEmits {}
 export interface MessageProviderEmits {}
 
 export interface TabsApiInjection {
-  active: string;
+  active?: string;
 }
 
 export const TABS_API_INJECTION_KEY = createInjectionKey<TabsApiInjection>("l-tabs-api");

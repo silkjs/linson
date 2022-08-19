@@ -1,4 +1,5 @@
-import { type PropType, Teleport, defineComponent, inject, provide, reactive } from "vue";
+import { type PropType, Teleport, Transition, defineComponent, inject, provide, reactive } from "vue";
+import { nanoid } from "nanoid";
 import { withInstall } from "../../utils/common";
 import { Message } from "./message";
 import {
@@ -39,6 +40,8 @@ export const MessageProvider = withInstall(
         },
         error(content) {
           data.messages.push({
+            id: nanoid(),
+            show: true,
             content: content,
             duration: 1000,
             theme: "error",
@@ -46,6 +49,8 @@ export const MessageProvider = withInstall(
         },
         info(content) {
           data.messages.push({
+            id: nanoid(),
+            show: true,
             content: content,
             duration: 1000,
             theme: "info",
@@ -53,6 +58,8 @@ export const MessageProvider = withInstall(
         },
         loading(content) {
           data.messages.push({
+            id: nanoid(),
+            show: true,
             content: content,
             duration: 1000,
             theme: "loading",
@@ -60,6 +67,8 @@ export const MessageProvider = withInstall(
         },
         success(content) {
           data.messages.push({
+            id: nanoid(),
+            show: true,
             content: content,
             duration: 1000,
             theme: "success",
@@ -67,6 +76,8 @@ export const MessageProvider = withInstall(
         },
         warning(content) {
           data.messages.push({
+            id: nanoid(),
+            show: true,
             content: content,
             duration: 1000,
             theme: "warning",
@@ -80,7 +91,23 @@ export const MessageProvider = withInstall(
           <Teleport to="body">
             <div class="l-message-provider">
               {data.messages.map((item) => (
-                <Message {...item} />
+                <Transition
+                  key={item.id}
+                  appear
+                  name="bounce"
+                  onAfterEnter={() => {
+                    setTimeout(() => {
+                      item.show = false;
+                    }, 3000);
+                  }}
+                  onAfterLeave={() => {
+                    setTimeout(() => {
+                      data.messages = data.messages.filter(({ id }) => item.id !== id);
+                    }, 0);
+                  }}
+                >
+                  {item.show && <Message {...item} />}
+                </Transition>
               ))}
             </div>
           </Teleport>

@@ -13,7 +13,22 @@ export const TabPane = withInstall(
       tab: [String, Function] as PropType<TabPaneProps["tab"]>,
     },
     setup(props, { slots }) {
-      return () => <div class={["l-tab-pane", {}]}>{slots.default?.()}</div>;
+      const tabs = inject(TABS_API_INJECTION_KEY);
+      if (typeof tabs === "undefined") {
+        throw new Error("No outer <l-tabs /> founded.");
+      }
+      return () => (
+        <div
+          class={[
+            "l-tab-pane",
+            {
+              "l-tab-pane-active": tabs.active === props.name,
+            },
+          ]}
+        >
+          {slots.default?.()}
+        </div>
+      );
     },
   })
 );

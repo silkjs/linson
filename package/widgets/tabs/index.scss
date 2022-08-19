@@ -56,10 +56,10 @@
   }
 
   .l-tabs-content {
-    .l-tabs-pane {
+    .l-tab-pane {
       display: none;
 
-      &.l-tabs-pane-active {
+      &.l-tab-pane-active {
         display: block;
       }
     }
