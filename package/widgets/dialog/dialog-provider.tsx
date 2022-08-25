@@ -47,9 +47,24 @@ export const DialogProvider = withInstall(
           {slots.default?.()}
           <Teleport to="body">
             <div class="l-dialog-provider">
-              {data.dialogs.map((item) => (
-                <Dialog {...item} />
-              ))}
+              {data.dialogs.length > 0 && <div class="l-dialog-provider-mask"></div>}
+              <div class="l-dialog-provider-container">
+                {data.dialogs.map((item) => (
+                  <div
+                    style={{
+                      display: "flex",
+                      position: "relative",
+                      top: "100px",
+                      width: "fit-content",
+                      borderRadius: "2px",
+                      boxShadow: "0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d",
+                      margin: "0 auto",
+                    }}
+                  >
+                    <Dialog {...item} />
+                  </div>
+                ))}
+              </div>
             </div>
           </Teleport>
         </>

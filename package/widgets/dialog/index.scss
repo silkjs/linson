@@ -1,26 +1,50 @@
 @import "../../common/styles/theme.scss";
 
 .l-dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  max-width: 500px;
-  max-height: 85vh;
-  border-radius: 6px;
-  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  color: var(--linson-color-gray-12);
   background-color: white;
-  box-shadow: rgb(14 18 22 / 35%) 0 10px 38px -10px, rgb(14 18 22 / 20%) 0 10px 20px -15px;
-  transform: translate(-50%, -50%);
 
-  .l-dialog_head {
-    font-size: 12px;
+  .l-dialog_title {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
   }
 
-  .l-dialog_body {
-    font-size: 12px;
+  .l-dialog_content {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
   }
 
-  .l-dialog_foot {
-    font-size: 12px;
+  .l-dialog_footer {
+    display: flex;
+    column-gap: 16px;
+    justify-content: end;
+    border-top: 1px solid #f0f0f0;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+.l-dialog-provider {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: visible;
+  height: 0;
+
+  .l-dialog-provider-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 45%);
   }
 }

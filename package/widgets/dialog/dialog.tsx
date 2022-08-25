@@ -10,27 +10,32 @@ export const Dialog = withInstall(
     emits: { ...emits },
     name: "l-dialog",
     props: {
-      head: {
-        type: [String, Object, Function] as PropType<DialogProps["head"]>,
+      title: {
+        type: [String, Object, Function] as PropType<DialogProps["title"]>,
       },
-      body: {
-        type: [String, Object, Function] as PropType<DialogProps["body"]>,
+      content: {
+        type: [String, Object, Function] as PropType<DialogProps["content"]>,
       },
-      foot: {
-        type: [String, Object, Function] as PropType<DialogProps["foot"]>,
-      },
+      width: { type: [Number, String] as PropType<number | string>, default: () => "500px" },
     },
-    setup() {
+    setup(props) {
       return () => (
-        <div class={["l-dialog"]}>
-          <div class="l-dialog_head">Are you absolutely sure?</div>
-          <div class="l-dialog_body">
+        <div
+          class={["l-dialog"]}
+          style={{
+            width: props.width,
+          }}
+        >
+          <div class="l-dialog_title">Are you absolutely sure?</div>
+          <div class="l-dialog_content">
             This action cannot be undone. This will permanently delete your account and remove your data from our
             servers.
           </div>
-          <div class="l-dialog_foot">
-            <Button>Cancel</Button>
-            <Button>Yes, delete account</Button>
+          <div class="l-dialog_footer">
+            <Button ghost theme="default">
+              Cancel
+            </Button>
+            <Button theme="primary">Yes, delete account</Button>
           </div>
         </div>
       );

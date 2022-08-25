@@ -1,4 +1,5 @@
 import { LNode } from "../../common/linson-type";
+import { createInjectionKey } from "../../utils/context";
 
 export interface CarouselProps {
   autoplay: boolean;
@@ -11,3 +12,9 @@ export interface CarouselProps {
 }
 
 export interface CarouselEmits {}
+
+export interface CarouselInjection {
+  index: number;
+}
+
+export const CAROUSEL_INJECTION_KEY = createInjectionKey<CarouselInjection>("l-carousel");
